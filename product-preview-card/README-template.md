@@ -20,6 +20,7 @@ This is a solution to the [Product preview card component challenge on Frontend 
 
 ## Overview
 
+
 ### The challenge
 
 Users should be able to:
