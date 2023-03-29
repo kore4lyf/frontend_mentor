@@ -20,7 +20,7 @@
       body {
         --clr-gray: #898a90;
         --clr-green-1: #3d8168;
-        --clr-green-2: 
+        --clr-green-2: #184131;
         margin: 0;
         width: 100%;
         box-sizing: border-box;
@@ -93,7 +93,11 @@
         background-color: var(--clr-green-1);
         color: white;
       }
-
+      
+      .btn-green:hover,
+      .btn-green:focus {
+        background-color: var(--clr-green-2);
+      }
       
 
       /* -- Theme styles -- */
@@ -133,6 +137,7 @@
       .previous-cost {
         color: var(--clr-gray);
         text-decoration: line-through;
+        font-weight: 400;
       }
 
 
@@ -142,7 +147,7 @@
 </head>
 <body>
     <main>
-      <img src="./design/mobile-design.jpg" alt="">
+      <img src="./design/active-states.jpg" alt="">
       <div class="content">
         <picture>
           <source media="(min-width: 650px)" srcset="./images/image-product-desktop.jpg">
