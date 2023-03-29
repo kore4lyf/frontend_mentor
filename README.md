@@ -3,7 +3,7 @@
 Below are the [frontendmentor.io](http://www.frontendmentor.io) projects I have worked on.
 
 
-## Frontend Projects
+## Frontend Challenge
 - [Project Preview Card](./project-preview-card)
 
 
