@@ -41,7 +41,7 @@
       picture img {
         object-fit: cover;
         object-position: center;
-        width: 100%;
+        width: 101%;
       }
 
       section {
@@ -62,9 +62,9 @@
 
       .product-name {
         font-family: 'Fraunces', serif;
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         font-weight: 700;
-        line-height: 1.8rem;
+        line-height: 1.6rem;
         margin-block: .6rem;
       }
 
@@ -110,6 +110,7 @@
 
       /* -- Theme styles -- */
       .attribution { 
+        display: none;
         font-size: 11px; text-align: center; 
         padding-block: .5rem;
       }
@@ -126,7 +127,7 @@
         max-width: 306px;
         margin: .5rem;
         min-width: 240px;
-        overflow: auto;
+        overflow: hidden;
         -ms-overflow-style: none;
       }
 
@@ -160,6 +161,10 @@
 
       /* --Media Queries-- */
       @media screen and (min-width: 650px) {
+        .attribution { 
+          display: none;
+        }
+        
         .content {
           flex-direction: row;
           height: fit-content;
