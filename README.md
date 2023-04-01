@@ -1,10 +1,11 @@
 # Frontend Web Development 
-![GitHub Repo Size](https://img.shields.io/github/downloads/kore4lyf/frontend_mentor/total?style=for-for-the-badge)
+![GitHub](https://img.shields.io/github/license/kore4lyf/frontend_mentor?style=flat)
+
 Below are the [frontendmentor.io](http://www.frontendmentor.io) projects I have worked on.
 
 
 ## Frontend Challenge
-- [Project Preview Card](./project-preview-card)
+- [Product Preview Card](./product-preview-card)
 
 
 ## License 
