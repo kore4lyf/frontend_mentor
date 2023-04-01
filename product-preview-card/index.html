@@ -29,16 +29,19 @@
       }
       
       main {
+        align-items: center;
         background-color: #f3eae3;
-        margin: auto;
+        display: flex;
         height: 100%;
+        justify-content: center;
+        border: 1px solid red;
       }
       
 
       picture img {
         object-fit: cover;
         object-position: center;
-        width: 101%;
+        width: 100%;
       }
 
       section {
@@ -122,10 +125,10 @@
         flex-direction: column;
         height: calc(100vh - 5vh);
         inset: 0;
-        margin: auto;
-        overflow: auto;
-        position: absolute;
         max-width: 306px;
+        margin: .5rem;
+        min-width: 240px;
+        overflow: auto;
         -ms-overflow-style: none;
       }
 
