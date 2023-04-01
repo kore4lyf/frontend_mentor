@@ -23,6 +23,7 @@
         --clr-green-1: #3d8168;
         --clr-green-2: #184131;
         height: 100%;
+        width: 100%;
         margin: 0;
         position: relative;
       }
@@ -31,14 +32,13 @@
         background-color: #f3eae3;
         margin: auto;
         height: 100%;
-        overflow: hidden;
       }
       
 
       picture img {
         object-fit: cover;
         object-position: center;
-        width: 100%;
+        width: 101%;
       }
 
       section {
@@ -54,15 +54,15 @@
         font-size: .8rem;
         font-family: 'Nunito', sans-serif;
         letter-spacing: 5px;
-        margin-block: .3rem;
+        margin-block: .15rem;
       }
 
       .product-name {
         font-family: 'Fraunces', serif;
-        font-size: clamp(1.2rem, 3vw + 1rem, 2.5rem);
+        font-size: 1.8rem;
         font-weight: 700;
-        line-height: clamp(1.2rem, 3vw + 1rem, 2.5rem);
-        margin-block: clamp(.5rem, 3vw + .1rem, 1.5rem);
+        line-height: 1.8rem;
+        margin-block: .6rem;
       }
 
       .product-desc {
@@ -70,7 +70,7 @@
         font-family: 'Nunito', sans-serif;
         font-size: 1rem;
         font-weight: 400;
-        margin-block: clamp(.3rem, 3vw + .1rem, 1rem);
+        margin-block: .3rem;
       }
 
 
@@ -80,17 +80,18 @@
       .btn {
         border: 0px;
         border-radius: .5rem;
+        display: flex;
         font-family: 'Nunito', sans-serif;
         font-weight: 700;
-        font-size: 1rem;
+        font-size: .8rem;
+        justify-content: center;
         margin-top: .3rem;
-        padding-block: .8rem; 
+        padding-block: .6rem; 
         width: 100%;
       }
 
       .btn img {
         padding-right: .5rem;
-        width: 1rem;  
       }
 
       .btn-green {
@@ -119,12 +120,17 @@
         border-radius: 10px;
         display: flex;
         flex-direction: column;
-        height: fit-content;
+        height: calc(100vh - 5vh);
         inset: 0;
         margin: auto;
-        overflow: hidden;
+        overflow: auto;
         position: absolute;
-        width: 90%;
+        max-width: 306px;
+        -ms-overflow-style: none;
+      }
+
+      .content::-webkit-scrollbar {
+        display: none;
       }
 
       .cost {
@@ -132,14 +138,14 @@
         display: flex;
         font-family: 'Nunito', sans-serif;
         gap: 1rem;
-        padding-block: .5;
-        margin-block: clamp(.5rem, 3vw + .1rem, 1rem);
+        padding-block: .4rem;
+        margin-block: .5rem;
       }
 
       .current-cost {
         color: var(--clr-green-1);
         font-family: 'Fraunces', serif;
-        font-size: 2rem;
+        font-size: 1.8rem;
         font-weight: 700;
         margin: 0;
       }
@@ -157,15 +163,41 @@
           flex-direction: row;
           height: fit-content;
           overflow:  hidden;
-          width: 650px;
+          max-width: 650px;
         }
 
         .content > * {
           flex: 1;
         }
 
+        .cost {
+          margin-block: 1rem;
+        }
+
+        .current-cost {
+          font-size: 2rem;
+        }
+
         picture img {
           height: 100%;
+          border-top-right-radius: 0;
+          border-top-left-radius: 10px;
+          border-bottom-left-radius: 10px;
+        }
+
+        .product-type {
+          margin-block: .3rem;
+        }
+
+        .product-name {
+          font-family: 'Fraunces', serif;
+          font-size: 2.5rem;
+          line-height: 2.5rem;
+          margin-block: 1.5rem;
+        }
+
+        .product-desc {
+          margin-block: 1rem;
         }
     }
 

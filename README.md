@@ -7,6 +7,5 @@ Below are the [frontendmentor.io](http://www.frontendmentor.io) projects I have 
 ## Frontend Challenge
 - [Product Preview Card](./product-preview-card)
 
-
 ## License 
 [MIT](./LICENSE)
