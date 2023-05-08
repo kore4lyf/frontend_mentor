@@ -6,6 +6,7 @@ Below are the [frontendmentor.io](http://www.frontendmentor.io) projects I worke
 
 ## Frontend Challenge
 - [Product Preview Card](./product-preview-card)
+- [QR Code Component](./qr-code-component)
 
 ## License 
 [MIT](./LICENSE)
