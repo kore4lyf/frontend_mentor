@@ -3,26 +3,56 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | QR code component</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&display=swap" rel="stylesheet">
+  
 
   <style>
     /* --GLOBAL STYLES-- */
+    :root {
+      --clr-white: hsl(0, 0%, 100%);
+      --clr-light-gray: hsl(212, 45%, 89%);
+      --clr-grayish-blue: hsl(220, 15%, 55%);
+      --clr-dark-blue: hsl(218, 44%, 22%);
+    }
     html, body {
       margin: 0;
     }
     img {
-      width: 200px;
+      width: 100%;
+      border-radius: 12px;
     }
     p {
       font-size: 15px;
     }
     main {
-      background-color: hsl(212, 45%, 89%);
+      background-color: var(--clr-light-gray);
     }
     
+
+
+
+
+    /* --OTHER STYLES-- */
+    .card {
+      background-color: var(--clr-white);
+      border-radius: 20px;
+      display: inline-block;
+      max-width: 300px;
+      padding: 15px;
+    }
+
+
+
+
+
+
     /* --OTHER STYLES-- */
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
