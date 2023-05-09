@@ -11,12 +11,19 @@ html, body {
 }
 
 p {
+  font-family: "Kumbh Sans";
   font-size: 18px;
 }
 
 
 /* --COMPONENT STYLES-- */
+/*p.name {*/
+  
+/*}*/
 
+/*p.stat {*/
+  
+/*}*/
 
 
 /* --OTHERS-- */
