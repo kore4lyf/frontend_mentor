@@ -1,6 +1,6 @@
 /* --GENERAL STYLES-- */
 :root {
-  --clr-darrk-cyan: hsl(185, 75%, 39%);
+  --clr-dark-cyan: hsl(185, 75%, 39%);
   --dark-desaturated-blue: hsl(229, 23%, 23%);
   --dark-grayish-blue: hsl(227, 10%, 46%);
   --dark-gray: hsl(0, 0%, 59%);
@@ -8,22 +8,50 @@
 
 html, body {
   margin: 0;
-}
-
-p {
-  font-family: "Kumbh Sans";
+  font-family: "Kumbh Sans", sans-serif;
   font-size: 18px;
 }
 
 
-/* --COMPONENT STYLES-- */
-/*p.name {*/
-  
-/*}*/
 
-/*p.stat {*/
-  
-/*}*/
+
+
+/* --TYPOGRAPHY STYLES-- */
+.big-text {
+  font-size: 1.2rem;
+}
+
+.big-text, .text, .tiny-text {
+  color: var(--dark-grayish-blue);
+  font-weight: 400;
+}
+
+.name {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.name, .stat {
+  color: var(--dark-gray);
+  font-weight: 700;
+}
+
+.stat {
+  font-size: 1.5rem;
+}
+
+.tiny-text {
+  font-size: .5rem;
+}
+
+
+
+
+
+/* --COMPONENT STYLES-- */
+
+
+
 
 
 /* --OTHERS-- */
