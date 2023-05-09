@@ -25,31 +25,29 @@ main {
 
 
 /* --TYPOGRAPHY STYLES-- */
-.big-text {
-  font-size: 1.2rem;
+
+.big-text, .mid-text, .text, .tiny-text {
+  color: var(--clr-dark-grayish-blue);
+  font-weight: 400;
 }
 
-.big-text, .text, .tiny-text {
-  color: var(--clr-dark-gray);
-  font-weight: 400;
+.mid-text {
+  font-size: .8rem;
 }
 
 .name {
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .name, .stat {
-  color: var(--clr-dark-grayish-blue);
+  color: hsl(215, 27.9%, 16.9%);
   font-weight: 700;
 }
 
-.stat {
-  font-size: 1.5rem;
-}
-
 .tiny-text {
-  font-size: .5rem;
+  font-size: .6rem;
+  letter-spacing: 2px;
 }
 
 
@@ -70,7 +68,3 @@ main {
 /* --OTHERS-- */
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
-.card {
-  width: 320px;
-  margin: 10px;
-}
