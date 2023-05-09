@@ -20,6 +20,11 @@ main {
   width: 100%;
 }
 
+img {
+  border: 5px solid #fff;
+  border-radius: 100%;
+}
+
 
 
 
