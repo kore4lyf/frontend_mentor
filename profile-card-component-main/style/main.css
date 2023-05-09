@@ -1,15 +1,23 @@
 /* --GENERAL STYLES-- */
 :root {
   --clr-dark-cyan: hsl(185, 75%, 39%);
-  --dark-desaturated-blue: hsl(229, 23%, 23%);
-  --dark-grayish-blue: hsl(227, 10%, 46%);
-  --dark-gray: hsl(0, 0%, 59%);
+  --clr-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --clr-dark-grayish-blue: hsl(227, 10%, 46%);
+  --clr-dark-gray: hsl(0, 0%, 59%);
 }
 
 html, body {
   margin: 0;
   font-family: "Kumbh Sans", sans-serif;
   font-size: 18px;
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  background-color: var(--clr-dark-cyan);
+  height: 100%;
+  width: 100%;
 }
 
 
@@ -22,7 +30,7 @@ html, body {
 }
 
 .big-text, .text, .tiny-text {
-  color: var(--dark-grayish-blue);
+  color: var(--clr-dark-gray);
   font-weight: 400;
 }
 
@@ -32,7 +40,7 @@ html, body {
 }
 
 .name, .stat {
-  color: var(--dark-gray);
+  color: var(--clr-dark-grayish-blue);
   font-weight: 700;
 }
 
@@ -49,7 +57,12 @@ html, body {
 
 
 /* --COMPONENT STYLES-- */
-
+.card {
+  background-color: #fff;
+  border-radius: 15px;
+  margin: 10px;
+  width: 320px;
+}
 
 
 
@@ -57,3 +70,7 @@ html, body {
 /* --OTHERS-- */
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+.card {
+  width: 320px;
+  margin: 10px;
+}
