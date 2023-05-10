@@ -49,8 +49,7 @@ p, .card-profile-date, .card-profile-name {
 .card-detail {
     flex: 1;
     padding-inline: 32px;
-    padding-top: 32px;
-    padding-top: 10px;
+    padding-top: 20px;
 }
 
 .card > img {
@@ -61,7 +60,22 @@ p, .card-profile-date, .card-profile-name {
     width: 100%;
 }
 
+
+
+
+
+
+/* --OTHER STYLES-- */
+
+.attribution { font-size: 11px; text-align: center; }
+
+.attribution a { color: hsl(228, 45%, 44%); }
+
 .card-profile-container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-block: 15px;
     width: 100%;
 }
 
@@ -73,6 +87,25 @@ p, .card-profile-date, .card-profile-name {
     color: var(--clr-grayish-blue);
 }
 
+.card-profile {
+    align-items: center;
+    display: flex;
+    gap: 20px;
+}
+
+.card-profile > img {
+    border-radius: 100%;
+    width: 40px;
+}
+
+img[alt=Share] {
+    background-color: var(--clr-light-grayish-blue);
+    border-radius: 100%;
+    padding: 10px;
+}
+
+
+
 p.text {
     font-weight: 500;
 }
@@ -81,12 +114,3 @@ p.title {
     font-weight: 700;
     font-size: 1rem;
 }
-
-
-
-
-
-/* --OTHER STYLES-- */
-
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
