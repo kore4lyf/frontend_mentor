@@ -2,9 +2,9 @@
 /* --GENERAL RULES-- */
 :root {
   --clr-dark-grayish-blue: hsl(217, 19%, 35%);
-  --desaturated-dark-blue: hsl(214, 17%, 51%);
-  --grayish-blue: hsl(212, 23%, 69%);
-  --light-grayish-blue: hsl(210, 46%, 95%);
+  --clr-desaturated-dark-blue: hsl(214, 17%, 51%);
+  --clr-grayish-blue: hsl(212, 23%, 69%);
+  --clr-light-grayish-blue: hsl(210, 46%, 95%);
 }
 
 html, body {
@@ -15,7 +15,7 @@ html, body {
 
 main {
     align-items: center;
-    background-color: var(--light-grayish-blue);
+    background-color: var(--clr-light-grayish-blue);
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -23,9 +23,11 @@ main {
     width: 100%;
 }
 
-p {
+p, .card-profile-date, .card-profile-name {
+    color: var(--clr-dark-grayish-blue);
     font-family: Manrope, sans-serif;
     font-size: 13px;
+    line-height: 1.5rem;
 }
 
 
@@ -40,12 +42,15 @@ p {
     display: flex;
     flex-wrap: wrap;
     margin: 10px;
-    overflow: auto;
+    overflow: hidden;
     width: 320px;
 }
 
 .card-detail {
     flex: 1;
+    padding-inline: 32px;
+    padding-top: 32px;
+    padding-top: 10px;
 }
 
 .card > img {
@@ -60,12 +65,21 @@ p {
     width: 100%;
 }
 
+.card-profile-name {
+    font-weight: 700;
+}
+
+.card-profile-date {
+    color: var(--clr-grayish-blue);
+}
+
 p.text {
     font-weight: 500;
 }
 
 p.title {
     font-weight: 700;
+    font-size: 1rem;
 }
 
 
