@@ -98,13 +98,18 @@ p, .card-profile-date, .card-profile-name {
     width: 40px;
 }
 
-img[alt=Share] {
+.share {
     background-color: var(--clr-light-grayish-blue);
+    border: 0px;
     border-radius: 100%;
     padding: 10px;
+    color: var(--clr-desaturated-dark-blue);
 }
 
-
+.share:hover, .share:active {
+    background-color: var(--clr-desaturated-dark-blue);
+    color: white;
+}
 
 p.text {
     font-weight: 500;
