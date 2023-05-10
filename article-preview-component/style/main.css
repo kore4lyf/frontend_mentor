@@ -14,9 +14,13 @@ html, body {
 }
 
 main {
+    align-items: center;
     background-color: var(--light-grayish-blue);
-    width: 100%;
+    display: flex;
+    flex-direction: column;
     height: 100%;
+    justify-content: center;
+    width: 100%;
 }
 
 p {
@@ -45,7 +49,7 @@ p {
 }
 
 .card > img {
-    aspect-ratio: 2/1.25;
+    aspect-ratio: 2/1.23;
     flex-shrink: 1;
     object-fit: cover;
     object-position: center -15px;
