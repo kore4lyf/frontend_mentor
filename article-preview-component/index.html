@@ -3,51 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <title>Article preview component</title>
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
-  <title>Article preview component</title>
   <link rel="stylesheet" href="./style/main.css">
   <script src="./script/main.js" defer></script>
+  
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <main>
     <div class="card">
-      <img alt="A room with a funiture" src="./images/drawers.jpg">
-
-        <p class="title">
-          Shift the overall look and feel by adding these wonderful 
-          touches to furniture in your home
-        </p>
-
-        <p class="text">
-          Ever been in a room and felt like something was missing? Perhaps 
-          it felt slightly bare and uninviting. I’ve got some simple tips 
-          to help you make any room feel complete.
-        </p>
-        
-        <div class="card-profile-container">
-          <div class="card-profile">
-            <img src="./images/avatar-michelle.jpg">
-            <div class="card-profile-details">
-              <div class="card-profile-name">
-                Michelle Appleton
-              </div>
-              <div class="card-profile-date">
-                28 Jun 2020
+      <img class="card-image" alt="A room with a funiture" src="./images/drawers.jpg">
+        <div class="card-detail">
+          <p class="title">
+            Shift the overall look and feel by adding these wonderful 
+            touches to furniture in your home
+          </p>
+  
+          <p class="text">
+            Ever been in a room and felt like something was missing? Perhaps 
+            it felt slightly bare and uninviting. I’ve got some simple tips 
+            to help you make any room feel complete.
+          </p>
+          
+          <div class="card-profile-container">
+            <div class="card-profile">
+              <img src="./images/avatar-michelle.jpg">
+              <div class="card-profile-details">
+                <div class="card-profile-name">
+                  Michelle Appleton
+                </div>
+                <div class="card-profile-date">
+                  28 Jun 2020
+                </div>
               </div>
             </div>
+          
+            <img alt="Share" src="./images/icon-share.svg">
           </div>
-        
-          <img alt="Share" src="./images/icon-share.svg">
         </div>
     </div>
 
 
 
-  <div class="attribution">
-    Coded by <a href="https://github.com/kore4lyf" target="_blank">KoRe</a>.
-  </div>
+    <div class="attribution">
+      Coded by <a href="https://github.com/kore4lyf" target="_blank">KoRe</a>.
+    </div>
   </main>
 </body>
 </html>
