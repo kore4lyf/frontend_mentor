@@ -39,6 +39,7 @@ p, .card-profile-date, .card-profile-name {
 .card {
     background-color: #fff;
     border-radius: 10px;
+    box-shadow: 2px 2px 25px rgba(211, 211, 211, .5);
     display: flex;
     flex-wrap: wrap;
     margin: 10px;
@@ -102,7 +103,7 @@ p, .card-profile-date, .card-profile-name {
     background-color: var(--clr-light-grayish-blue);
     border: 0px;
     border-radius: 100%;
-    padding: 10px;
+    padding: 8px;
     color: var(--clr-desaturated-dark-blue);
 }
 
