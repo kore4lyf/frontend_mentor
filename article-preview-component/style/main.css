@@ -1,7 +1,7 @@
 
 /* --GENERAL RULES-- */
 :root {
-  --clr-dark-grayish-blue: hsl(217, 19%, 35%);
+  --clr-dark-grayish-blue: #48556a;
   --clr-desaturated-dark-blue: hsl(214, 17%, 51%);
   --clr-grayish-blue: hsl(212, 23%, 69%);
   --clr-light-grayish-blue: hsl(210, 46%, 95%);
@@ -43,6 +43,7 @@ p, .card-profile-date, .card-profile-name {
     display: flex;
     flex-wrap: wrap;
     margin: 10px;
+    position: relative;
     overflow: hidden;
     width: 320px;
 }
@@ -67,8 +68,7 @@ p, .card-profile-date, .card-profile-name {
 
 
 /* --OTHER STYLES-- */
-
-.attribution { font-size: 11px; text-align: center; }
+.attribution { font-family: Manrope, sans-serif;; font-size: 11px; text-align: center; }
 
 .attribution a { color: hsl(228, 45%, 44%); }
 
@@ -76,9 +76,10 @@ p, .card-profile-date, .card-profile-name {
     align-items: center;
     display: flex;
     justify-content: space-between;
-    margin-block: 15px;
     padding-inline: 32px;
-    width: 100%;
+    padding-block: 10px;
+    /* width: 100%; */
+    margin: 0px;
 }
 
 .card-profile-name {
@@ -115,10 +116,41 @@ p, .card-profile-date, .card-profile-name {
 
 .socials {
     align-items: center;
-    display: none;
+    display: flex;
     gap: .8rem;
+    padding-block: 2px;
     width: 100%;
 }
+
+.mini-socials {
+    align-items: center;
+    font-size: .5rem;
+    background-color: var(--clr-dark-grayish-blue);
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(211, 211, 211, .5);
+    display: flex;
+    gap: .8rem;
+    isolation: isolate;
+    justify-content: center;
+    padding-inline: 10px;
+    position: absolute;
+    right: -7.1%;
+    bottom: 25%;
+    z-index: 3;
+}
+
+.mini-socials::after {
+    content: "";
+    border: 10px solid;
+    border-color: #48556a transparent transparent transparent;
+    position: absolute;
+    top: 98%;
+}
+
+.mini-socials p {
+    margin: 8px;
+}
+
 
 .spaced-text {
     color: var(--clr-grayish-blue);
@@ -136,16 +168,31 @@ p.title {
 }
 
 
+/* ---Overide--- */
+.hide {
+    display: none;
+}
+
+
+
+
+
 /* ---MEDIA QUERY--- */
 @media screen and (min-width: 768px) {
     .card {
         width: 720px;
+        flex-wrap: nowrap;
+        overflow: none !important;
     }
 
     .card > img {
         aspect-ratio: 1/.8;
         object-position: center left;
         width: 40%;
+    }
+
+    .socials {
+        padding-block: 1px;
     }
 
     
