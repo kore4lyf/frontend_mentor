@@ -47,7 +47,7 @@ p, .card-profile-date, .card-profile-name {
     width: 320px;
 }
 
-.card-detail {
+.card-note {
     flex: 1;
     padding-inline: 32px;
     padding-top: 20px;
@@ -77,11 +77,12 @@ p, .card-profile-date, .card-profile-name {
     display: flex;
     justify-content: space-between;
     margin-block: 15px;
+    padding-inline: 32px;
     width: 100%;
 }
 
 .card-profile-name {
-    font-weight: 700;
+    font-weight: 800;
 }
 
 .card-profile-date {
@@ -112,11 +113,40 @@ p, .card-profile-date, .card-profile-name {
     color: white;
 }
 
+.socials {
+    align-items: center;
+    display: none;
+    gap: .8rem;
+    width: 100%;
+}
+
+.spaced-text {
+    color: var(--clr-grayish-blue);
+    letter-spacing: 5px;
+    font-size: .65rem;
+}
+
 p.text {
     font-weight: 500;
 }
 
 p.title {
-    font-weight: 700;
+    font-weight: 800;
     font-size: 1rem;
+}
+
+
+/* ---MEDIA QUERY--- */
+@media screen and (min-width: 768px) {
+    .card {
+        width: 720px;
+    }
+
+    .card > img {
+        aspect-ratio: 1/.8;
+        object-position: center left;
+        width: 40%;
+    }
+
+    
 }
