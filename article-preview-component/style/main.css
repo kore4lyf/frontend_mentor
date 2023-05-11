@@ -44,7 +44,7 @@ p, .card-profile-date, .card-profile-name {
     flex-wrap: wrap;
     margin: 10px;
     position: relative;
-    overflow: hidden;
+    /*overflow: hidden;*/
     width: 320px;
 }
 
@@ -56,6 +56,7 @@ p, .card-profile-date, .card-profile-name {
 
 .card > img {
     aspect-ratio: 2/1.23;
+    border-radius: 10px 10px 0 0;
     flex-shrink: 1;
     object-fit: cover;
     object-position: center -15px;
@@ -74,11 +75,11 @@ p, .card-profile-date, .card-profile-name {
 
 .card-profile-container {
     align-items: center;
+    border-radius: 0px 0px 10px 10px;
     display: flex;
     justify-content: space-between;
     padding-inline: 32px;
     padding-block: 10px;
-    /* width: 100%; */
     margin: 0px;
 }
 
@@ -187,6 +188,7 @@ p.title {
 
     .card > img {
         aspect-ratio: 1/.8;
+        border-radius: 10px 0 0 10px;
         object-position: center left;
         width: 40%;
     }
