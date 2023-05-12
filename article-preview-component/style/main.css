@@ -192,6 +192,10 @@ p.title {
         object-position: center left;
         width: 40%;
     }
+    
+    .card-profile-container {
+      border-radius: 0px 0px 10px 0px;
+    }
 
     .socials {
         padding-block: 1px;
