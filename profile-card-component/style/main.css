@@ -81,4 +81,11 @@ main {
 .profile-image {
   border: 5px solid #fff;
   border-radius: 100%;
+  margin-top: -55px;
+}
+
+.profile-background {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  width: 100%;
 }
