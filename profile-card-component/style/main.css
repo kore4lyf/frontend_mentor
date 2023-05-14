@@ -89,3 +89,19 @@ main {
   border-top-right-radius: 15px;
   width: 100%;
 }
+
+.stat-container {
+  border-top: 1px solid lightgray;
+  display: flex;
+  padding-block: 25px;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.stat-container  * {
+  margin-block: 0px;
+}
+
+.stat-desc {
+  margin-top: 8px;
+}
