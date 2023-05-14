@@ -27,10 +27,6 @@ main {
   width: 100%;
 }
 
-img {
-  border: 5px solid #fff;
-  border-radius: 100%;
-}
 
 
 
@@ -81,12 +77,8 @@ img {
 
 .attribution a { color: hsl(228, 45%, 44%); }
 
-.decoration {
-  display: none;
-  grid-template-columns: repeat(2, 1fr);
-  border: 1px solid blue;
-  height: 100%;
-  position: absolute;
-  width: 100%;
-  z-index: 2;
+
+.profile-image {
+  border: 5px solid #fff;
+  border-radius: 100%;
 }
