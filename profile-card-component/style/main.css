@@ -7,7 +7,9 @@
 }
 
 html, body {
-  background: url("../images/bg-pattern-top.svg") right 35vw bottom 50vh no-repeat, url("../images/bg-pattern-bottom.svg") left 50vw  top 40vh no-repeat, var(--clr-dark-cyan);
+  background: url("../images/bg-pattern-top.svg") right 40vw bottom 50vh no-repeat, 
+    url("../images/bg-pattern-bottom.svg") left 50vw  top 40vh no-repeat, 
+    var(--clr-dark-cyan);
   font-family: "Kumbh Sans", sans-serif;
   font-size: 18px;
   height: 100%;
@@ -39,6 +41,7 @@ main {
 }
 
 .mid-text {
+  margin-top: 8px;
   font-size: .8rem;
 }
 
