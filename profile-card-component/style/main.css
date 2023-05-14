@@ -79,6 +79,10 @@ main {
 
 .attribution a { color: hsl(228, 45%, 44%); }
 
+.profile-name {
+  display: flex;
+  gap: 8px;
+}
 
 .profile-image {
   border: 5px solid #fff;
