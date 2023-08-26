@@ -1,0 +1,22 @@
+/* --GENERAL RULES-- */
+
+:root {
+  --clr-dark-grayish-blue: #48556a;
+}
+
+*, 
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  text-rendering: optimizeSpeed;
+}
+
+svg,
+img {
+  max-width: 100%;
+}
+
