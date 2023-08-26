@@ -1,10 +1,17 @@
 /* --GENERAL RULES-- */
+@font-face {
+  font-family: "HankenGrotesk";
+  src: url("../assets/fonts/HankenGrotesk-VariableFont_wght.ttf");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
 :root {
   /* Primary */
   --clr-light-red: hsl(0, 100%, 67%);
   --clr-orange-yellow: hsl(39, 100%, 56%);
   --clr-green-teal: hsl(166, 100%, 37%);
-  --clr-Cobalt-blue: hsl(234, 85%, 45%);
+  --clr-cobalt-blue: hsl(234, 85%, 45%);
   
   
   /* Gradient */
@@ -21,22 +28,33 @@
   --clr-light-lavender: hsl(241, 100%, 89%);
   --clr-dark-gray-blue: hsl(224, 30%, 27%);
   
-  --fs-mid: 1.5rem;
-  --fs-big: 2rem; 
+  --fs-sm: 1.125rem;
+  --fs-md: 1.25rem;
+  --fs-lg: 1.5rem; 
+  
+  --fw-bold-sm: 500;
+  --fw-bold-md: 800;
+  --fw-bold-lg: 900;
   
   --rounded-full: 100%;
-  --rounded-small: 1rem;
-  --rounded-big: 3rem;
+  --rounded-sm: 1rem;
+  --rounded-lg: 3rem;
+  
+  --padding-sm: 1rem;
+  --padding-md: 2rem;
 }
 
 *, 
 *::after,
 *::before {
+  font: inherit;
   box-sizing: border-box;
 }
 
 html,
 body {
+  font-family: "HankenGrotesk";
+  margin: 0;
   text-rendering: optimizeSpeed;
 }
 
