@@ -11,15 +11,22 @@
   --clr-light-slate-blue: hsl(252, 100%, 67%);
   --clr-light-royal-blue: hsl(241, 81%, 54%);
     
-    /* Neutral */
+  /* Gradient */
   --clr-violet-blue: hsla(256, 72%, 46%, 1);
   --clr-persian-blue: hsla(241, 72%, 46%, 0);
 
-  /* Gradient */
-  --clr-hite: hsl(0, 0%, 100%);
+    /* Neutral */
+  --clr-white: hsl(0, 0%, 100%);
   --clr-pale-blue: hsl(221, 100%, 96%);
   --clr-light-lavender: hsl(241, 100%, 89%);
   --clr-dark-gray-blue: hsl(224, 30%, 27%);
+  
+  --fs-mid: 1.5rem;
+  --fs-big: 2rem; 
+  
+  --rounded-full: 100%;
+  --rounded-small: 1rem;
+  --rounded-big: 3rem;
 }
 
 *, 
