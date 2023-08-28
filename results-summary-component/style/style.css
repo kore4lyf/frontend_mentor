@@ -44,6 +44,7 @@
   
   --rounded-full: 100%;
   --rounded-sm: 1rem;
+  --rounded-md: 2rem;
   --rounded-lg: 3rem;
   
   --padding-sm: 1rem;
@@ -92,6 +93,7 @@ img {
   background: linear-gradient(to top, var(--clr-light-royal-blue), var(--clr-light-slate-blue));
   color: hsla(var(--hsl-white), .6);
   text-align: center;
+  border-radius: 0 0 var(--rounded-md) var(--rounded-md);
 } 
 
 .result h1,
@@ -183,6 +185,11 @@ img {
 
 .summary-item-score {
   color: var(--clr-dark-gray-blue); 
+}
+
+.summary-category {
+  display: flex;
+  align-items: center;
 }
 
 .cta-btn {
