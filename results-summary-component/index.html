@@ -25,6 +25,8 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   
   <link rel="stylesheet" href="style/style.css" type="text/css" media="screen" />
+  
+  <script src="script/script.js" type="text/javascript" charset="utf-8" defer></script>
 </head>
 
 <body>
@@ -44,50 +46,9 @@
       <div class="summary grid-flow" data-gap="md">
         <h2 class="title">Summary</h2>
         
-        <div class="grid-flow">
-            <div class="summary-item" data-accent-type="1">
-              <p>
-                <span class="icon">SVG</span>
-                Reaction
-              </p>
-              <p class="summary-item-percentage"> 
-                <span class="summary-item-score">80</span> / 100 
-              </p>
-            </div>
-            
-            
-            <div class="summary-item" data-accent-type="2">
-              <p>
-                <span class="icon">SVG</span>
-                Memory
-              </p>
-              <p class="summary-item-percentage"> 
-                <span class="summary-item-score">92</span> / 100 
-              </p>
-            </div>
-            
-            
-            <div class="summary-item" data-accent-type="3">
-              <p>
-                <span class="icon">SVG</span>
-                Verbal
-              </p>
-              <p class="summary-item-percentage"> 
-                <span class="summary-item-score">61</span> / 100 
-              </p>
-            </div>
-            
-            
-            <div class="summary-item" data-accent-type="4">
-              <p>
-                <span class="icon">SVG</span>
-                Visual
-              </p>
-              <p class="summary-item-percentage"> 
-                <span class="summary-item-score">72</span> / 100 
-              </p>
-            </div>
-          </div>
+        <div id="summary-items-container">
+        </div>
+        
         <button class="cta-btn">
           Continue
         </button>
