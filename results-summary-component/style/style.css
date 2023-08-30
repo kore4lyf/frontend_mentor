@@ -107,6 +107,10 @@ img {
   padding: var(--padding-md);
 }
 
+ .result-summary {
+   background: white;
+ }
+
 .result-percentage {
   aspect-ratio: 1/1;
   background: linear-gradient(to bottom, var(--clr-violet-blue), var(--clr-persian-blue));
@@ -126,6 +130,7 @@ img {
 .result-desc {
   font-weight: var(--fw-bold-sm);
   width: 31ch;
+  margin: var(--padding-sm)
 }
 
 .result-desc-header {

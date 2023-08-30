@@ -1,0 +1,32 @@
+/* Refer to style.css for each custom properties used */
+
+ body {
+   border: 1px solid green;
+   background: var(--clr-pale-blue);
+   display: grid;
+   min-height: 100vh;
+   place-items: center;
+ }
+ 
+ main {
+   border: 1px solid red;
+   max-width: 42rem; 
+ }
+ 
+ .grid-flow {
+   align-content: space-between;
+ }
+ 
+ .result-summary {
+   border-radius: var(--rounded-md);
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+ }
+ 
+ .result {
+  border-radius: inherit;
+ }
+ 
+ .result-desc {
+  width: 28ch;
+ }
