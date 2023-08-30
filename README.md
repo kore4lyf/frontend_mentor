@@ -9,7 +9,7 @@ Below are the [frontendmentor.io](http://www.frontendmentor.io) projects I worke
 - [QR Code Component](./qr-code-component)
 - [Profile Card Component](./profile-card-component)
 - [Article Preview Component](./article-preview-component)
-- [Tailwindcss CSS](./tailwindcss_lessons/lesson 2/build)
+- [Tailwindcss CSS](./tailwindcss_lessons/lesson2/build)
 - [Results Summary Component](./results-summary-component)
 
 
