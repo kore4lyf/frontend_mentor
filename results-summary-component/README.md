@@ -1,9 +1,9 @@
-# Result Summary Component 
+# Results Summary Component 
 This is a solution to the [Result Summary challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/results-summary-component-CE_K6s0maV). 
 
 
 ## Table of contents
-- [Result Summary Component](#result-summary-component)
+- [Results Summary Component](#result-summary-component)
   - [Table of contents](#table-of-contents)
   - [Overview](#overview)
     - [The challenge](#the-challenge)
@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Links
 - Solution URL: [View](./index.html)
-- Live Site URL: [View](https://kore4lyf.github.io/frontend_mentor/result-summary-component/)
+- Live Site URL: [View](https://kore4lyf.github.io/frontend_mentor/results-summary-component/)
 
 ## My process
 ### Tech 
