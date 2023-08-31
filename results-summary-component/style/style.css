@@ -22,6 +22,7 @@
   /* Gradient */
   --clr-light-slate-blue: hsl(252, 100%, 67%);
   --clr-light-royal-blue: hsl(241, 81%, 54%);
+  --hls-light-royal-blue: 241, 81%, 54%;
     
   /* Gradient circle */
   --clr-violet-blue: hsla(256, 72%, 46%, 1);
@@ -33,6 +34,7 @@
   --clr-pale-blue: hsl(221, 100%, 96%);
   --clr-light-lavender: hsl(241, 100%, 89%);
   --clr-dark-gray-blue: hsl(224, 30%, 27%);
+  --hsl-dark-gray-blue: 224, 30%, 27%;
   
   --fs-sm: 1.125rem;
   --fs-md: 1.25rem;

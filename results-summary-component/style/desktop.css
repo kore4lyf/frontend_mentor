@@ -1,15 +1,13 @@
 /* Refer to style.css for each custom properties used */
 
  body {
-   border: 1px solid green;
-   background: var(--clr-pale-blue);
    display: grid;
    min-height: 100vh;
    place-items: center;
  }
  
  main {
-   max-width: 44rem; 
+   max-width: 50rem; 
  }
  
  .attribution {
@@ -22,6 +20,7 @@
  
  .result-summary {
    border-radius: var(--rounded-md);
+   box-shadow: 8px 8px 60px hsla(var(--hls-light-royal-blue), 15%);
    display: grid;
    grid-template-columns: repeat(2, 1fr);
  }
