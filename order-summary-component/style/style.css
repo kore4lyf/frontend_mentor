@@ -1,4 +1,27 @@
 /** Global Styles **/
+:root {
+  --rounded-sm: .5rem;
+  --rounded-md: .75rem;
+  --rounded-lg: 1rem;
+}
+
+*, 
+*:before,
+*:after {
+  font-size: inherit; 
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  text-rendering: optimizeSpeed;
+}
+
+svg,
+img {
+  max-width: 100%;
+}
 
 
 /** Component Styles **/
