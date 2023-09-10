@@ -4,6 +4,14 @@
   --size: .75rem;
   --size-md: 1rem;
   --size-lg: 1.5rem;
+  
+  
+  --clr-pale-blue: hsl(225, 100%, 94%);
+  --clr-bright-blue: hsl(245, 75%, 52%);
+
+  --clr-very-pale-blue: hsl(225, 100%, 98%);
+  --clr-desaturated-blue: hsl(224, 23%, 55%);
+  --clr-dark-blue: hsl(223, 47%, 23%);
 }
 
 *, 
