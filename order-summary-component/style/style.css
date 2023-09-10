@@ -15,6 +15,7 @@
 
 html,
 body {
+  background: teal;
   display: grid;
   margin: 0;
   text-rendering: optimizeSpeed;
@@ -32,15 +33,16 @@ main {
   height: fit-content;
   margin: auto;
   min-width: 240px; 
-  padding-inline: var(--size-lg);
+  padding-inline: var(--size-md);
   width: fit-content;
 }
 
 
 /** Component Styles **/
-.card {
-  margin: auto;
-  border-radius: var(--size-lg);
+
+
+.btn.link {
+  text-decoration: underline;
 }
 
 .card-img {
@@ -48,7 +50,106 @@ main {
   border-top-right-radius: inherit;
 }
 
+.plan-icon {
+  width: fit-content;
+  height: fit-content;
+}
 
-/** Utility Styles **/
+.summary {
+  line-height: 2rem;
+  max-width: 30ch;
+  margin-inline: auto;
+}
+
+.title {
+  font-size: var(--size-lg);
+  font-weight: bold;
+}
+
+
+
+/** Block **/ 
+.btn-group-vert {
+  display: block;
+  gap: var(--size-lg);
+  padding-bottom: 1rem;
+}
+
+.btn-group-vert > a {
+  display: block;
+}
+
+.card {
+  border-radius: var(--size-lg);
+  margin: auto;
+}
+
+.plan {
+  align-items: center;
+  background: pink;
+  border-radius: var(--size);
+  padding: var(--size-md);
+  justify-content: space-between;
+}
+
+.plan-details {
+  align-items: center;
+  gap: var(--size-md);
+}
+
+.plan-name-duration {
+  align-items: center;
+  gap: var(--size-sm);
+}
+
+.sub-card {
+  background: white;
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+  padding: var(--size-lg); 
+  text-align: center;
+}
+
+
+
+
+/** Utility **/
+.btn {
+  border: 0;
+  background: transparent; 
+  font-weight: bold;
+}
+
+.btn-accent {
+  background: var(--clr-accent, red);
+  color: white;
+}
+
+.btn-block {
+  padding: var(--size-md);
+}
+
+.btn-full {
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.grid-flex {
+  align-content: start;
+  display: grid;
+  gap: var(--size-lg);
+}
+
+.rounded {
+  border-radius: var(--size);
+}
+
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }

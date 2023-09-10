@@ -37,22 +37,27 @@
 
 <body>
   <main>
-  <section class="card"> 
+  <section class="card [ flex flex-col ]"> 
     <img class="card-img" src="./images/illustration-hero.svg" alt="Illustration of a lady dancing and listening to music">
   
     <div class="sub-card grid-flex">
-      <h1 class="title">Order Summary</h1>
-      <p class="text"> You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like! </p>
-      
-      <div class="plan"> 
-        <img class="plan-icon" src="./images/icon-music.svg" alt="Music symbol or Icon"/>
-        <p class="heading"> Annual Plan </p>
-        <p class="text"> $59.99/year </p>
-        <button class="link"> Change </button>
+      <div>
+        <h1 class="title">Order Summary</h1>
+        <p class="text summary"> You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere you like! </p>
       </div>
-
-      <div class="btn-group-vertical"> 
-        <a class="btn btn-accent"> Proceed to Payment </a>
+      
+      <div class="plan [ flex ]"> 
+        <div class="plan-details [ flex ]">
+          <img class="plan-icon" src="./images/icon-music.svg" alt="Music symbol or Icon"/>
+          <div class="plan-name-duration [ flex flex-col ]">
+            <span class="heading"> Annual Plan </span>
+            <span class="text"> $59.99/year </span>
+          </div>
+        </div>
+        <button class="btn link"> Change </button>
+    </div>
+      <div class="btn-group-vert [ flex flex-col ]"> 
+        <a class="rounded btn btn-block btn-full btn-accent"> Proceed to Payment </a>
         <a class="btn"> Cancel Order </a>
       </div>
     </div>
