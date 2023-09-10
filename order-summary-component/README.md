@@ -1,5 +1,8 @@
-# Results Summary Component 
-This is a solution to the [Result Summary Component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/results-summary-component-CE_K6s0maV). 
+# Order summary card
+This is a solution to the [Order summary card challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/results-summary-component-CE_K6s0maV).
+
+
+
 
 
 ## Table of contents
@@ -14,26 +17,33 @@ This is a solution to the [Result Summary Component challenge on Frontend Mentor
   - [Author](#author)
   
 
+
+
+
 ## Overview
 
 ### The challenge
-Users should be able to:
-- View the optimal layout for the interface depending on their device's screen size
-- See hover and focus states for all interactive elements on the page
-- **Bonus**: Use the local JSON data to dynamically populate the content
+- Build out this order summary card component and get it looking as close to the design as possible.
+- You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
+
+Your users should be able to:
+- See hover states for interactive elements
+
 
 ### Screenshot
-![Design preview for the Result Summary Component challenge  coding challenge](./design/desktop-preview.jpg)
+![Design preview for the Order summary card Component challenge coding challenge](./design/desktop-preview.jpg)
 
 ### Links
 - Solution URL: [View](./index.html)
-- Live Site URL: [View](https://kore4lyf.github.io/frontend_mentor/results-summary-component/)
+- Live Site URL: [View](https://kore4lyf.github.io/frontend_mentor/order-summary-component/)
+
+
+
 
 ## My process
 ### Tech 
 - ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)   
 - ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) 
-- ![JavaScript](![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
 
 
