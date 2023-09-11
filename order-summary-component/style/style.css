@@ -104,7 +104,7 @@ main {
 }
 
 .title {
-  font-size: var(--size-lg);
+  font-size: 1.75rem;
   font-weight: 900;
   margin-bottom: .7rem;
 }
@@ -154,7 +154,8 @@ main {
   background: white;
   border-bottom-left-radius: inherit;
   border-bottom-right-radius: inherit;
-  padding: var(--size-lg); 
+  padding-block: var(--size-lg); 
+  padding-inline: 2rem; 
   text-align: center;
 }
 
