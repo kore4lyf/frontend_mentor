@@ -104,19 +104,20 @@ p, .card-profile-date, .card-profile-name {
 }
 
 .share {
-    background-color: var(--clr-light-grayish-blue);
-    border: 0px;
-    border-radius: 100%;
-    color: var(--clr-desaturated-dark-blue);
-    display: block;
-    padding: 8px;
-    width: fit-content;
-    height: fit-content;
+  background-color: var(--clr-light-grayish-blue);
+  border: 0px;
+  border-radius: 100%;
+  color: var(--clr-desaturated-dark-blue);
+  display: block;
+  padding: 5px;
+  padding-inline: 7px;
+  width: fit-content;
+  height: fit-content;
 }
 
 .share:hover, .share:active {
-    background-color: var(--clr-desaturated-dark-blue);
-    color: white;
+  background-color: var(--clr-desaturated-dark-blue);
+  color: white;
 }
 
 .socials {
@@ -167,9 +168,12 @@ p.text {
     font-weight: 500;
 }
 
-p.title {
-    font-weight: 800;
-    font-size: 1rem;
+.title {
+  color: var(--clr-dark-grayish-blue);
+  font-family: Manrope, sans-serif;
+  font-weight: 800;
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 
@@ -205,8 +209,9 @@ p.title {
         padding-block: 1px;
     }
     
-    p.title {
-      font-size: 1.2rem;
+    .title {
+      font-size: 1.3rem;
+      line-height: 2rem;
     }
 
     
