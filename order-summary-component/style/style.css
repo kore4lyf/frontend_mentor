@@ -31,9 +31,10 @@ html {
 
 html,
 body {
-  background: url("./images/pattern-background-mobile.svg"), var(--clr-pale-blue);
+  background: url("../images/pattern-background-mobile.svg"), var(--clr-pale-blue);
   background-repeat: no-repeat;
-  background-position: top;
+  background-position: top left;
+  background-size: 100% auto;
   display: grid;
   font-family: 'Red Hat Display', sans-serif;
   margin: 0;
@@ -46,7 +47,7 @@ body {
 @media screen and (max-width: 600px) {
   html,
   body {
-    background: url('./images/pattern-background-desktop.svg'), var(--clr-pale-blue);
+    background: url("../images/pattern-background-desktop.svg"), var(--clr-pale-blue);
   }
 }
 
