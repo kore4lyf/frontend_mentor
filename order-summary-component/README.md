@@ -61,13 +61,13 @@ Your users should be able to:
 
 
 ## Author
-<a href="https://www.frontendmentor.io/profile/faleye"> ![Frontend Mentor](https://img.shields.io/badge/FEM%20Profile-f8f9f8?style=for-the-badge&logo=Frontend-Mentor&logoColor=black)
-</a>
+  <a href="https://www.frontendmentor.io/profile/faleye"> ![Frontend Mentor](https://img.shields.io/badge/FEM%20Profile-f8f9f8?style=for-the-badge&logo=Frontend-Mentor&logoColor=black)
+  </a>
 
-<a href="https://www.github.com/kore4lyf">
-![Github](https://img.shields.io/badge/Github%20Profile-131313?style=for-the-badge&logo=github&logoColor=white)
-</a>
+  <a href="https://www.github.com/kore4lyf"> ![Github](https://img.shields.io/badge/Github%20Profile-131313?style=for-the-badge&logo=github&logoColor=white)
+  </a>
 
-<a href="https://www.linkedin.com/in/kore4lyf">
-![Linkedin](https://img.shields.io/badge/linkedin%20Profile-%2300acee.svg?color=405DE6&style=for-the-badge&logo=linkedin&logoColor=white)
-</a>
+
+
+  <a href="https://www.linkedin.com/in/kore4lyf">![Linkedin](https://img.shields.io/badge/linkedin%20Profile-%2300acee.svg?color=405DE6&style=for-the-badge&logo=linkedin&logoColor=white)
+  </a>
