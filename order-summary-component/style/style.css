@@ -9,10 +9,12 @@
   --clr-pale-blue: hsl(225, 100%, 94%);
   --clr-bright-blue: hsl(245, 75%, 52%);
   --clr-accent: hsl(245, 75%, 52%);
-  --clr-accent-hover: #766CF1;
-
+  --clr-accent-hover: hsl(244, 82.6% ,68.4%);
+  --hsl-accent-hover: 244, 82.6% ,68.4%;
+  
   --clr-very-pale-blue: hsl(225, 100%, 98%);
   --clr-desaturated-blue: hsl(224, 23%, 55%);
+  --hsl-desaturated-blue: 224, 23%, 55%;
   --clr-dark-blue: hsl(223, 47%, 23%);
 }
 
@@ -82,7 +84,6 @@ main {
   max-width: 30ch;
   margin-inline: auto;
   margin-top: .5rem;
-  margin-bottom: .5rem;
 }
 
 .title {
@@ -109,6 +110,7 @@ main {
 
 .card {
   border-radius: var(--size-lg);
+  box-shadow: 0px 1rem 1.5rem .5rem hsl(var(--hsl-desaturated-blue), .2);
   margin: auto;
 }
 
@@ -153,6 +155,7 @@ main {
 
 .btn-accent {
   background: var(--clr-accent);
+  box-shadow: 0px 1rem 1.5rem .5rem hsl(var(--hsl-accent-hover), .2);
   color: white;
 }
 
