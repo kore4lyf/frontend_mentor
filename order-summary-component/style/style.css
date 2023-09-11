@@ -9,6 +9,7 @@
   --clr-pale-blue: hsl(225, 100%, 94%);
   --clr-bright-blue: hsl(245, 75%, 52%);
   --clr-accent: hsl(245, 75%, 52%);
+  --clr-accent-hover: #766CF1;
 
   --clr-very-pale-blue: hsl(225, 100%, 98%);
   --clr-desaturated-blue: hsl(224, 23%, 55%);
@@ -53,6 +54,11 @@ main {
 .btn.link {
   text-decoration: underline;
   color: var(--clr-accent);
+  cursor: pointer;
+}
+
+.btn-link:hover {
+  color: var(--clr-accent-hover);
 }
 
 .card-img {
@@ -74,12 +80,15 @@ main {
   line-height: 1.7rem;
   max-width: 30ch;
   margin-inline: auto;
-  margin-bottom: 0;
+  margin-top: .5rem;
+  margin-bottom: .5rem;
 }
 
 .title {
   font-size: var(--size-lg);
   font-weight: bold;
+  margin-bottom: .7rem;
+  border: 1px solid red;
 }
 
 .text {
@@ -137,12 +146,18 @@ main {
 .btn {
   border: 0;
   background: transparent; 
+  cursor: pointer;
   font-weight: bold;
+  width: fit-content;
 }
 
 .btn-accent {
   background: var(--clr-accent);
   color: white;
+}
+
+.btn-accent:hover {
+  background: var(--clr-accent-hover)
 }
 
 .btn-block {
@@ -151,6 +166,10 @@ main {
 
 .btn-inline {
   color: var(--clr-desaturated-blue);
+}
+
+.btn-inline:hover {
+  color: black;
 }
 
 .btn-full {
@@ -171,9 +190,13 @@ main {
   gap: var(--size-lg);
 }
 
+.mx-auto {
+  margin-inline: auto;
+}
+
 .rounded {
   border-radius: var(--size);
 }
 
-.attribution { font-size: 11px; text-align: center; }
+.attribution { padding-top:1rem; font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
