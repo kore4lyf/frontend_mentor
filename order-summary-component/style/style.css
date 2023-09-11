@@ -25,9 +25,15 @@
   box-sizing: border-box;
 }
 
+html {
+}
+ 
+
 html,
 body {
-  background: var(--clr-pale-blue);
+  background: url("./images/pattern-background-mobile.svg"), var(--clr-pale-blue);
+  background-repeat: no-repeat;
+  background-position: top;
   display: grid;
   font-family: 'Red Hat Display', sans-serif;
   margin: 0;
@@ -35,6 +41,13 @@ body {
   place-content: center;
   text-rendering: optimizeSpeed;
   width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  html,
+  body {
+    background: url('./images/pattern-background-desktop.svg'), var(--clr-pale-blue);
+  }
 }
 
 svg,
@@ -150,6 +163,7 @@ main {
   background: transparent; 
   cursor: pointer;
   font-weight: 700;
+  text-decoration: none;
   width: fit-content;
 }
 
