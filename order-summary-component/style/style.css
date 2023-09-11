@@ -27,11 +27,12 @@ html,
 body {
   background: var(--clr-pale-blue);
   display: grid;
+  font-family: 'Red Hat Display', sans-serif;
   margin: 0;
-  text-rendering: optimizeSpeed;
-  width: 100%;
   min-height: 100vh;
   place-content: center;
+  text-rendering: optimizeSpeed;
+  width: 100%;
 }
 
 svg,
@@ -86,9 +87,8 @@ main {
 
 .title {
   font-size: var(--size-lg);
-  font-weight: bold;
+  font-weight: 900;
   margin-bottom: .7rem;
-  border: 1px solid red;
 }
 
 .text {
@@ -147,7 +147,7 @@ main {
   border: 0;
   background: transparent; 
   cursor: pointer;
-  font-weight: bold;
+  font-weight: 700;
   width: fit-content;
 }
 
