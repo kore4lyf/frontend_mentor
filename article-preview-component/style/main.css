@@ -107,8 +107,11 @@ p, .card-profile-date, .card-profile-name {
     background-color: var(--clr-light-grayish-blue);
     border: 0px;
     border-radius: 100%;
-    padding: 8px;
     color: var(--clr-desaturated-dark-blue);
+    display: block;
+    padding: 8px;
+    width: fit-content;
+    height: fit-content;
 }
 
 .share:hover, .share:active {
@@ -200,6 +203,10 @@ p.title {
 
     .socials {
         padding-block: 1px;
+    }
+    
+    p.title {
+      font-size: 1.2rem;
     }
 
     
