@@ -4,7 +4,7 @@
   --size: .75rem;
   --size-md: 1rem;
   --size-lg: 1.5rem;
-  
+
   
   --clr-pale-blue: hsl(225, 100%, 94%);
   --clr-bright-blue: hsl(245, 75%, 52%);
@@ -44,10 +44,13 @@ body {
   width: 100%;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 600px) {
   html,
   body {
     background: url("../images/pattern-background-desktop.svg"), var(--clr-pale-blue);
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: 100% auto;
   }
 }
 
