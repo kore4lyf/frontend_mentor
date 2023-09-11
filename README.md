@@ -11,6 +11,7 @@ Below are the [frontendmentor.io](http://www.frontendmentor.io) projects I worke
 - [Article Preview Component](./article-preview-component)
 - [Tailwindcss CSS](./tailwindcss_lessons/lesson2/build)
 - [Results Summary Component](./results-summary-component)
+- [Order Summary Component](./order-summary-component)
 
 
 ## License 
