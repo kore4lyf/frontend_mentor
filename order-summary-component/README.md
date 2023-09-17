@@ -1,11 +1,7 @@
 # Order summary card
-This is a solution to the [Order summary card challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/results-summary-component-CE_K6s0maV).
 
 
-
-
-
-## Table of contents
+# Table of contents
 - [Results Summary Component](#result-summary-component)
   - [Table of contents](#table-of-contents)
   - [Overview](#overview)
