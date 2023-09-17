@@ -27,9 +27,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="#48556a"/>
 
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-    
-    <link rel="stylesheet" href="./style/main.css">
-    <script src="./script/main.js" defer></script>
+    <link rel="stylesheet" href="./style/css/styl`e.css">
     
     <title>Frontend Mentor | NFT preview card component</title>
 
@@ -41,12 +39,15 @@
   </head>
   <body>
     <main>
-      <section class="grid-flex">
-        <div class="card">
-          <div class="card-image">
-            <img src="./image-equilibrium.jpg" alt="An NFT art: light passing through an ice cube"/>
-          </div>
-          <h1 class="title"> Equilibrium #3429 </h1>
+      <section>
+        <div class="card grid-flex">
+          <a href="#" class="card-image">
+            <img src="./images/image-equilibrium.jpg" alt="An NFT art: light passing through an ice cube"/>
+            <div class="place-center">
+            </div>
+          </a>
+          <h1 class="sr-only"> Equilibrium #3429 </h1>
+          <a href="#" class="title"> Equilibrium #3429 </a>
           <p class="text">
             Our Equilibrium collection promotes balance and calm.
           </p>
@@ -57,7 +58,7 @@
           </div> 
 
           <div class="author">
-            <img src="./images/image-avartar.png" alt="Author's profile picture"/> 
+            <img src="./images/image-avatar.png" alt="Author's profile picture"/> 
             <span class="text"> Creation of <a class="clickable" href="#"> Jules Wyvern</a> </span>
           </div>
         </div>
