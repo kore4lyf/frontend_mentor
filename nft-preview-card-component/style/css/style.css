@@ -45,9 +45,7 @@ body {
   width: 350px;
 }
 .card .title {
-  color: hsl(0, 0%, 100%);
   font-size: 1.5rem;
-  text-decoration: none;
 }
 .card .img-view img {
   aspect-ratio: 1/1;
@@ -57,11 +55,6 @@ body {
 }
 .card .icon {
   max-width: 25px;
-}
-.card .card-details {
-  display: flex;
-  flex-wrap: warp;
-  justify-content: space-between;
 }
 .card .value, .card .days {
   gap: 0.5rem;
@@ -74,13 +67,25 @@ body {
   border-top: 1px solid hsl(215, 32%, 27%);
   width: 100%;
 }
+.card .author {
+  gap: 1rem;
+}
+.card .author img {
+  border-radius: 100%;
+  border: 1px solid hsl(215, 51%, 70%);
+  width: 35px;
+}
+.card .link {
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+}
 
 .attribution {
   color: hsl(215, 51%, 70%);
   text-align: center;
 }
 .attribution a {
-  color: blue;
+  color: white;
 }
 
 /* Utility */
@@ -92,24 +97,38 @@ body {
   font-weight: 400;
 }
 
+.flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: warp;
+}
+
+.flex-nowarp {
+  flex-wrap: nowarp;
+}
+
 .grid-flex {
   display: grid;
   align-content: start;
   gap: 1.2rem;
 }
 
+.items-center {
+  align-items: center;
+}
+
 .pointer {
   cursor: pointer;
 }
 
-.sr-only {
-  display: none;
+.space-between {
+  justify-content: space-between;
 }
 
-.v-center {
-  display: flex;
-  flex-warp: nowrap;
-  align-items: center;
+.sr-only {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */

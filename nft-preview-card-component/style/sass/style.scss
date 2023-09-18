@@ -81,9 +81,7 @@ body {
 
   
   & .title {
-    color: map.get($colors, "white");
     font-size: map.get($sizes, "xxl");
-    text-decoration: none;
   }
 
   & .img-view img {
@@ -94,16 +92,11 @@ body {
    line-height: 2rem; 
   }
 
+
   & .icon {
     max-width: 25px;
-
   }
 
-  & .card-details {
-    display: flex;
-    flex-wrap: warp;
-    justify-content: space-between;
-  }
   
   & .value, & .days {
     gap: .5rem;
@@ -120,7 +113,21 @@ body {
     width: 100%;
   }
 
-  
+  & .author {
+    gap: 1rem;
+  }
+
+  & .author img {
+    border-radius: 100%;
+    border: 1px solid map.get($colors, "softBlue");
+    width: 35px;
+  }
+
+  & .link {
+    color: map.get($colors, "white");
+    text-decoration: none;
+  }
+
 
 }
 
@@ -134,7 +141,7 @@ body {
   text-align: center;
 
   & a {
-    color: blue;
+    color: white;
   }
 }
 
@@ -150,14 +157,34 @@ body {
   font-weight: map.get($fontWeight, "med");
 }
 
+.flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: warp;
+}
+
+.flex-nowarp {
+  flex-wrap: nowarp;
+}
+
 .grid-flex {
   display: grid;
   align-content: start;
   gap: 1.2rem;
 }
 
+.items-center {
+  align-items: center;
+}
+
 .pointer {
   cursor: pointer;
+}
+
+.space-between {
+  justify-content: space-between;
 }
 
 .sr-only {
@@ -165,9 +192,4 @@ body {
 }
 
 
-.v-center {
-  display: flex;
-  flex-warp: nowrap;
-  align-items: center;
-}
 
