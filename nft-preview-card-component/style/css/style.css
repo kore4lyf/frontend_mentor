@@ -1,17 +1,107 @@
-/* Error: expected ";".
- *    ,
- * 20 | $colors: (
- *    |        ^
- *    '
- *   style.scss 20:8  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: 'Error: expected ";".\a    \2577 \a 20 \2502  $colors: (\a    \2502         ^\a    \2575 \a   style.scss 20:8  root stylesheet';
+/* Variables */
+/* Global */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
+
+html,
+body {
+  background: hsl(217, 54%, 11%);
+  display: grid;
+  place-content: center;
+  margin: 0;
+  min-height: 100vh;
+}
+
+main {
+  width: fit-content;
+  height: fit-content;
+}
+
+img {
+  width: 100%;
+}
+
+/* Typography */
+body {
+  font-family: sans-serif;
+}
+
+.title {
+  font-weight: bold;
+}
+
+/* Component */
+.card {
+  background: hsl(216, 50%, 16%);
+  color: hsl(215, 51%, 70%);
+  font-size: 1.125rem;
+  font-weight: 300;
+  padding: 1.5rem;
+  max-width: 90%;
+  margin: auto;
+}
+.card .title {
+  color: hsl(0, 0%, 100%);
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+.card .text {
+  line-height: 2rem;
+}
+.card .icon {
+  max-width: 25px;
+}
+.card .card-details {
+  display: flex;
+  flex-wrap: warp;
+  justify-content: space-between;
+}
+.card .value, .card .days {
+  gap: 0.5rem;
+  white-space: nowrap;
+}
+.card p {
+  margin: 0;
+}
+
+.attribution {
+  color: hsl(215, 51%, 70%);
+  text-align: center;
+}
+.attribution a {
+  color: blue;
+}
+
+/* Utility */
+.fw-bold {
+  font-weight: 600;
+}
+
+.fw-med {
+  font-weight: 400;
+}
+
+.grid-flex {
+  display: grid;
+  align-content: start;
+  gap: 1rem;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.sr-only {
+  display: none;
+}
+
+.v-center {
+  display: flex;
+  flex-warp: nowrap;
+  align-items: center;
+}
+
+/*# sourceMappingURL=style.css.map */

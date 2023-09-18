@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->  
     <meta name="keywords" content="Frontend, Frontend Development, NFT Preview Card Component, Frontend Mentor Challenge, Korede, Faleye, Kore4lyf"/>
     <meta name="description" content="NFT Preview Card Component coded by KoRe"/>
-    <meta name="title" content="NFT Preview Card Component">
+    <meta name="title" content="NFT Preview Card">
 
     <!-- Open Graph Data -->
     <meta property="og:title" content="NFT Preview Card">
@@ -26,37 +26,40 @@
     <meta name="apple-mobile-web-app-capable" content="yes"/>
     <meta name="apple-mobile-web-app-status-bar-style" content="#48556a"/>
 
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
     
-    <link rel="stylesheet" href="./style/main.css">
-    <script src="./script/main.js" defer></script>
+    <link rel="stylesheet" href="./style/css/style.css">
     
-    <title>Frontend Mentor | NFT preview card component</title>
+    <title>NFT Preview Card</title>
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution { font-size: 11px; text-align: center; }
-      .attribution a { color: hsl(228, 45%, 44%); }
-    </style>
   </head>
   <body>
     <main>
-      <section class="grid-flex">
-        <div class="card">
-          <img src="./images/image-equilibrium.jpg" alt="Light passes through a cube crystal glass"/>
+      <section>
+        <div class="card grid-flex">
+          <div class="card-img">
+            <img src="./images/image-equilibrium.jpg" alt="Light passes through a cube crystal glass"/>
+            <div class="img-veiw">
+              <img class="icon" src="./images/icon-view.svg" alt="Analog clock logo"/> 
+            </div>
+          </div>
 
           <h1 class="sr-only"> Equilibrium #3429 </h1>
-          <a href="title">  Equilibrium #3429 </a>
+          <a href="#" class="title fw-bold pointer"> Equilibrium #3429 </a>
           <p class="text">
             Our Equilibrium collection promotes balance and calm.
           </p>
           
           <div class="card-details">
-            <div> <img src="./images/icon-ethereum.svg" alt="Ethrerum logo"/>0.041 ETH
-    3 days left
+            <div class="value v-center fw-bold"> <img class="icon" src="./images/icon-ethereum.svg" alt="Ethrerum logo"/> 0.041 ETH </div>
+            <div class="days v-center fw-med"> <img class="icon" src="./images/icon-clock.svg" alt="Analog clock logo"/> 3 days left </div>
           </div> 
-    Creation of Jules Wyvern
-        </div>
+
+          <div class="line"> </div>
+
+          <div> 
+            Creation of <a href="#" class="pointer fw-med">Jules Wyvern
+            </a> 
+          </div>
 
 
       </section>  

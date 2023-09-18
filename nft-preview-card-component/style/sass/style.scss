@@ -15,12 +15,12 @@ $fontWeight: (
   "light": 300,
   "med": 400,
   "bold": 600
-)
+);
 
 $colors: (
-  "softBlue": hls(215, 51%,70),
+  "softBlue": hsl(215, 51%, 70%),
   "cyan": hsl(178, 100%, 50%),
-  "vDrakBlue1": hsl(217, 54%, 11%),
+  "vDarkBlue1": hsl(217, 54%, 11%),
   "vDarkBlue2": hsl(216, 50%, 16%),
   "vDarkBlue3": hsl(215, 32%, 27%),
   "white": hsl(0, 0%, 100%)
@@ -39,8 +39,11 @@ $colors: (
 
 html,
 body {
-  background: map.get($colors, "vDarkBlue");
+  background: map.get($colors, "vDarkBlue1");
+  display: grid;
+  place-content: center;
   margin: 0;
+  min-height: 100vh;
 }
 
 main {
@@ -48,37 +51,111 @@ main {
   height: fit-content;
 }
 
+img {
+  width: 100%;
+}
 
 /* Typography */
 
 body {
-  font-family: "sans serif";
+  font-family: sans-serif;
 }
 
 .title {
   font-weight: bold;
 }
 
-p {
-  // color: ;
-}
 
 
 /* Component */
   
 .card {
   background: map.get($colors, "vDarkBlue2"); 
+  color: map.get($colors, "softBlue");
+  font-size: map.get($sizes, "fontBase");
+  font-weight: map.get($fontWeight, "light");
+  padding: map.get($sizes, "xxl");
+  max-width: 90%;
+  margin: auto;
+
+  
+  & .title {
+    color: map.get($colors, "white");
+    font-size: map.get($sizes, "xxl");
+    text-decoration: none;
+  }
+
+  & .text {
+   line-height: 2rem; 
+  }
+
+  & .icon {
+    max-width: 25px;
+  }
+
+  & .card-details {
+    display: flex;
+    flex-wrap: warp;
+    justify-content: space-between;
+  }
+  
+  & .value, & .days {
+    gap: .5rem;
+    white-space: nowrap;
+  }
+
+  & p {
+    margin: 0;
+  }
+
+ 
+
 }
 
 
+
+
+
+
+.attribution {
+  color: map.get($colors, "softBlue");
+  text-align: center;
+
+  & a {
+    color: blue;
+  }
+}
 
 
 
 /* Utility */
 
-.bold {
-  font-weight: bold;
+.fw-bold {
+  font-weight: map.get($fontWeight,"bold");
+}
+
+.fw-med {
+  font-weight: map.get($fontWeight, "med");
+}
+
+.grid-flex {
+  display: grid;
+  align-content: start;
+  gap: 1rem;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.sr-only {
+  display: none;
 }
 
 
+.v-center {
+  display: flex;
+  flex-warp: nowrap;
+  align-items: center;
+}
 
