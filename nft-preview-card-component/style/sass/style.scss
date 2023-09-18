@@ -26,7 +26,7 @@ $colors: (
   "white": hsl(0, 0%, 100%)
 );
 
-$hslaSoftBlue: 178, 100%, 50%, 50%;
+$hslaCyan: 178, 100%, 50%, 50%;
 
 
 /* Global */
@@ -58,7 +58,7 @@ img {
 /* Typography */
 
 body {
-  font-family: sans-serif;
+  font-family: 'Outfit', sans-serif;
 }
 
 .title {
@@ -79,6 +79,9 @@ body {
   margin: 1.5rem;
   width: 350px;
   border-radius: map.get($sizes, "lg");
+  -webkit-box-shadow: 0px 0px 69px -6px rgba(0,0,0,0.35);
+  -moz-box-shadow: 0px 0px 69px -6px rgba(0,0,0,0.35);
+  box-shadow: 0px 0px 69px -6px rgba(0,0,0,0.35);
   
 
   & .title {
@@ -101,7 +104,7 @@ body {
   }
 
   & .img-view {
-    background: hsla($hslaSoftBlue...);
+    background: hsla($hslaCyan...);
     border-radius: map.get($sizes, "sm");
     display: none;
     height: 98.5%;
