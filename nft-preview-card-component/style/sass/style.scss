@@ -26,7 +26,7 @@ $colors: (
   "white": hsl(0, 0%, 100%)
 );
 
-
+$hslaSoftBlue: 178, 100%, 50%, 50%;
 
 
 /* Global */
@@ -85,12 +85,35 @@ body {
     font-size: map.get($sizes, "xxl");
   }
 
+  & .card-img {
+    position: relative;
+    margin-bottom: map.get($sizes, "sm");
+
+    &:hover .img-view {
+      display: grid;
+    }
+  }
+
   & .card-img > img {
     aspect-ratio: 1/1;
+    object-fit: cover;
     border-radius: map.get($sizes, "sm");
   }
 
-  & .img-view img {
+  & .img-view {
+    background: hsla($hslaSoftBlue...);
+    border-radius: map.get($sizes, "sm");
+    display: none;
+    height: 98.5%;
+    place-items: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+  }
+
+  & .img-view .icon {
+    width: 40px;
   }
 
   & .text {
@@ -99,7 +122,7 @@ body {
 
 
   & .icon {
-    max-width: 25px;
+    width: 20px;
   }
 
   
@@ -112,6 +135,10 @@ body {
     color: map.get($colors, "cyan");
   }
 
+  
+  & .value {
+    width: 18px;
+  }
 
   & p {
     margin: 0;
