@@ -12,6 +12,7 @@ Below are the [frontendmentor.io](http://www.frontendmentor.io) projects I worke
 - [Tailwindcss CSS](./tailwindcss_lessons/lesson2/build)
 - [Results Summary Component](./results-summary-component)
 - [Order Summary Component](./order-summary-component)
+- [NFT Preview Card Component](./nft-preview-card-component)
 
 
 ## License 
