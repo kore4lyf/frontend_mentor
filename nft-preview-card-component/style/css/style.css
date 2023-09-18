@@ -70,7 +70,7 @@ body {
 .card p {
   margin: 0;
 }
-.card line {
+.card .line {
   border-top: 1px solid hsl(215, 32%, 27%);
   width: 100%;
 }
@@ -95,7 +95,7 @@ body {
 .grid-flex {
   display: grid;
   align-content: start;
-  gap: 1rem;
+  gap: 1.2rem;
 }
 
 .pointer {
