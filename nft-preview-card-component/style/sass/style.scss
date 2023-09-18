@@ -162,6 +162,10 @@ body {
   & .link {
     color: map.get($colors, "white");
     text-decoration: none;
+
+    &:hover {
+      color: map.get($colors, "cyan");
+    }
   }
 
 
