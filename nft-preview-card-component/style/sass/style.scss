@@ -78,14 +78,19 @@ body {
   max-width: 100%;
   margin: 1.5rem;
   width: 350px;
-
+  border-radius: map.get($sizes, "lg");
   
+
   & .title {
     font-size: map.get($sizes, "xxl");
   }
 
-  & .img-view img {
+  & .card-img > img {
     aspect-ratio: 1/1;
+    border-radius: map.get($sizes, "sm");
+  }
+
+  & .img-view img {
   }
 
   & .text {

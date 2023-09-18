@@ -43,12 +43,14 @@ body {
   max-width: 100%;
   margin: 1.5rem;
   width: 350px;
+  border-radius: 1rem;
 }
 .card .title {
   font-size: 1.5rem;
 }
-.card .img-view img {
+.card .card-img > img {
   aspect-ratio: 1/1;
+  border-radius: 0.5rem;
 }
 .card .text {
   line-height: 2rem;
