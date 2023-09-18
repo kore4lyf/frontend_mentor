@@ -60,6 +60,9 @@ body {
   gap: 0.5rem;
   white-space: nowrap;
 }
+.card .value {
+  color: hsl(178, 100%, 50%);
+}
 .card p {
   margin: 0;
 }

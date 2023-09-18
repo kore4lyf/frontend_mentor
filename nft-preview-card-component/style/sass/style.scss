@@ -103,6 +103,10 @@ body {
     white-space: nowrap;
   }
 
+  & .value {
+    color: map.get($colors, "cyan");
+  }
+
 
   & p {
     margin: 0;
