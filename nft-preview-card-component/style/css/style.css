@@ -1,9 +1,9 @@
-/* Error: expected "{".
+/* Error: expected ";".
  *    ,
- * 57 |   _
- *    |    ^
+ * 20 | $colors: (
+ *    |        ^
  *    '
- *   style.scss 57:4  root stylesheet */
+ *   style.scss 20:8  root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -13,5 +13,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: 'Error: expected "{".\a    \2577 \a 57 \2502    _\a    \2502     ^\a    \2575 \a   style.scss 57:4  root stylesheet';
+  content: 'Error: expected ";".\a    \2577 \a 20 \2502  $colors: (\a    \2502         ^\a    \2575 \a   style.scss 20:8  root stylesheet';
 }

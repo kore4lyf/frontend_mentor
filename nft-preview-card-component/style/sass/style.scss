@@ -1,14 +1,36 @@
 /* Variables */
+
 @use "sass:map";
 
-$font-sizes: (
-  "-sm": 1rem,
-  "-md": 1.25rem,
-  "-lg": 1.75rem
+$sizes: (
+  "fontBase": 1.125rem,
+  "sm": .5rem,
+  "md":  .75rem,
+  "lg":  1rem,
+  "xl":  1.25rem,
+  "xxl": 1.5rem
+);
+
+$fontWeight: (
+  "light": 300,
+  "med": 400,
+  "bold": 600
+)
+
+$colors: (
+  "softBlue": hls(215, 51%,70),
+  "cyan": hsl(178, 100%, 50%),
+  "vDrakBlue1": hsl(217, 54%, 11%),
+  "vDarkBlue2": hsl(216, 50%, 16%),
+  "vDarkBlue3": hsl(215, 32%, 27%),
+  "white": hsl(0, 0%, 100%)
 );
 
 
+
+
 /* Global */
+
 *,
 *::before,
 *::after {
@@ -17,6 +39,7 @@ $font-sizes: (
 
 html,
 body {
+  background: map.get($colors, "vDarkBlue");
   margin: 0;
 }
 
@@ -27,6 +50,7 @@ main {
 
 
 /* Typography */
+
 body {
   font-family: "sans serif";
 }
@@ -41,17 +65,20 @@ p {
 
 
 /* Component */
+  
 .card {
-
+  background: map.get($colors, "vDarkBlue2"); 
 }
 
 
 
+
+
 /* Utility */
+
 .bold {
   font-weight: bold;
 }
 
 
 
-  _
