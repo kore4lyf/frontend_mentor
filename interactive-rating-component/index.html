@@ -1,45 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="keywords" content="Frontend, Frontend Development, Interactive Rating Component, Frontend Mentor Challenge, Korede, Faleye, Kore4lyf"/>
+    <meta name="description" content="Interactive Rating Component coded by KoRe"/>
+    <meta name="title" content="Interactive Rating Component">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Interactive rating component</title>
+    <!-- Open Graph Data -->
+    <meta property="og:title" content="Interactive Rating Component">
+    <meta property="og:site_name" content="Interactive Rating Component" >
+    <meta property="og:url" content="https://kore4lyf.github.io/frontend_mentor/interactive-rating-component">
+    <meta property="og:description" content="Interactive Rating Component, a Frontend mentor challenge solved by KoRe.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content=https://kore4lyf.github.io/frontend_mentor/interactive-rating-component/design/desktop-preview.jpg>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+
+    <!-- Change status and address bar color -->
+      <!-- Chrome, Firefox and Opera -->
+    <meta name="theme-color" content="#000000"/>
+      <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#000000"/>
+      <!-- iOS Safari-->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000000"/>
+    
+    <link rel="stylesheet" href="./style/css/style.css">
+
+    <title>Interactive rating component</title>
 </head>
 <body>
 
-  <!-- Rating state start -->
+  <main>
+    <section>
+      <h1 class="sr-only"> interactive Rating Component<h1>
+        
+        <!-- Card -->
+        <div class="">
 
-  How did we do?
+          <!-- Rating state start -->
+          <div class="">
+            <img src="./images/icon-star.svg" alt="Star shaped icon"/>
+            <h2> How did we do? </h2>
+            <p> 
+              Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!
+            </p>
 
-  Please let us know how we did with your support request. All feedback is appreciated 
-  to help us improve our offering!
+            <div>
+              <button> 1 </button> 
+              <button> 2 </button> 
+              <button> 3 </button> 
+              <button> 4 </button> 
+              <button> 5 </button> 
+            </div>
 
-  1 2 3 4 5
+            <button id="submit"> Submit </button> 
+          </div>
+          <!-- Rating state end -->
 
-  Submit
 
-  <!-- Rating state end -->
+          <div class="">
 
-  <!-- Thank you state start -->
+            <img src="images/illustration-thank-you.svg" alt="An illustrationof a Phone, a slip and a card"/>
+            
+            <!-- Thank you state start -->
+            <div> You selected 
+              <span id="rating"></span>
+              <!-- Add rating here --> out of 5 </div>
 
-  You selected <!-- Add rating here --> out of 5
 
-  Thank you!
+            <h2> Thank you! </h2>
+            <p>
+              We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!
+            </p>
+          <!-- Thank you state end -->
 
-  We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch!
 
-  <!-- Thank you state end -->
+          </div>
 
+        </div>
+    </section>
+  </main>
+
+
+
+
+  
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
