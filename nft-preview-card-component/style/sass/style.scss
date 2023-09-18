@@ -75,8 +75,9 @@ body {
   font-size: map.get($sizes, "fontBase");
   font-weight: map.get($fontWeight, "light");
   padding: map.get($sizes, "xxl");
-  max-width: 90%;
-  margin: auto;
+  max-width: 100%;
+  margin: 1.5rem;
+  width: 350px;
 
   
   & .title {
@@ -85,12 +86,17 @@ body {
     text-decoration: none;
   }
 
+  & .img-view img {
+    aspect-ratio: 1/1;
+  }
+
   & .text {
    line-height: 2rem; 
   }
 
   & .icon {
     max-width: 25px;
+
   }
 
   & .card-details {
@@ -104,8 +110,14 @@ body {
     white-space: nowrap;
   }
 
+
   & p {
     margin: 0;
+  }
+
+  & line {
+    border-top: 1px solid map.get($colors, "vDarkBlue3");
+    width: 100%;
   }
 
  

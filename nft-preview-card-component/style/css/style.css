@@ -40,13 +40,17 @@ body {
   font-size: 1.125rem;
   font-weight: 300;
   padding: 1.5rem;
-  max-width: 90%;
-  margin: auto;
+  max-width: 100%;
+  margin: 1.5rem;
+  width: 350px;
 }
 .card .title {
   color: hsl(0, 0%, 100%);
   font-size: 1.5rem;
   text-decoration: none;
+}
+.card .img-view img {
+  aspect-ratio: 1/1;
 }
 .card .text {
   line-height: 2rem;
@@ -65,6 +69,10 @@ body {
 }
 .card p {
   margin: 0;
+}
+.card line {
+  border-top: 1px solid hsl(215, 32%, 27%);
+  width: 100%;
 }
 
 .attribution {
