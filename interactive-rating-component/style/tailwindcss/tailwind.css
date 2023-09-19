@@ -4,5 +4,9 @@
 
 
 @layer utilities {
-
+  .gradient-bg {
+    background: linear-gradient(to top right, hsla(213, 19%, 18%, 40%), hsla(213, 19%, 18%, 80%) 90%);
+  }
 }
+
+

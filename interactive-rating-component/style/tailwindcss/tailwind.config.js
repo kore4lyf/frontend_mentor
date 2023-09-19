@@ -5,9 +5,10 @@ module.exports = {
     extend: {
       colors: {
         primary: "hsl(25, 97%, 53%)",
-        litegray: "hsl(217, 12%, 63%)",
+        lightgray: "hsl(217, 12%, 63%)",
         medgray: "hsl(216, 12%, 54%)",
         darkblue: "hsl(213, 19%, 18%)",
+        transdarkblue: "hsla(213, 19%, 18%, 50%)",
         verydarkblue: "hsl(216, 12%, 8%)"
       },
       fontFamily: {
