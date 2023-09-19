@@ -33,12 +33,12 @@
 
   <main class="w-fit h-fit">
     <section>
-      <h1 class="sr-only"> interactive Rating Component<h1>
+      <h1 class="sr-only"> interactive Rating Component</h1>
         <!-- Card -->
         <div class="w-[340px] gradient-bg rounded-xl m-auto p-[1.5rem]">
 
           <!-- Rating state start -->
-          <div id="rate" class="grid gap-5">
+          <div id="rate" class="grid gap-5 hidden">
             <div class="p-3 bg-darkblue w-fit h-fit rounded-full">
               <img class="w-[14px] h-[14px]" src="./images/icon-star.svg" alt="Star shaped icon"/>
             </div>
@@ -63,11 +63,11 @@
           <!-- Rating state end -->
 
 
-          <div class="hidden">
+          <!-- Thank you state start -->
+          <div class="grid gap-5">
 
-            <img src="images/illustration-thank-you.svg" alt="An illustrationof a Phone, a slip and a card"/>
+            <img class="mx-auto w-[150px] h-[100px]" src="images/illustration-thank-you.svg" alt="An illustrationof a Phone, a slip and a card"/>
             
-            <!-- Thank you state start -->
             <div> You selected 
               <span id="rating"></span>
               <!-- Add rating here --> out of 5 </div>

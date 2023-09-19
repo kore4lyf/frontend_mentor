@@ -550,6 +550,11 @@ video {
   margin: auto;
 }
 
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .mb-3 {
   margin-bottom: 0.75rem;
 }
@@ -583,12 +588,28 @@ video {
   height: fit-content;
 }
 
-.h-8 {
-  height: 2rem;
+.h-\[100\] {
+  height: 100;
 }
 
-.h-9 {
-  height: 2.25rem;
+.h-\[150\] {
+  height: 150;
+}
+
+.h-\[100px\] {
+  height: 100px;
+}
+
+.h-\[200px\] {
+  height: 200px;
+}
+
+.h-\[150px\] {
+  height: 150px;
+}
+
+.max-h-\[150\] {
+  max-height: 150;
 }
 
 .min-h-screen {
@@ -603,6 +624,10 @@ video {
   width: 14px;
 }
 
+.w-\[340px\] {
+  width: 340px;
+}
+
 .w-fit {
   width: -moz-fit-content;
   width: fit-content;
@@ -612,20 +637,24 @@ video {
   width: 100%;
 }
 
-.w-\[340px\] {
-  width: 340px;
+.w-\[100px\] {
+  width: 100px;
 }
 
-.w-8 {
-  width: 2rem;
+.w-\[200px\] {
+  width: 200px;
 }
 
-.w-9 {
-  width: 2.25rem;
+.w-\[150px\] {
+  width: 150px;
 }
 
-.max-w-\[340px\] {
-  max-width: 340px;
+.w-\[170px\] {
+  width: 170px;
+}
+
+.w-\[160px\] {
+  width: 160px;
 }
 
 .place-content-center {
@@ -657,14 +686,14 @@ video {
   background-color: hsl(213 19% 18% / var(--tw-bg-opacity));
 }
 
-.bg-verydarkblue {
-  --tw-bg-opacity: 1;
-  background-color: hsl(216 12% 8% / var(--tw-bg-opacity));
-}
-
 .bg-primary {
   --tw-bg-opacity: 1;
   background-color: hsl(25 97% 53% / var(--tw-bg-opacity));
+}
+
+.bg-verydarkblue {
+  --tw-bg-opacity: 1;
+  background-color: hsl(216 12% 8% / var(--tw-bg-opacity));
 }
 
 .p-3 {
@@ -673,11 +702,6 @@ video {
 
 .p-\[1\.5rem\] {
   padding: 1.5rem;
-}
-
-.py-3 {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
 }
 
 .py-2 {
@@ -690,36 +714,16 @@ video {
   line-height: 2rem;
 }
 
-.text-\[15px\] {
-  font-size: 15px;
-}
-
 .text-\[14px\] {
   font-size: 14px;
 }
 
-.text-\[12px\] {
-  font-size: 12px;
-}
-
-.font-\[15px\] {
-  font-weight: 15px;
+.text-\[15px\] {
+  font-size: 15px;
 }
 
 .font-bold {
   font-weight: 700;
-}
-
-.font-\[14px\] {
-  font-weight: 14px;
-}
-
-.font-\[12px\] {
-  font-weight: 12px;
-}
-
-.font-\[10px\] {
-  font-weight: 10px;
 }
 
 .text-lightgray {
@@ -738,7 +742,7 @@ video {
 }
 
 .gradient-bg {
-  background: linear-gradient(to top right, hsla(213, 19%, 18%, 40%), hsla(213, 19%, 18%, 80%) 90%);
+  background: linear-gradient(to top right, hsla(213, 19%, 18%, 40%), hsla(213, 19%, 18%, 80%) 80%);
 }
 
 
