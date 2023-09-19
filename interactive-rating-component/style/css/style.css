@@ -550,6 +550,10 @@ video {
   margin: auto;
 }
 
+.m-\[1\.5rem\] {
+  margin: 1.5rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -621,8 +625,20 @@ video {
   width: 100%;
 }
 
+.min-w-\[250px\] {
+  min-width: 250px;
+}
+
+.max-w-\[340px\] {
+  max-width: 340px;
+}
+
 .cursor-pointer {
   cursor: pointer;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
 }
 
 .place-content-center {
@@ -639,6 +655,18 @@ video {
 
 .gap-7 {
   gap: 1.75rem;
+}
+
+.gap-1 {
+  gap: 0.25rem;
+}
+
+.gap-\[1rem\] {
+  gap: 1rem;
+}
+
+.gap-\[\.5rem\] {
+  gap: .5rem;
 }
 
 .rounded-full {

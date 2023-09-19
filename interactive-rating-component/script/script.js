@@ -32,7 +32,6 @@ const setRating = e => {
   const newRating = e.target
   const rating = newRating.innerText
   
-  console.log(newRating)
   if (state.activeRating) {
     removeActiveState(state.activeRating)
     addActiveState(newRating)
