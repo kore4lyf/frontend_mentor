@@ -30,7 +30,7 @@
 
     <title>Interactive rating component</title>
 </head>
-<body class="min-h-screen w-full bg-verydarkblue grid place-content-center">
+<body class="min-h-screen w-full bg-verydarkblue fw-400 grid place-content-center font-Overpass">
 
   <main class="w-fit h-fit">
     <section>
@@ -39,19 +39,19 @@
         <div class="w-[340px] gradient-bg rounded-xl m-auto p-[1.5rem]">
 
           <!-- Rating state start -->
-          <div id="rate" class="grid gap-7">
+          <div id="rating" class="grid gap-7">
             <div class="p-3 bg-darkblue w-fit h-fit rounded-full">
               <img class="w-[14px] h-[14px]" src="./images/icon-star.svg" alt="Star shaped icon"/>
             </div>
             
             <div> 
-              <h2 class="mb-3 text-2xl text-white font-bold"> How did we do? </h2>
+              <h2 class="mb-3 text-2xl text-white fw-700"> How did we do? </h2>
               <p class="mt-2 text-[15px] text-lightgray">
               Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!
               </p>
             </div>
 
-            <div class="flex text-bold text-[14px] text-medgray justify-between items-center">
+            <div class="flex fw-700 text-[14px] text-medgray justify-between items-center">
               <button class="bg-darkblue rounded-full grid place-content-center w-11 h-11 hover:bg-primary hover:text-white active:bg-medgray cursor-pointer" onclick="setRating(event)"> 1 </button> 
               <button id="btn2" class="bg-darkblue rounded-full grid place-content-center w-11 h-11 hover:bg-primary hover:text-white active:bg-medgray cursor-pointer" onclick="setRating(event)"> 2 </button> 
               <button class="bg-darkblue rounded-full grid place-content-center w-11 h-11 hover:bg-primary hover:text-white active:bg-medgray cursor-pointer" onclick="setRating(event)"> 3 </button> 
@@ -59,13 +59,13 @@
               <button class="bg-darkblue rounded-full grid place-content-center w-11 h-11 hover:bg-primary hover:text-white active:bg-medgray cursor-pointer" onclick="setRating(event)"> 5 </button> 
             </div>
 
-            <button id="submit" class="bg-primary text-white py-3 rounded-full uppercase text-[15px] tracking-widest text-bold hover:bg-white hover:text-primary cursor-pointer"> Submit </button> 
+            <button id="submit" class="bg-primary text-white py-3 rounded-full uppercase text-[15px] tracking-widest fw-700 hover:bg-white hover:text-primary cursor-pointer"> Submit </button> 
           </div>
           <!-- Rating state end -->
 
 
           <!-- Thank you state start -->
-          <div class="grid gap-7 text-[15px] hidden">
+          <div id="thank-you" class="grid gap-7 text-[15px] hidden">
 
             <img class="mx-auto w-[150px] h-[100px]" src="images/illustration-thank-you.svg" alt="An illustrationof a Phone, a slip and a card"/>
             
@@ -74,7 +74,7 @@
               <!-- Add rating here --> out of 5 </div>
 
             <div class="pt-2">
-              <h2 class="mb-3 text-center text-2xl text-white font-bold"> Thank you! </h2>
+              <h2 class="mb-3 text-center text-2xl text-white fw-700"> Thank you! </h2>
               <p class="mt-2 text-center [15px] text-lightgray">
                 We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!
               </p>
@@ -84,13 +84,13 @@
           </div>
 
         </div>
+          <div class="attribution">
+            Coded by <a href="https://github.com/kore4lyf" target="_blank">KoRe</a>.
+          </div>
     </section>
   </main>
 
   
   
-  <div class="attribution">
-    Coded by <a href="https://github.com/kore4lyf" target="_blank">KoRe</a>.
-  </div>
 </body>
 </html>

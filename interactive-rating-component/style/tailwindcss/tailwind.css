@@ -6,6 +6,12 @@
 @layer utilities {
   .gradient-bg {
     background: linear-gradient(to top right, hsla(213, 19%, 18%, 40%), hsla(213, 19%, 18%, 70%) 80%);
+  },
+  .fw-400 {
+    font-weight: 400;
+  },
+  .fw-700 {
+    font-weight: 700;
   }
 }
 

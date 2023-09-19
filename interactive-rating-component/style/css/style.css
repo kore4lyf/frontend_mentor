@@ -654,6 +654,11 @@ video {
   background-color: hsl(213 19% 18% / var(--tw-bg-opacity));
 }
 
+.bg-medgray {
+  --tw-bg-opacity: 1;
+  background-color: hsl(216 12% 54% / var(--tw-bg-opacity));
+}
+
 .bg-primary {
   --tw-bg-opacity: 1;
   background-color: hsl(25 97% 53% / var(--tw-bg-opacity));
@@ -662,11 +667,6 @@ video {
 .bg-verydarkblue {
   --tw-bg-opacity: 1;
   background-color: hsl(216 12% 8% / var(--tw-bg-opacity));
-}
-
-.bg-medgray {
-  --tw-bg-opacity: 1;
-  background-color: hsl(216 12% 54% / var(--tw-bg-opacity));
 }
 
 .p-2 {
@@ -686,11 +686,6 @@ video {
   padding-right: 1rem;
 }
 
-.py-2 {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
 .py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
@@ -702,6 +697,10 @@ video {
 
 .text-center {
   text-align: center;
+}
+
+.font-Overpass {
+  font-family: Overpass, sans-serif;
 }
 
 .text-2xl {
@@ -717,28 +716,8 @@ video {
   font-size: 15px;
 }
 
-.font-bold {
-  font-weight: 700;
-}
-
 .uppercase {
   text-transform: uppercase;
-}
-
-.lowercase {
-  text-transform: lowercase;
-}
-
-.capitalize {
-  text-transform: capitalize;
-}
-
-.tracking-wide {
-  letter-spacing: 0.025em;
-}
-
-.tracking-wider {
-  letter-spacing: 0.05em;
 }
 
 .tracking-widest {
@@ -769,14 +748,24 @@ video {
   background: linear-gradient(to top right, hsla(213, 19%, 18%, 40%), hsla(213, 19%, 18%, 70%) 80%);
 }
 
-.hover\:bg-white:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+,
+  .fw-400 {
+  font-weight: 400;
+}
+
+,
+  .fw-700 {
+  font-weight: 700;
 }
 
 .hover\:bg-primary:hover {
   --tw-bg-opacity: 1;
   background-color: hsl(25 97% 53% / var(--tw-bg-opacity));
+}
+
+.hover\:bg-white:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .hover\:text-primary:hover {
