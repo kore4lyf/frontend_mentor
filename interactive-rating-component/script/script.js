@@ -119,16 +119,22 @@ const submit = () => {
 
 
 const showNotify = (msg) => {
-  getElem("#notify-msg").innerText = msg
-  getElem("#notify").classList.remove("opacity-0")
-  getElem("#notify").classList.add("opacity-100")
-  getElem("#notify").classList.remove("-translate-y-36")
-  getElem("#notify").classList.add("tanslate-y-2")
+  const notNotified = !state.notified
 
-  // Hide notify after 3 secounds
-  setTimeout(() => {
-    hideNotify()
-  }, 3000);
+  if(notNotified) {
+  console.log("Show notification")
+    getElem("#notify-msg").innerText = msg
+    setState({ notified: true })
+    getElem("#notify").classList.remove("opacity-0")
+    getElem("#notify").classList.add("opacity-100")
+    getElem("#notify").classList.remove("-translate-y-36")
+    getElem("#notify").classList.add("tanslate-y-2")
+
+    // Hide notify after 3 secounds
+    setTimeout(() => {
+      hideNotify()
+    }, 3000);
+  }
 }
 
 
@@ -138,7 +144,9 @@ const hideNotify = () => {
   getElem("#notify").classList.add("opacity-0")
 
   setTimeout(() => {
+    console.log("Hide notification")
     getElem("#notify").classList.add("-translate-y-36")
+    setState({ notified: false })
   }, 100);
 }
 
