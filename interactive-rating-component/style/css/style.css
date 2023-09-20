@@ -608,6 +608,14 @@ video {
   margin-bottom: 0.5rem;
 }
 
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
 .flex {
   display: flex;
 }
@@ -678,12 +686,32 @@ video {
   width: 350px;
 }
 
+.w-\[360px\] {
+  width: 360px;
+}
+
 .min-w-\[250px\] {
   min-width: 250px;
 }
 
 .min-w-\[150px\] {
   min-width: 150px;
+}
+
+.min-w-\[200px\] {
+  min-width: 200px;
+}
+
+.min-w-\[240px\] {
+  min-width: 240px;
+}
+
+.min-w-\[235px\] {
+  min-width: 235px;
+}
+
+.min-w-\[230px\] {
+  min-width: 230px;
 }
 
 .max-w-\[340px\] {
@@ -708,6 +736,10 @@ video {
 
 .max-w-\[280px\] {
   max-width: 280px;
+}
+
+.max-w-\[360px\] {
+  max-width: 360px;
 }
 
 .translate-y-3 {
@@ -997,6 +1029,22 @@ video {
   transition-duration: 150ms;
 }
 
+.duration-500 {
+  transition-duration: 500ms;
+}
+
+.duration-300 {
+  transition-duration: 300ms;
+}
+
+.duration-1000 {
+  transition-duration: 1000ms;
+}
+
+.ease-out {
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
 .gradient-bg {
   background: linear-gradient(to top right, hsla(213, 19%, 18%, 40%), hsla(213, 19%, 18%, 70%) 80%);
 }
@@ -1034,6 +1082,66 @@ video {
 .active\:bg-medgray:active {
   --tw-bg-opacity: 1;
   background-color: hsl(216 12% 54% / var(--tw-bg-opacity));
+}
+
+@media (min-width: 640px) {
+  .sm\:w-\[360px\] {
+    width: 360px;
+  }
+
+  .sm\:max-w-\[360px\] {
+    max-width: 360px;
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:w-\[385px\] {
+    width: 385px;
+  }
+
+  .md\:w-\[395px\] {
+    width: 395px;
+  }
+
+  .md\:w-\[400px\] {
+    width: 400px;
+  }
+
+  .md\:w-\[420px\] {
+    width: 420px;
+  }
+
+  .md\:w-\[450px\] {
+    width: 450px;
+  }
+
+  .md\:max-w-\[380px\] {
+    max-width: 380px;
+  }
+
+  .md\:max-w-\[400px\] {
+    max-width: 400px;
+  }
+
+  .md\:max-w-\[490px\] {
+    max-width: 490px;
+  }
+
+  .md\:max-w-\[390px\] {
+    max-width: 390px;
+  }
+
+  .md\:max-w-\[385px\] {
+    max-width: 385px;
+  }
+
+  .md\:max-w-\[450px\] {
+    max-width: 450px;
+  }
+
+  .md\:max-w-\[420px\] {
+    max-width: 420px;
+  }
 }
 
 

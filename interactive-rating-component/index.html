@@ -40,7 +40,7 @@
     <section>
       <h1 class="sr-only"> interactive Rating Component</h1>
         <!-- Card -->
-        <div class="max-w-[340px] min-w-[250px] gradient-bg rounded-xl m-auto m-[1.5rem] p-[1.5rem]">
+        <div class="max-w-[350px] md:max-w-[400px] min-w-[230px] gradient-bg rounded-xl m-[1.5rem] p-[1.5rem]">
 
           <!-- Rating state start -->
           <div id="survey" class="grid gap-7">
@@ -71,7 +71,7 @@
           <!-- Thank you state start -->
           <div id="thank-you" class="grid gap-7 text-[15px] hidden">
 
-            <img id="#thank-you-img" class="mx-auto w-[150px] h-[100px] opacity-0 transition" src="images/illustration-thank-you.svg" alt="An illustrationof a Phone, a slip and a card"/>
+            <img id="thank-you-img" class="mt-3 mx-auto w-[150px] h-[100px] opacity-0 transition-opacity duration-1000" src="images/illustration-thank-you.svg" alt="An illustration of a Phone, a slip and a card"/>
             
             <div class="bg-darkblue p-2 px-4 w-fit rounded-full text-primary mx-auto"> You selected 
               <span id="rating"> </span>
@@ -95,7 +95,7 @@
 
   <!-- Notification -->
   <div class="absolute text-white w-full"> 
-    <div id="notify" class="relative bg-red-600 my-5 p-5 min-w-[150px] max-w-[280px] -translate-y-36 opacity-0 transition mx-auto rounded-md border-l-[.6rem] border-l-red-800">
+    <div id="notify" class="relative bg-red-600 my-5 p-5 min-w-[150px] max-w-[280px] -translate-y-36 opacity-0 transition duration-300 ease-out mx-auto rounded-md border-l-[.6rem] border-l-red-800">
       <div class="text-[1rem] font-bold mb-1">Error</div>
       <p id="notify-msg" class="text-[14px]"> </p> 
       <span id="close-notification" class="absolute top-1 right-3 text-[1.5rem]" onclick="hideNotify()">&times;</span>

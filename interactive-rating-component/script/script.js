@@ -111,6 +111,10 @@ const submit = () => {
     getElem("#survey").classList.add("hidden")
     getElem("#thank-you").classList.remove("hidden")
     getElem("#rating").innerText = state.ratingValue
+    setTimeout(() => {
+      getElem("#thank-you-img").classList.remove("opacity-0")
+      getElem("#thank-you-img").classList.add("opacity-100")
+    }, 0);
   }
 }
 
@@ -122,7 +126,6 @@ const showNotify = (msg) => {
   const notNotified = !state.notified
 
   if(notNotified) {
-  console.log("Show notification")
     getElem("#notify-msg").innerText = msg
     setState({ notified: true })
     getElem("#notify").classList.remove("opacity-0")
@@ -139,14 +142,17 @@ const showNotify = (msg) => {
 
 
 const hideNotify = () => {
-  getElem("#notify").classList.remove("opacity-100")
-  getElem("#notify").classList.remove("tanslate-y-2")
-  getElem("#notify").classList.add("opacity-0")
+  const notified = state.notified
 
-  setTimeout(() => {
-    console.log("Hide notification")
-    getElem("#notify").classList.add("-translate-y-36")
-    setState({ notified: false })
-  }, 100);
+  if(notified) {
+    getElem("#notify").classList.remove("opacity-100")
+    getElem("#notify").classList.remove("tanslate-y-2")
+    getElem("#notify").classList.add("opacity-0")
+
+    setTimeout(() => {
+      getElem("#notify").classList.add("-translate-y-36")
+      setState({ notified: false })
+    }, 300);
+  }
 }
 
