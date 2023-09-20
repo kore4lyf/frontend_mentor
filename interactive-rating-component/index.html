@@ -92,19 +92,15 @@
           <div class="text-lightgray text-center pt-5 text-[14px]">
             Coded by <a class="text-primary" href="https://github.com/kore4lyf" target="_blank">KoRe</a>.
           </div>
-
-          <button id=""> show notification</button> 
     </section>
   </main>
 
 
   <!-- Notification -->
-  <div id="notify-containter" class="absolute text-white w-full"> 
-    <div class="relative bg-red-600 my-5 p-5 max-w-[280px] translate-y-2 mx-auto rounded-md border-l-[.6rem] border-l-red-800">
+  <div class="absolute text-white w-full"> 
+    <div id="notify" class="relative bg-red-600 my-5 p-5 min-w-[150px] max-w-[280px] -translate-y-36 opacity-0 transition mx-auto rounded-md border-l-[.6rem] border-l-red-800">
       <div class="text-[1rem] font-bold mb-1">Error</div>
-      <p class="text-[14px]"> 
-        Kindly, select a rating value from the buttons <b>1</b> to <b>5</b>.
-      </p> 
+      <p id="notify-msg" class="text-[14px]"> </p> 
       <span id="close-notification" class="absolute top-1 right-3 text-[1.5rem]" onclick="closeNotification(event)">&times;</span>
     </div>
   </div>

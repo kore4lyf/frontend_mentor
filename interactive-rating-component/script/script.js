@@ -2,7 +2,8 @@
 // Store 
 let state = {
  activeRating: null,
- rating: null
+ ratingValue: null,
+ notified: false
 }
 
 
@@ -30,18 +31,52 @@ const getElem = selector =>  document.querySelector(selector)
 const setRating = e => {
   const prevActiveRating = state.activeRating
   const newRating = e.target
-  const rating = newRating.innerText
+  const ratingValue = newRating.innerText
+  console.log(ratingValue)
   
   if (state.activeRating) {
     removeActiveState(state.activeRating)
     addActiveState(newRating)
     setState({activeRating: newRating})
-    setState({rating: rating})
+    try {
+      setState({ratingValue: parseInt(ratingValue)})
+    } catch (err) {
+      console.log(err.message)
+    }
   } else {
     addActiveState(newRating)
     setState({activeRating: newRating})
-    setState({rating: rating})
+    try {
+      setState({ratingValue: parseInt(ratingValue)})
+    } catch (err) {
+      console.log(err.message)
+    }
   }
+  console.log(state.ratingValue)
+}
+
+
+
+const ratingValueValidity = () => {
+  const ratingValue = state.ratingValue
+
+  if(!ratingValue) {
+    showNotify("Kindly, select a rating value from the buttons 1 to 5.")
+    return false
+  }
+
+  if(isNaN(ratingValue)) {
+    showNotify("Rating value must be a number")
+    return false
+  }
+
+  if(ratingValue > 5 || ratingValue < 0) {
+    showNotify("Rating value must be between the range of 1 to 5")
+    return false
+  }
+
+  return true
+
 }
 
 
@@ -72,11 +107,45 @@ const addActiveState = elem => {
 
 
 const submit = () => {
-  const rating = state.rating
+  const ratingValueIsValid = ratingValueValidity()
+  console.log(state.ratingValue)
+  console.log(ratingValueIsValid)
 
-  if(rating) {
+  if(ratingValueIsValid) {
     getElem("#survey").classList.add("hidden")
     getElem("#thank-you").classList.remove("hidden")
-    getElem("#rating").innerText = state.rating
+    getElem("#rating").innerText = state.ratingValue
   }
 }
+
+
+
+
+
+const showNotify = (msg) => {
+  getElem("#notify-msg").innerText = msg
+  getElem("#notify").classList.remove("opacity-0")
+  getElem("#notify").classList.add("opacity-100")
+  getElem("#notify").classList.remove("-translate-y-36")
+  getElem("#notify").classList.add("tanslate-y-2")
+  setState({notified: true})
+
+  // Hide notify after 3 secounds
+  setTimeout(() => {
+    hideNotify()
+  }, 3000);
+}
+
+
+const hideNotify = () => {
+  getElem("#notify").classList.remove("opacity-100")
+  getElem("#notify").classList.remove("tanslate-y-2")
+  getElem("#notify").classList.add("opacity-0")
+  setState({notified: false})
+
+
+  setTimeout(() => {
+    getElem("#notify").classList.add("-translate-y-36")
+  }, 100);
+}
+
