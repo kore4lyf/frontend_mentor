@@ -75,7 +75,8 @@ const submit = () => {
   const rating = state.rating
 
   if(rating) {
-    getElem("#rating").classList.add("hidden")
+    getElem("#survey").classList.add("hidden")
     getElem("#thank-you").classList.remove("hidden")
+    getElem("#rating").innerText = state.rating
   }
 }

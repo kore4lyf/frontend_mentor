@@ -13,7 +13,9 @@ module.exports = {
       },
       fontFamily: {
         Overpass: ["Overpass", "sans-serif"],
-      }
+      },
+      keyframes: {
+      },
     },
   plugins: [],
   }
