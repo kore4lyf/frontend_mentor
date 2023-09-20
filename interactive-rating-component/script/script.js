@@ -32,7 +32,6 @@ const setRating = e => {
   const prevActiveRating = state.activeRating
   const newRating = e.target
   const ratingValue = newRating.innerText
-  console.log(ratingValue)
   
   if (state.activeRating) {
     removeActiveState(state.activeRating)
@@ -52,7 +51,6 @@ const setRating = e => {
       console.log(err.message)
     }
   }
-  console.log(state.ratingValue)
 }
 
 
@@ -108,8 +106,6 @@ const addActiveState = elem => {
 
 const submit = () => {
   const ratingValueIsValid = ratingValueValidity()
-  console.log(state.ratingValue)
-  console.log(ratingValueIsValid)
 
   if(ratingValueIsValid) {
     getElem("#survey").classList.add("hidden")
@@ -128,7 +124,6 @@ const showNotify = (msg) => {
   getElem("#notify").classList.add("opacity-100")
   getElem("#notify").classList.remove("-translate-y-36")
   getElem("#notify").classList.add("tanslate-y-2")
-  setState({notified: true})
 
   // Hide notify after 3 secounds
   setTimeout(() => {
@@ -141,8 +136,6 @@ const hideNotify = () => {
   getElem("#notify").classList.remove("opacity-100")
   getElem("#notify").classList.remove("tanslate-y-2")
   getElem("#notify").classList.add("opacity-0")
-  setState({notified: false})
-
 
   setTimeout(() => {
     getElem("#notify").classList.add("-translate-y-36")

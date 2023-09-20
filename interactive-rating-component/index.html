@@ -1,7 +1,4 @@
 <!DOCTYPE html>
-<!-- TODO: -->
-<!-- TODO: Add animation to thankyou  -->
-<!-- TODO: Add notofication to notify users when submit button is clicked with no rating selected-->
 <html lang="en">
   <head>
     <meta charset="UTF-8">
@@ -74,7 +71,7 @@
           <!-- Thank you state start -->
           <div id="thank-you" class="grid gap-7 text-[15px] hidden">
 
-            <img class="mx-auto w-[150px] h-[100px]" src="images/illustration-thank-you.svg" alt="An illustrationof a Phone, a slip and a card"/>
+            <img id="#thank-you-img" class="mx-auto w-[150px] h-[100px] opacity-0 transition" src="images/illustration-thank-you.svg" alt="An illustrationof a Phone, a slip and a card"/>
             
             <div class="bg-darkblue p-2 px-4 w-fit rounded-full text-primary mx-auto"> You selected 
               <span id="rating"> </span>
@@ -101,7 +98,7 @@
     <div id="notify" class="relative bg-red-600 my-5 p-5 min-w-[150px] max-w-[280px] -translate-y-36 opacity-0 transition mx-auto rounded-md border-l-[.6rem] border-l-red-800">
       <div class="text-[1rem] font-bold mb-1">Error</div>
       <p id="notify-msg" class="text-[14px]"> </p> 
-      <span id="close-notification" class="absolute top-1 right-3 text-[1.5rem]" onclick="closeNotification(event)">&times;</span>
+      <span id="close-notification" class="absolute top-1 right-3 text-[1.5rem]" onclick="hideNotify()">&times;</span>
     </div>
   </div>
   
