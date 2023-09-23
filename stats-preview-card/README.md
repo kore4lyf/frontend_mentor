@@ -1,5 +1,4 @@
-# Interactive Rating Component
-
+# Stats preview card
 
 ## Table of contents
 - [Interactive Rating Component](#interactive-rating-component)
@@ -17,22 +16,17 @@
 
 
 
-## Overview
+## overview
 
 ### The challenge
 Your users should be able to:
-
-- View the optimal layout for the app depending on their device's screen size
-- See hover states for all interactive elements on the page
-- Select and submit a number rating
-- See the "Thank you" card state after submitting a rating
+- View the optimal layout depending on their device's screen size
 
 
 
 
-
-### Screenshot
-![Design preview for the Interactive rating component coding challenge](./design/desktop-preview.jpg)
+### Screenshot 
+![Design preview for the Stats preview card component coding challenge](./design/desktop-preview.jpg)
 
 
 
@@ -40,7 +34,7 @@ Your users should be able to:
 
 ### Links
 - Solution URL: [View](./index.html)
-- Live Site URL: [View](https://kore4lyf.github.io/frontend_mentor/interactive-rating-component/)
+- Live Site URL: [View](https://kore4lyf.github.io/frontend_mentor/stats-preview-card/)
 
 
 
@@ -50,8 +44,7 @@ Your users should be able to:
 ### Tech 
 - ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)   
 - ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)  
-- ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) 
-- ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white) 
+- ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white) 
 
 
 
@@ -76,7 +69,6 @@ Your users should be able to:
   <a href="https://www.github.com/kore4lyf"> ![Github](https://img.shields.io/badge/Github%20Profile-131313?style=for-the-badge&logo=github&logoColor=white)
   </a>
 
-
-
   <a href="https://www.linkedin.com/in/kore4lyf">![Linkedin](https://img.shields.io/badge/linkedin%20Profile-%2300acee.svg?color=405DE6&style=for-the-badge&logo=linkedin&logoColor=white)
   </a>
+  
