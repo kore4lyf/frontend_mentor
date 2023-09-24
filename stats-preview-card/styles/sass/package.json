@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch-sass": "sass --watch ./sass/style.scss ../css/style.css -w --style compressed"
+    "watch-sass": "sass --watch ./style.scss ../css/style.css -w --style compressed"
   },
   "keywords": [],
   "author": "",
