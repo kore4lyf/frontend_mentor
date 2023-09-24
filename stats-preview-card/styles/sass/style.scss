@@ -22,11 +22,13 @@ $colors: (
 
 html, 
 body {
+	display: grid;
 	background: map.get($colors, "very-dark-blue"); 
 	font-family: "inter", sans-serif;
 	font-size: 15px;
 	margin: 0;
 	min-height: 100vh;
+	place-content: center;
 }
 
 main {
@@ -78,16 +80,17 @@ img {
 	background: map.get($colors, "dark-desaturated-blue");
 	border-radius: .8rem;
 	margin: 2rem;
+	max-width: 325px;
 	overflow: hidden;
 	text-align: center;
 
-
 	& .card-img {
 		position: relative;
+		height: 50%;
 	}
 
 	& picture::after {
-		aspect-ratio: 1.4/1;
+		aspect-ratio: 540/460;
 		background: map.get($colors, "soft-violet");
 		content: "";
 		inset: 0;
@@ -97,12 +100,12 @@ img {
 	}
 	
 	& img {
-		aspect-ratio: 1.4/1;
+		aspect-ratio: 540/460;
 		object-fit: cover;
 	}
 
 	& .title {
-		padding-top: 0;
+		margin-top: 0px;
 	}
 
 	& .card-details {
@@ -120,17 +123,49 @@ img {
 		flex-direction: column;
 		gap: .5rem;
 	}
+
+	& .stat-desc {
+		font-size: 13px;	
+	}
 }
 
 
 
 
 /* Utility */
+
 .grid-flex {
 	display: grid;
 	gap: 2rem;
+	justify-content: space-between;
 }
 
 
 
+@media screen and (min-width: 930px) {
+	.card {
+		display: flex;
+		flex-direction: row-reverse;
+		max-width: 900px;
+		justify-content: space-between;
+		text-align: left;
+
+		& .card-img {
+			height: 102%;
+		}
+		
+		& .card-img {
+		margin-bottom: -5px;
+		}
+
+		& .card-details {
+			margin: 1rem;
+			max-width: 450px;
+		}
+
+		& .stats {
+			flex-direction: row;
+		}
+	}
+}
 
