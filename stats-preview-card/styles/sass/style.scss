@@ -45,6 +45,7 @@ img {
 /* Typography */
 .stat-num {
 	color: map.get($colors, "white");
+	font-size: 1.5rem;
 	font-weight: 700;
 }
 
@@ -56,6 +57,7 @@ img {
 
 .title {
 	color: map.get($colors, "white");
+	font-size: 1.8rem;
 	font-weight: 700;
 }
 
@@ -77,6 +79,7 @@ img {
 	border-radius: .8rem;
 	margin: 2rem;
 	overflow: hidden;
+	text-align: center;
 
 
 	& .card-img {
@@ -96,6 +99,26 @@ img {
 	& img {
 		aspect-ratio: 1.4/1;
 		object-fit: cover;
+	}
+
+	& .title {
+		padding-top: 0;
+	}
+
+	& .card-details {
+		padding: 2rem;
+	}
+
+	& .stats {
+		display: flex;
+		gap: 2rem;
+		flex-direction: column;
+	}
+
+	& .stat {
+		display: flex;
+		flex-direction: column;
+		gap: .5rem;
 	}
 }
 
