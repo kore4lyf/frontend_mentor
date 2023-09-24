@@ -14,6 +14,7 @@ Below are the [frontendmentor.io](http://www.frontendmentor.io) projects I worke
 - [Order Summary Component](./order-summary-component)
 - [NFT Preview Card Component](./nft-preview-card-component)
 - [Interactive Rating Component](./interactive-rating-component)
+- [Stats Preview Card](./stats-preview-card)
 
 
 ## License 
