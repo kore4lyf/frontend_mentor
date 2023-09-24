@@ -130,6 +130,17 @@ img {
 }
 
 
+.attribution {
+	color: map.get($colors, "trans-white-1");
+	padding-bottom: 2rem;
+	text-align: center;
+}
+
+.attribution a {
+	color: map.get($colors, "soft-violet");
+}
+
+
 
 
 /* Utility */
@@ -151,7 +162,7 @@ img {
 		text-align: left;
 
 		& .card-img {
-			height: 102%;
+			height: 100%;
 		}
 		
 		& .card-img {
