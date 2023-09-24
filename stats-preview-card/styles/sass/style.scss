@@ -22,13 +22,39 @@ $colors: (
 
 html, 
 body {
+	background: map.get($colors, "very-dark-blue"); 
+	font-size: 15px;
 	margin: 0;
 	min-height: 100vh;
-	background: map.get($colors, "very-dark-blue"); 
 }
 
 img {
 	width: 100%;
+}
+
+
+
+
+
+/* Typography */
+.stat-num {
+	color: map.get($colors, "white");
+}
+
+.stat-desc {
+	color: map.get($colors, "trans-white-1");
+}
+
+.title {
+	color: map.get($colors, "white");
+}
+
+.text {
+	color: map.get($colors, "trans-white-1");
+}
+
+.trans-white {
+	color: map.get($colors, "soft-violet");
 }
 
 
