@@ -25,29 +25,39 @@
     <meta name="apple-mobile-web-app-capable" content="yes"/>
     <meta name="apple-mobile-web-app-status-bar-style" content="#000000"/>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="./style/css/style.css">
-    <link rel="stylesheet" href="./fonts/fonts.css">
+    <link rel="stylesheet" href="./styles/css/style.css"/>
+    <link rel="stylesheet" href="./fonts/fonts.css"/>
 
    <title>Stats Preview Card</title>
 </head>
 <body>
-  
-  Get insights that help your business grow.
+  <main>
+    <section class="grid-flex">
+      <picture>
+        <source srcset="./images/image-header-desktop.jpg" media="(min-width: 600px)" />
+        <img src="./images/image-header-mobile.jpg" alt="Women working in a corperate environment." />
+      </picture>
+      <h1 class="title">Get <span class="trans-white">insights that help your business grow. </span></h1>
+      
+      <p class="text-trans"> 
+       Discover the benefits of data analytics and make better decisions regarding revenue, customer experience, and overall efficiency.
+      </p>
 
-  Discover the benefits of data analytics and make better decisions regarding revenue, customer 
-  experience, and overall efficiency.
-
-  10k+ companies
-  314 templates
-  12m+ queries
-
-  <div class="attribution">
-        Coded by <a href="https://github.com/kore4lyf" target="_blank">KoRe</a>.
+      <div class="stats">
+        <span class="stat-num">10k+</span> 
+        <span class="stat-desc">companies</span>
+        <span class="stat-num">314</span> 
+        <span class="stat-desc">templates</span>
+        <span class="stat-num">12m+</span> 
+        <span class="stat-desc">queries</span>
       </div>
-  </div>
+    </section>
+
+    <div class="attribution">
+      Coded by <a href="https://github.com/kore4lyf" target="_blank">KoRe</a>.
+    </div>
+    
+  </main>
 </body>
 </html>
