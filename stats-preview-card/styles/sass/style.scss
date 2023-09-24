@@ -84,17 +84,18 @@ img {
 	}
 
 	& picture::after {
+		aspect-ratio: 1.4/1;
 		background: map.get($colors, "soft-violet");
-		content: "hey";
+		content: "";
 		inset: 0;
-		height: 240px;
 		mix-blend-mode: multiply;
 		position: absolute;
 		z-index: 2;
 	}
 	
 	& img {
-		height: 240px;
+		aspect-ratio: 1.4/1;
+		object-fit: cover;
 	}
 }
 
