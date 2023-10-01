@@ -42,7 +42,25 @@ body {
 
 
 /* Components */ 
+.cards {
+	margin: 1.5rem;
+}
+
 .card {
+	background: teal;
+	padding: 3rem;
+	border: 1px solid red;
+
+	&:first-of-type {
+		border-top-right-radius: .6rem;
+		border-top-left-radius: .6rem;
+	}
+	
+	&:last-of-type {
+		border-bottom-right-radius: .6rem;
+		border-bottom-left-radius: .6rem;
+	}
+
 	& .title {
 		font-family: "Big Shoulders";
 	}
@@ -60,7 +78,8 @@ body {
 
 /* Utility */
 .grid-flex {
- display: grid;	
+ display: grid;
+ gap: 1rem;
 }
 
 .sr-only {
