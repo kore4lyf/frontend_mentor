@@ -92,6 +92,7 @@ body {
 	& article {
 		color: map.get($colors, "trans-white");
 		line-height: 1.5rem;
+		max-width: 240px;
 	}
 
 
@@ -100,8 +101,14 @@ body {
 			background: $color;	
 
 			.btn-white {
+				border: 2px solid map.get($colors, "very-light-gray");
 				background: map.get($colors, "very-light-gray");
 				color: $color;
+
+				&:hover {
+					background: $color;
+					color: map.get($colors, "very-light-gray");
+				}
 			}
 
 			& .icon::after {
@@ -115,7 +122,6 @@ body {
 }
 
 .btn {
-	border: 1px solid white;
 	border-radius: 3rem;
 	font-family: inherit;
 	font-weight: bold;
@@ -154,3 +160,17 @@ body {
 
 
 
+
+/* Media Queries */ 
+@media screen and (min-width: 600px) {
+	.cards {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.card {
+		& article {
+		 width: 200px;
+		}
+	}
+}
