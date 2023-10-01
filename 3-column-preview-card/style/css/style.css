@@ -1,17 +1,1 @@
-/* Error: expected selector.
- *    ,
- * 86 |     each $key, $ico
- *    |          ^
- *    '
- *   style.scss 86:7  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: expected selector.\a    \2577 \a 86 \2502      each $key, $ico\a    \2502           ^\a    \2575 \a   style.scss 86:7  root stylesheet";
-}
+*,*::after,*::before{box-sizing:border-box}body{margin:0;min-height:100vh}body{background:#f2f2f2;font-family:"Lexend Deca";font-size:15px;display:grid;place-content:center}.icon{aspect-ratio:1/1;border-radius:100%;width:40px}.cards{margin:1.5rem;min-width:250px}.card{padding:3rem}.card:first-of-type{border-top-right-radius:.6rem;border-top-left-radius:.6rem}.card:last-of-type{border-bottom-right-radius:.6rem;border-bottom-left-radius:.6rem}.card .title{color:#f2f2f2;font-family:"Big Shoulders";font-size:2.25rem;margin-block:.5rem;text-transform:uppercase}.card article{color:rgba(255,255,255,.75);line-height:1.5rem}.card[data-card-type=sedans]{background:#e38826}.card[data-card-type=sedans] .btn-white{background:#f2f2f2;color:#e38826}.card[data-card-type=sedans] .icon::after{content:url("../../images/icon-sedans.svg");height:100px;width:100px}.card[data-card-type=suvs]{background:#006970}.card[data-card-type=suvs] .btn-white{background:#f2f2f2;color:#006970}.card[data-card-type=suvs] .icon::after{content:url("../../images/icon-suvs.svg");height:100px;width:100px}.card[data-card-type=luxury]{background:#004241}.card[data-card-type=luxury] .btn-white{background:#f2f2f2;color:#004241}.card[data-card-type=luxury] .icon::after{content:url("../../images/icon-luxury.svg");height:100px;width:100px}.btn{border:1px solid #fff;border-radius:3rem;font-family:inherit;font-weight:bold;padding-block:.8rem;padding-inline:1.5rem;width:fit-content}.attribution{padding-bottom:1rem;text-align:center}.grid-flex{display:grid;gap:1.5rem}.sr-only{height:1px;clip:rect(1px, 1px, 1px, 1px);clip-path:inset(50%);-webkit-clip-path:inset(50%);padding:0px;position:absolute;white-space:nowrap;width:1px}
