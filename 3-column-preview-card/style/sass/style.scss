@@ -65,20 +65,17 @@ body {
 
 .cards {
 	margin: 1.5rem;
-	min-width: 250px;
 }
 
 .card {
 	padding: 3rem;
 
 	&:first-of-type {
-		border-top-right-radius: .6rem;
-		border-top-left-radius: .6rem;
+		border-radius: .6rem .6rem 0 0;
 	}
 	
 	&:last-of-type {
-		border-bottom-right-radius: .6rem;
-		border-bottom-left-radius: .6rem;
+		border-radius: 0 0 .6rem .6rem;
 	}
 
 	& .title {
@@ -92,7 +89,7 @@ body {
 	& article {
 		color: map.get($colors, "trans-white");
 		line-height: 1.5rem;
-		max-width: 240px;
+		max-width: 320px;
 	}
 
 
@@ -162,15 +159,25 @@ body {
 
 
 /* Media Queries */ 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 900px) {
 	.cards {
 		display: flex;
-		flex-wrap: wrap;
+		flex-wrap: nowrap;
+
 	}
 
 	.card {
 		& article {
 		 width: 200px;
+		}
+
+
+		&:first-of-type {
+			border-radius: .6rem 0 0 .6rem;
+		}
+		
+		&:last-of-type {
+			border-radius: 0 .6rem .6rem 0;
 		}
 	}
 }
