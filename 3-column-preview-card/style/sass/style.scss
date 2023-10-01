@@ -1,11 +1,19 @@
 @use "sass:map";
 
-$section-colors: (
-	"sedans": hsl(31, 77%, 52%),
+/* Variables */
+$colors: (
+	"bright-orange": hsl(31, 77%, 52%),
 	"dark-cyan": hsl(184, 100%, 22%),
 	"very-dark-cyan": hsl(179, 100%, 13%),
-	"trans-white (paragraphs): hsla(0, 0%, 100%, 0.75)
-$very-light-gray: hsl(0, 0%, 95%);
+	"trans-white": hsla(0, 0%, 100%, 0.75),
+	"very-light-gray": hsl(0, 0%, 95%)
+);
+
+$cards-bg: (
+	"sedans": map.get($colors, "bright-orange"),
+	"suvs": map.get($colors, "dark-cyan"),
+	"luxury": map.get($colors, "very-dark-cyan")
+);
 
 /* Global */
 *,
@@ -15,24 +23,56 @@ $very-light-gray: hsl(0, 0%, 95%);
 }
 
 body {
-	font-size: 15px;
+	margin: 0;
 	min-height: 100vh;
 } 
 
 
 
+
+
 /* Typography */ 
+body {
+	font-family: "Lexend Deca";
+	font-size: 15px;
+}
+
 
 
 
 
 /* Components */ 
+.card {
+	& .title {
+		font-family: "Big Shoulders";
+	}
+
+}
+
+.attribution {
+	padding-block: 1rem;
+	text-align: center;
+}
+
 
 
 
 
 /* Utility */
+.grid-flex {
+ display: grid;	
+}
 
+.sr-only {
+	height: 1px;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	-webkit-clip-path: inset(50%);
+	padding: 0px;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
 
 
 

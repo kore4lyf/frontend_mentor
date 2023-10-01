@@ -1,17 +1,1 @@
-/* Error: Expected ".
- *   ,
- * 7 |     "trans-white (paragraphs): hsla(0, 0%, 100%, 0.75)
- *   |                                                       ^
- *   '
- *   style.scss 7:52  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: 'Error: Expected ".\a   \2577 \a 7 \2502      "trans-white (paragraphs): hsla(0, 0%, 100%, 0.75)\a   \2502                                                        ^\a   \2575 \a   style.scss 7:52  root stylesheet';
-}
+*,*::after,*::before{box-sizing:border-box}body{margin:0;min-height:100vh}body{font-family:"Lexend Deca";font-size:15px}.card .title{font-family:"Big Shoulders"}.attribution{padding-block:1rem;text-align:center}.grid-flex{display:grid}.sr-only{height:1px;clip:rect(1px, 1px, 1px, 1px);clip-path:inset(50%);-webkit-clip-path:inset(50%);padding:0px;position:absolute;white-space:nowrap;width:1px}
