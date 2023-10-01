@@ -35,6 +35,8 @@ body {
 body {
 	font-family: "Lexend Deca";
 	font-size: 15px;
+	display: grid;
+	place-content: center;
 }
 
 
@@ -44,12 +46,12 @@ body {
 /* Components */ 
 .cards {
 	margin: 1.5rem;
+	min-width: 250px;
 }
 
 .card {
 	background: teal;
 	padding: 3rem;
-	border: 1px solid red;
 
 	&:first-of-type {
 		border-top-right-radius: .6rem;
@@ -62,13 +64,23 @@ body {
 	}
 
 	& .title {
+		color: white;
 		font-family: "Big Shoulders";
+		font-size: 2.25rem;
+		font-weight: bold;
+		margin-block: 1rem;
+		text-transform: uppercase;
+	}
+
+	& article {
+		color: map.get($colors, "trans-white");
+		line-height: 1.5rem;
 	}
 
 }
 
 .attribution {
-	padding-block: 1rem;
+	padding-bottom: 1rem;
 	text-align: center;
 }
 
