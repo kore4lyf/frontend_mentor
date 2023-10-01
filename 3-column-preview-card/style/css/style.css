@@ -1,1 +1,17 @@
-*,*::after,*::before{box-sizing:border-box}body{margin:0;min-height:100vh}body{font-family:"Lexend Deca";font-size:15px;display:grid;place-content:center}.cards{margin:1.5rem;min-width:250px}.card{padding:3rem}.card:first-of-type{border-top-right-radius:.6rem;border-top-left-radius:.6rem}.card:last-of-type{border-bottom-right-radius:.6rem;border-bottom-left-radius:.6rem}.card .title{color:#fff;font-family:"Big Shoulders";font-size:2.25rem;font-weight:bold;margin-block:1rem;text-transform:uppercase}.card article{color:rgba(255,255,255,.75);line-height:1.5rem}.card[data-card-type=sedans]{background:#e38826}.card[data-card-type=suvs]{background:#006970}.card[data-card-type=luxury]{background:#004241}.attribution{padding-bottom:1rem;text-align:center}.grid-flex{display:grid;gap:1rem}.sr-only{height:1px;clip:rect(1px, 1px, 1px, 1px);clip-path:inset(50%);-webkit-clip-path:inset(50%);padding:0px;position:absolute;white-space:nowrap;width:1px}
+/* Error: expected selector.
+ *    ,
+ * 86 |     each $key, $ico
+ *    |          ^
+ *    '
+ *   style.scss 86:7  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: expected selector.\a    \2577 \a 86 \2502      each $key, $ico\a    \2502           ^\a    \2575 \a   style.scss 86:7  root stylesheet";
+}
