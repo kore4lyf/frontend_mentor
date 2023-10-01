@@ -1,1 +1,38 @@
-$black: #000000;	
+@use "sass:map";
+
+$section-colors: (
+	"sedans": hsl(31, 77%, 52%),
+	"dark-cyan": hsl(184, 100%, 22%),
+	"very-dark-cyan": hsl(179, 100%, 13%),
+	"trans-white (paragraphs): hsla(0, 0%, 100%, 0.75)
+$very-light-gray: hsl(0, 0%, 95%);
+
+/* Global */
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+body {
+	font-size: 15px;
+	min-height: 100vh;
+} 
+
+
+
+/* Typography */ 
+
+
+
+
+/* Components */ 
+
+
+
+
+/* Utility */
+
+
+
+

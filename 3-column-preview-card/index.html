@@ -24,22 +24,32 @@
       <!-- iOS Safari-->
     <meta name="apple-mobile-web-app-capable" content="yes"/>
     <meta name="apple-mobile-web-app-status-bar-style" content="#000000"/>
+    <link rel="stylesheet" href="./style/css/style.css"/>
 
     <title>3-column Preview Card</title>
 </head>
 <body>
-  <main>
-  Sedans
-  Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city 
-  or on your next road trip.
+  <main class="grid-flex">
+    <h1 class="">3-column Preview Card</h1>
+    <section data-card-type="sedans">
+      <h2 class="title">Sedans</h2>
+      <article> Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city or on your next road trip.
+      </article>
+    </section>
 
-  SUVs
-  Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation 
-  and off-road adventures.
+    <section data-card-type="suv">
+      <h2> SUVs </h2>
+      <article> 
+        Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation and off-road adventures.
+      </article>
+    </section>
 
-  Luxury
-  Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury 
-  rental and arrive in style.
+    <section data-card-type="luxury">
+      <h2 class="title">Luxury</h2>
+      <article>
+        Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury rental and arrive in style.
+      </article>
+    </section>
   </main>  
   <div class="attribution">
     Coded by <a href="https://github.com/kore4lyf" target="_blank">KoRe</a>.
