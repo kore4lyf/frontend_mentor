@@ -4,7 +4,7 @@
   "description": "Watches for any change is style.scss file and transpiles the style.scss file to ../css/style.css",
   "main": "index.js",
   "scripts": {
-    "watch-sass": "sass ./style.scss ../css/style.css -w --style=compressed --no-source-map"
+    "watch-sass": "sass ./style.scss ../static/style/css/style.css -w --style=compressed --no-source-map"
   },
   "keywords": [],
   "author": "",
