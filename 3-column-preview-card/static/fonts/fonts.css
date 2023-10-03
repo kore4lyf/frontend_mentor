@@ -2,7 +2,7 @@
 	font-family: "Lexend Deca";
 	font-display: swap;
 	font-weight: 400;
-	src: url("./LexendDeca-VariableFont_wght.ttf");
+	src: url('./LexendDeca-VariableFont_wght.ttf');
 }
 
 
@@ -10,5 +10,5 @@
 	font-family: "Big Shoulders";
 	font-display: swap;
 	font-weight: 700;
-	src: url("./BigShouldersDisplay-VariableFont_wght.ttf");
+	src: url('./BigShouldersDisplay-VariableFont_wght.ttf');
 }
