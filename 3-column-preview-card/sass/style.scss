@@ -44,7 +44,7 @@ body {
 /* Typography */ 
 body {
 	background: map.get($colors, "very-light-gray");
-	font-family: "Lexend Deca";
+	font-family: "Lexend Deca", sans-serif;
 	font-size: 15px;
 	display: grid;
 	place-content: center;
@@ -80,7 +80,7 @@ body {
 
 	& .title {
 		color: map.get($colors, "very-light-gray");
-		font-family: "Big Shoulders";
+		font-family: "Big Shoulders", sans-serif;
 		font-size: 2.25rem;
 		margin-block: .5rem;
 		text-transform: uppercase;
