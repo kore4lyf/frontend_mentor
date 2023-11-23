@@ -1,21 +1,109 @@
 /* -- Custom Properties -- */ 
+::root {
+
+/* colors */ 
+
+  /* Shades of Grey */
+--clr-grey-50: #656266;
+--clr-grey-100: #616161;
+--clr-grey-200: #322F33;
+--clr-grey-300: #1C181D;
+
+  /* Font Color */
+--clr-light: #E3E3E3;
+--clr-mid: #616161;
+--clr-dark: #475467;
+
+  /* Strokes */
+--clr-s50: #EBEBEB;
+--clr-s100: #000000/7%;
+--clr-s200: #FFFFFF/20;
+
+  /* State */
+--clr-hover: #F7F7F7;
+--clr-pressed: #F0F0F0;
+--clr-focus: #005BD3;
+
+  /* Plain */
+--clr-bg-white: #FFFFFF;
+--clr-bg-grey: #F1F1F1;
+}
+
+
 
 
 
 /* -- Global -- */ 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeSpeed;
+}
+
+input, 
+button, 
+textarea, 
+select {
+  font: inherit;
+}
+
 
 
 
 
 /* -- Typography -- */ 
+.body {
+  font-family: Inter, sans-serif;
+}
+.text-12,
+.text-13,
+.text-14 {
+  letter-spacing: 0%;
+  line-height: 130%;
+}
+
+.text-13,
+.text-14 {
+  line-height: 140%;
+}
+
+.text-12 {
+  font-size: 12px
+}
+
+.text-13 {
+  font-size: 13px
+}
+
+.text-14 {
+  font-size: 14px
+}
+
+
+
+
+
+/* -- Block -- */
+header {
+  background: black;
+}
+
 
 
 
 
 /* -- Components -- */ 
-header {
-  background: black;
-}
+
+
+
 
 
 
