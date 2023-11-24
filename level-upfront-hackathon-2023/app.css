@@ -43,6 +43,10 @@
 --clr-bg-white: #FFFFFF;
 --clr-bg-grey: #F1F1F1;
 
+  /* Other Color */ 
+--clr-green: #36FBA1;
+--clr-dark-green: #209761;
+
 
   /* Border Radius */ 
 --bdr-sm: .25rem;
@@ -146,6 +150,10 @@ header {
   padding-inline: 1.5rem;
 }
 
+.store {
+
+}
+
 
 
 
@@ -159,6 +167,7 @@ header {
   border-radius: var(--bdr-md);
   color: var(--clr-light);
   padding: var(--p-1);
+  text-decoration: none;
 
   & svg {
     transform: scale(1.2);
@@ -171,8 +180,8 @@ header {
   width: 34px;
 }
 
-/* notify */
-.notify {
+/* notification */
+.notification {
   background: transparent;
 }
 
@@ -182,7 +191,7 @@ header {
   background: var(--clr-grey-200);
   border: 1px solid var(--clr-s200);
   border-radius: var(--bdr-md);
-  padding-block: .2rem;
+  padding-block: var(--p-1);
 
   .search-icon {
     height: 14px;
@@ -207,15 +216,40 @@ header {
       color: var(--clr-light);
     }
 
-    :is(
+    &:is(
       :hover, 
       :active, 
       :focus ) {
-      outline: 1px solid red;
+      outline: 0;
     }
   }
-
 }
+
+/* store-btn */ 
+.store-btn {
+  background: var(--clr-grey-200);
+  border-radius: var(--bdr-md);
+  color: var(--clr-light);
+  padding: 2px;
+  text-decoration: none;
+
+  & .store-full-name {
+    display: none;
+    padding-inline: var(--p-1);
+    text-wrap: nowrap;
+    text-transform: capitalize;
+  }
+
+  & .store-init-name {
+    background: var(--clr-green);
+    border-radius: calc(var(--bdr-md) * .8);
+    color: var(--clr-dark-green); 
+    display: block;
+    padding: var(--p-1);
+    text-transform: uppercase;
+  }
+}
+
 
 
 
@@ -268,7 +302,14 @@ header {
     width: 102px;
   }
 
-  .notify {
+  .notification {
     background: var(--clr-grey-200);
+  }
+
+  .store-btn {
+
+    & .store-full-name {
+      display: block;
+    }
   }
 }
