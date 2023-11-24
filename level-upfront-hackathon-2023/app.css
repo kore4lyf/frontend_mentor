@@ -67,7 +67,9 @@
 
 
 /* -- Global -- */ 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -94,9 +96,9 @@ picture {
 
 
 /* -- Typography -- */ 
-.body {
+body {
   background: var(--clr-bg-grey);
-  font-family: Inter, sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 .text-12,
@@ -147,11 +149,7 @@ select {
 header {
   background: var(--clr-grey-300);
   padding-block: 1rem;
-  padding-inline: 1.5rem;
-}
-
-.store {
-
+  padding-inline: 1rem;
 }
 
 
@@ -163,7 +161,7 @@ header {
 /* button */ 
 .btn {
   background: var(--clr-grey-200);
-  border: 0;
+  border: none;
   border-radius: var(--bdr-md);
   color: var(--clr-light);
   padding: var(--p-1);
@@ -183,6 +181,7 @@ header {
 /* notification */
 .notification {
   background: transparent;
+  width: 38px;
 }
 
 
@@ -192,6 +191,7 @@ header {
   border: 1px solid var(--clr-s200);
   border-radius: var(--bdr-md);
   padding-block: var(--p-1);
+  width: 100%;
 
   .search-icon {
     height: 14px;
@@ -207,10 +207,10 @@ header {
 
   .search-box {
     background: transparent;
-    border: 0;
+    border: none;
     color: var(--clr-light);
-    max-width: 480px;
-    outline: 0;
+    width: 100%;
+    outline: none;
 
     &::placeholder {
       color: var(--clr-light);
@@ -220,7 +220,7 @@ header {
       :hover, 
       :active, 
       :focus ) {
-      outline: 0;
+      outline: none;
     }
   }
 }
@@ -228,10 +228,11 @@ header {
 /* store-btn */ 
 .store-btn {
   background: var(--clr-grey-200);
+  border: none;
   border-radius: var(--bdr-md);
   color: var(--clr-light);
-  padding: 2px;
   text-decoration: none;
+  padding: 0px;
 
   & .store-full-name {
     display: none;
@@ -306,7 +307,12 @@ header {
     background: var(--clr-grey-200);
   }
 
+  .search {
+    width: 480px;
+  }
+
   .store-btn {
+    padding: 2px;
 
     & .store-full-name {
       display: block;
