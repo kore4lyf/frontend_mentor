@@ -12,17 +12,22 @@
 
   </head>
   <body>
-    <header> 
+    <header class="flex-flow space-btw align-center"> 
+
       <!-- Shopify Logo -->
       <a href="http://shopify.com">
         <picture>
-        <source srcset="./assets/shopify-icon-desktop.svg" media="(min-width: 800px)">
-	  <img src="./assets/shopify-icon.svg" alt="Shopify logo" height=""/>
+          <source srcset="./assets/shopify-icon-desktop.svg" media="(min-width: 800px)">
+	  <img class="logo" src="./assets/shopify-icon.svg" alt="Shopify logo"/>
 	</picture>
       <a/>
 
       <!-- Search Box -->
-      <div class="search">
+      <div class="search flex-flow align-center">
+        <button class="search-btn"> 
+          <img src="./assets/icon-search.svg" alt="Search button" />
+        </button>
+        <input class="search-box" type="text" placeholder="Search"/>
       </div>
 
       <!-- Navigation --> 
