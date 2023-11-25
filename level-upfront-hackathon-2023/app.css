@@ -46,6 +46,7 @@
   /* Other Color */ 
 --clr-green: #36FBA1;
 --clr-dark-green: #209761;
+--clr-search: #B5B5B5;
 
 
   /* Border Radius */ 
@@ -95,7 +96,13 @@ picture {
 
 
 
-/* -- Typography -- */ 
+/* -- Typography -- */
+@font-face {
+  font-family: "Inter";
+  src: url("./font/Inter-var.ttf");
+  display: swap;
+}
+
 body {
   background: var(--clr-bg-grey);
   font-family: "Inter", sans-serif;
@@ -148,8 +155,7 @@ select {
 /* -- Blocks -- */
 header {
   background: var(--clr-grey-300);
-  padding-block: 1rem;
-  padding-inline: 1rem;
+  padding: var(--p-3);
 }
 
 
@@ -158,7 +164,7 @@ header {
 
 /* -- Components -- */ 
 
-/* button */ 
+  /* button */ 
 .btn {
   background: var(--clr-grey-200);
   border: none;
@@ -172,18 +178,42 @@ header {
   }
 }
 
-/* logo */
+  /* logo */
 .logo {
   height: 34px;
   width: 34px;
 }
 
-/* notification */
+  /* notification */
 .notification {
   background: transparent;
   width: 38px;
 }
 
+
+  /* Plan Notifier */ 
+.plan-notifier {
+  background: var(--clr-grey-300);
+  color: var(--clr-light);
+  padding: var(--p-3);
+  position: relative;
+
+  .close-plan-notifier {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.4rem;
+    padding: 0px;
+    margin-bottom: var(--p-3);
+
+    &:is(
+      :hover,
+      :active,
+      :focus) {
+      color: red;
+    }
+  }
+}
 
   /* Search */
 .search{
@@ -197,23 +227,23 @@ header {
     height: 14px;
     margin-left: .8rem;
     margin-right: .6rem;
-    transform: scale(1.2);
+    transform: scale(1.4);
     width: 13px;
 
     & path {
-      fill: var(--clr-light);
+      fill: var(--clr-search);
     }
   }
 
   .search-box {
     background: transparent;
     border: none;
-    color: var(--clr-light);
-    width: 100%;
+    color: var(--clr-search);
     outline: none;
+    width: 100%;
 
     &::placeholder {
-      color: var(--clr-light);
+      color: var(--clr-search);
     }
 
     &:is(
@@ -284,6 +314,14 @@ header {
   display: grid;
   /*gap: ;*/
   justify-content: start;
+}
+
+.mb-2rem {
+  margin-bottom: 2rem;
+}
+
+.mt-2rem {
+  margin-bottom: 2rem;
 }
 
 .space-btw {
