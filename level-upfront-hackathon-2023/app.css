@@ -132,6 +132,9 @@ body {
 .text-14 {
   font-size: 14px
 }
+.fw-regular {
+  font-weight: 400;
+}
 
 .fw-medium {
   font-weight: 500;
@@ -163,17 +166,6 @@ header {
 
 
 /* -- Components -- */ 
-.m-1rem {
-  margin: 1rem;
-}
-.b-1 {
-  border: 1px solid red;
-}
-
-.bg-white {
-  position: relative;
-}
-
 
   /* button */ 
 .btn {
@@ -349,15 +341,21 @@ header {
   .close-plan-notifier {
     background: transparent;
     border: none;
-    color: white;
-    font-size: var(--size-4);
     padding: 0px;
+    margin-top: .4rem;
 
     &:is(
       :hover,
       :active,
-      :focus) {
-      color: red;
+      :focus) svg path{
+      fill: red;
+    }
+    
+    & svg {
+
+      & path {
+        fill: white;
+      }
     }
   }
 }
@@ -425,7 +423,7 @@ header {
 div:has(
   .search-box:is(
     :active, 
-    :focus)) {
+    :focus )) {
     border-color: var(--clr-s50);
     border-width: 2px;
 }
@@ -542,7 +540,7 @@ div:has(
   }
     
     .close-plan-notifier {
-      margin-bottom: 0px;
+      margin-top: 0px;
     }
   }
 
