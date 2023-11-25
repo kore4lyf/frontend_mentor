@@ -235,8 +235,9 @@ header {
     }
 
     &:active {
+      background: var(--clr-pressed);
       border-color: transparent;
-      box-shadow: inset 0px 1px 3px var(--clr-s100);
+      box-shadow: inset 0px 2px 2px var(--clr-s100);
     }
 
     &:focus {
@@ -252,6 +253,36 @@ header {
     box-shadow: 0px 2px black;
     position: relative;
 
+    &:active {
+      border-color: transparent;
+      box-shadow: 0px 0px black;
+      outline: none;
+    }
+    
+    &:active::after{
+      border-top: 2px solid black;
+    }
+
+    &:focus::before {
+      outline: 2px solid var(--clr-focus);
+      outline-offset: 2px;
+    }
+
+    &:hover {
+      background: var(--clr-grey-200);
+    }
+
+    &::after {
+      content: "";
+      border: none;
+      border-radius: inherit;
+      inset: 0;
+      padding: inherit;
+      margin-inline: -2px;
+      position: absolute;
+      transform: scaleY(1.12);
+    }
+
     &::before {
       background: var(--clr-grey-200);
       content: "";
@@ -262,39 +293,6 @@ header {
       position: absolute;
       transform: scaleY(1.21);
       z-index: -2;
-    }
-
-    &::after {
-      content: "";
-      border: none;
-      border-top: 2px solid black;
-      border-radius: inherit;
-      display: none;
-      inset: 0;
-      padding: inherit;
-      margin-inline: -2px;
-      position: absolute;
-      transform: scaleY(1.12);
-
-    }
-
-    &:hover {
-      background: var(--clr-grey-200);
-    }
-
-    &:active {
-      border-color: transparent;
-      box-shadow: 0px 0px black;
-      outline: none;
-    }
-    
-    &:active::after{
-      display: block;
-    }
-
-    &:focus {
-      outline: 2px solid var(--clr-focus);
-      outline-offset: 4px;
     }
   }
 
@@ -329,7 +327,7 @@ header {
   /* notification */
 .notification {
   background: transparent;
-  width: 38px;
+  width: 36px;
 }
 
 
@@ -435,6 +433,7 @@ div:has(
 
 /* store-btn */ 
 .store-btn {
+  border-radius: calc(var(--bdr-md) * .8);
   padding: 0px;
   font-weight: 400;
 
@@ -556,6 +555,7 @@ div:has(
   }
 
   .store-btn {
+    border-radius: var(--bdr-md);
     padding: 2px;
 
     & .store-full-name {
