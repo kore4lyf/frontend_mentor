@@ -214,16 +214,15 @@ header {
   background: var(--clr-grey-300);
   color: var(--clr-light);
   margin-inline: auto;
-  max-width: 800px;
   padding: var(--size-3);
   position: relative;
-  width: 100%;
 
   & button {
     width: fit-content;
   }
 
   & div {
+    align-items: flex-start;
     position: relative;
   }
 
@@ -320,6 +319,11 @@ header {
   align-items: center;
 } 
 
+.auto-width {
+  max-width: 800px;
+  width: 100%;
+}
+
 .flex-dir-row,
 .flex-dir-row-to-col{
   flex-direction: row;
@@ -387,6 +391,7 @@ header {
 
   .plan-notifier {
     border-radius: var(--bdr-md);
+
 
   & div {
     align-items: center;
