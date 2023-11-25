@@ -337,7 +337,7 @@ header {
 .plan-notifier {
   background: var(--clr-grey-300);
   color: var(--clr-light);
-  margin-inline: auto;
+  margin-inline: 1rem;
   padding: var(--size-3);
 
   & button {
@@ -367,10 +367,27 @@ header {
   /* Search */
 .search{
   background: var(--clr-grey-200);
-  border: 1px solid var(--clr-s200);
+  border: 2px solid transparent;
   border-radius: var(--bdr-md);
   padding-block: var(--size-1);
+  position: relative;
   width: 100%;
+
+  &::after {
+    background: transparent;
+    border: 1px solid var(--clr-s200);
+    content: "";
+    border-radius: inherit;
+    inset: 0;
+    margin-inline: -2px;
+    padding: inherit;
+    position: absolute;
+    transform: scaleY(1.12);
+  }
+
+  &:hover::after {
+    border-color: var(--clr-s100);
+  }
 
   .search-icon {
     height: 14px;
@@ -401,11 +418,24 @@ header {
       :focus ) {
       outline: none;
     }
+
   }
 }
 
+
+/* Style .search-box container(.search) when active and on focus */ 
+div:has(
+  .search-box:is(
+    :active, 
+    :focus)) {
+    border-color: var(--clr-s50);
+    border-width: 2px;
+}
+
+
 /* store-btn */ 
 .store-btn {
+  padding: 0px;
   font-weight: 400;
 
   & .store-full-name {
