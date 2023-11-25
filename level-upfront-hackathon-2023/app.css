@@ -302,17 +302,17 @@ header {
   &.tag {
     
     &:hover {
-      background: var(--clr-hover);
+      background: var(--clr-grey-100);
     }
     
     &:active {
-      background: var(--clr-focus);
+      background: var(--clr-grey-50);
     }
 
     &:focus {
-      background: var(--clr-hover);
-      outline: 1px solid var(--clr-focus);
-      outline-offset: 2px;
+      background: var(--clr-grey-50);
+      outline: 2px solid var(--clr-focus);
+      outline-offset: 1px;
     }
   }
 
