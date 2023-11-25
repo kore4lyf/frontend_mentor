@@ -105,6 +105,7 @@ picture {
 
 body {
   background: var(--clr-bg-grey);
+  color: var(--clr-dark);
   font-family: "Inter", sans-serif;
 }
 
@@ -169,6 +170,11 @@ header {
 .b-1 {
   border: 1px solid red;
 }
+.bg-white {
+  background: white;
+}
+
+
   /* button */ 
 .btn {
   background: var(--clr-grey-200);
@@ -183,11 +189,60 @@ header {
   }
 
   &.btn-neutral {
+    color: var(--clr-dark);
     background: transparent;
+
+    &:hover {
+      background: var(--clr-hover);
+    }
+
+    &:active {
+      background: var(--clr-pressed);
+    }
+
+    &:focus {
+      color: var(--clr-dark);
+      outline: 2px solid var(--clr-focus);
+      outline-offset: 2px;
+    }
+  }
+
+  &.btn-neutral-hover {
+    color: var(--clr-dark);
+    background: var(--clr-hover);
+  }
+
+  &.btn-neutral-active {
+    color: var(--clr-dark);
+    background: var(--clr-pressed);
+  }
+
+  &.btn-neutral-focus {
+    background: transparent;
+    color: var(--clr-dark);
+    outline: 2px solid var(--clr-focus);
+    outline-offset: 2px;
   }
 
   &.btn-white {
 
+  }
+
+  &.btn-white-hover {
+    color: var(--clr-dark);
+    background: var(--clr-hover);
+  }
+
+  &.btn-white-active {
+    color: var(--clr-dark);
+    background: var(--clr-pressed);
+  }
+
+  &.btn-white-focus {
+    background: transparent;
+    color: var(--clr-dark);
+    outline: 2px solid var(--clr-focus);
+    outline-offset: 2px;
   }
 
   &.btn-black {
@@ -215,7 +270,6 @@ header {
   color: var(--clr-light);
   margin-inline: auto;
   padding: var(--size-3);
-  position: relative;
 
   & button {
     width: fit-content;
@@ -223,7 +277,6 @@ header {
 
   & div {
     align-items: flex-start;
-    position: relative;
   }
 
   .close-plan-notifier {
@@ -232,8 +285,6 @@ header {
     color: white;
     font-size: var(--size-4);
     padding: 0px;
-    padding-top: 0px;
-    margin-bottom: var(--size-3);
 
     &:is(
       :hover,
