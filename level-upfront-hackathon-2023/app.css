@@ -212,18 +212,30 @@ header {
   &.btn-white {
     color: var(--clr-dark);
     background: white;
-    border: 1px solid var(--clr-s100);
-    border-bottom: 0px; 
     box-shadow: 0px 1px var(--clr-s200);
+    position: relative;
+
+    &::before {
+      background: transparent;
+      border: 1px solid var(--clr-s100);
+      border-bottom: 0px; 
+      content: "";
+      border-radius: inherit;
+      inset: 0;
+      padding: inherit;
+      position: absolute;
+    }
 
     &:hover {
       background: var(--clr-hover);
     }
 
+    &:active::before {
+      border: none;
+    }
+
     &:active {
-      border: 0px solid transparent !important;
-      padding-inline: calc(var(--size-1) + 1px); 
-      padding-block: calc(var(--size-1) + .5px);
+      border-color: transparent;
       box-shadow: inset 0px 1px 3px var(--clr-s100);
     }
 
@@ -283,6 +295,24 @@ header {
     &:focus {
       outline: 2px solid var(--clr-focus);
       outline-offset: 4px;
+    }
+  }
+
+
+  &.tag {
+    
+    &:hover {
+      background: var(--clr-hover);
+    }
+    
+    &:active {
+      background: var(--clr-focus);
+    }
+
+    &:focus {
+      background: var(--clr-hover);
+      outline: 1px solid var(--clr-focus);
+      outline-offset: 2px;
     }
   }
 
@@ -376,12 +406,7 @@ header {
 
 /* store-btn */ 
 .store-btn {
-  background: var(--clr-grey-200);
-  border: none;
-  border-radius: var(--bdr-md);
-  color: var(--clr-light);
-  text-decoration: none;
-  padding: 0px;
+  font-weight: 400;
 
   & .store-full-name {
     display: none;
