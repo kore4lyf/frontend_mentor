@@ -31,7 +31,7 @@
 
   /* Strokes */
 --clr-s50: #EBEBEB;
---clr-s100: #F0F0F0;
+--clr-s100: #E1E1E1;
 --clr-s200: #616161;
 
   /* State */
@@ -207,39 +207,46 @@ header {
     }
   }
 
-  &.btn-neutral-hover {
-    color: var(--clr-dark);
-    background: var(--clr-hover);
-  }
-
-  &.btn-neutral-active {
-    color: var(--clr-dark);
-    background: var(--clr-pressed);
-  }
-
-  &.btn-neutral-focus {
-    background: transparent;
-    color: var(--clr-dark);
-    outline: 2px solid var(--clr-focus);
-    outline-offset: 2px;
-  }
 
   &.btn-white {
+    color: var(--clr-dark);
+    background: white;
+    border: 1px solid var(--clr-s100);
+    border-bottom: 0px; 
+    box-shadow: 0px 1px var(--clr-s200);
 
+    &:hover {
+      background: var(--clr-hover);
+    }
+    &:active {
+      border: 1px solid transparent;
+      box-shadow: inset 0px 1px 2px var(--clr-s100);
+    }
+    &:focus {
+      outline: 2px solid var(--clr-focus);
+      outline-offset: 2px;
+    }
   }
 
   &.btn-white-hover {
     color: var(--clr-dark);
     background: var(--clr-hover);
+    border: 1px solid var(--clr-s100);
+    box-shadow: 0px 1px var(--clr-s200);
   }
 
   &.btn-white-active {
     color: var(--clr-dark);
-    background: var(--clr-pressed);
+    background: var(--clr-hover);
+    border: 1px solid transparent;
+    box-shadow: inset 0px 1px 2px var(--clr-s100);
   }
 
   &.btn-white-focus {
-    background: transparent;
+    background: white;
+    border: 1px solid var(--clr-s100);
+    border-bottom: 0px; 
+    box-shadow: 0px 1px var(--clr-s200);
     color: var(--clr-dark);
     outline: 2px solid var(--clr-focus);
     outline-offset: 2px;
@@ -247,6 +254,16 @@ header {
 
   &.btn-black {
 
+  }
+
+  
+  &.btn-black-hover {
+  }
+
+  &.btn-black-active {
+  }
+
+  &.btn-black-focus {
   }
 
 }
