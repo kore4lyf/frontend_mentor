@@ -163,7 +163,12 @@ header {
 
 
 /* -- Components -- */ 
-
+.m-1rem {
+  margin: 1rem;
+}
+.b-1 {
+  border: 1px solid red;
+}
   /* button */ 
 .btn {
   background: var(--clr-grey-200);
@@ -176,6 +181,19 @@ header {
   & svg {
     transform: scale(1.2);
   }
+
+  &.btn-neutral {
+    background: transparent;
+  }
+
+  &.btn-white {
+
+  }
+
+  &.btn-black {
+
+  }
+
 }
 
   /* logo */
@@ -302,11 +320,13 @@ header {
   align-items: center;
 } 
 
-.flex-dir-row {
+.flex-dir-row,
+.flex-dir-row-to-col{
   flex-direction: row;
 }
 
-.flex-dir-col {
+.flex-dir-col,
+.flex-dir-col-to-row{
   flex-direction: column;
 }
 
@@ -348,6 +368,10 @@ header {
   justify-content: space-between;
 }
 
+.w-100 {
+  width: 100%;
+}
+
 
 
 
@@ -364,6 +388,10 @@ header {
   .plan-notifier {
     border-radius: var(--bdr-md);
 
+  & div {
+    align-items: center;
+  }
+    
     .close-plan-notifier {
       margin-bottom: 0px;
     }
@@ -383,5 +411,18 @@ header {
     & .store-full-name {
       display: block;
     }
+  }
+
+
+
+
+
+  /* Utilities */
+  .flex-dir-col-to-row {
+    flex-direction: row;
+  }
+
+  .flex-dir-row-to-col {
+    flex-direction: column;
   }
 }
