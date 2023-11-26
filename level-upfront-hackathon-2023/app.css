@@ -189,10 +189,14 @@ header {
 
   & .setup-step {
     border-radius: var(--bdr-md);
+    transition: background ease-out .3s;
   }
 
   & .setup-step-content {
+    max-height: 0;
+    overflow: hidden;
     position: relative;
+    transition: max-height ease-out .3s
   }
 
   & .setup-step-msg {
@@ -206,6 +210,10 @@ header {
     & .setup-step-msg {
       font-weight: 500;
     }
+
+    & .setup-step-content {
+      max-height: 100%;
+    }
   }
   
   & .setup-step-img {
@@ -218,7 +226,8 @@ header {
   }
 
   & .setup-step-msg-btn {
-    margin-left: 2.2rem;
+    margin-left: 2.1rem;
+    margin-bottom: .2rem;
   }
 }
 
@@ -232,14 +241,30 @@ header {
 
 /* Accordion */
   .accordion {
-    border: 1px solid red;
+    background: transparent;
+    border: none;
     color: var(--clr-dark);
     padding: 0px;
 
     & svg {
-    border: 1px solid red;
       color: var(--clr-grey-150);
       width: 26px;
+    }
+
+
+    &:hover {
+      background: var(--clr-hover);
+    }
+
+    &:active {
+      background: var(--clr-pressed);
+    }
+
+    &:focus {
+      border-radius: var(--bdr-sm);
+      color: var(--clr-dark);
+      outline: 2px solid var(--clr-focus);
+      outline-offset: 2px;
     }
   }
 
