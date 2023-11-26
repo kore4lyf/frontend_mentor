@@ -86,39 +86,79 @@
         </div>
       </section> 
 
-      <section class="auto-width flex-flow gap-md mb-1rem p-3 setup-guide space-btw">
-        <div class="flex-flow flex-dir-col gap-md flex">
+      <section class="auto-width flex-flow flex-dir-col gap-md mb-1rem p-1 setup space-btw">
+
+        <!-- Setup Guide Details -->
+        <div class="flex-flow flex-dir-col gap-md flex p-1 w-100">
           
-          <div class="flex-flow gap-md space-btw">
-            <div class="flex-flow gap-sm flex-dir-col">
+          <article class="flex-flow gap-md space-btw">
+            <div class="flex-flow flex-dir-col gap-sm w-100">
               <h1 class="text-14 fw-bold"> Setup Guide </h1> 
               <p> Use this personalized guide to get your store up and running.</p>
             </div>
-            <div class="flex-flow">
+            <div>
               <button class="btn btn-neutral chevron">
-                x
+
+                <!-- Chevron Down -->
+                <svg class="chevron-down hide" width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M6.21967 8.46967C6.51256 8.17678 6.98744 8.17678 7.28033 8.46967L10.75 11.9393L14.2197 8.46967C14.5126 8.17678 14.9874 8.17678 15.2803 8.46967C15.5732 8.76256 15.5732 9.23744 15.2803 9.53033L11.2803 13.5303C10.9874 13.8232 10.5126 13.8232 10.2197 13.5303L6.21967 9.53033C5.92678 9.23744 5.92678 8.76256 6.21967 8.46967Z" fill="#4A4A4A"/>
+                </svg>
+
+
+
+                <!-- Chevron Up -->
+                <svg class="chevron-up" width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M15.0303 12.2803C14.7374 12.5732 14.2626 12.5732 13.9697 12.2803L10.5 8.81066L7.03033 12.2803C6.73744 12.5732 6.26256 12.5732 5.96967 12.2803C5.67678 11.9874 5.67678 11.5126 5.96967 11.2197L9.96967 7.21967C10.2626 6.92678 10.7374 6.92678 11.0303 7.21967L15.0303 11.2197C15.3232 11.5126 15.3232 11.9874 15.0303 12.2803Z" fill="#4A4A4A"/>
+                </svg>
+
               </button> 
             </div>
-          </div>
+          </article>
 
+          <!-- Progress -->
           <div class="progress text-12">
             <div class="align-center flex-flow gap-sm">
               <p><span class="progress-step">1</span> / 5 completed</p>
-              <progress class="progress-bar" min="0" max="100" value="25"> 25%
-              </progress>
+              <progress class="progress-bar" min="0" max="100" value="25"> 25% </progress>
             </div>
-          </div>
-
-          <div>
-
           </div>
         </div>
 
-      </section>
+        <div class="flex-flow flex-dir-col">
 
-        <button class="btn btn-neutral">Neutral</button>
-        <button class="btn btn-white">White</button>
-        <button class="btn btn-black">Black</button>
+          <!-- Step 1 -->
+          <article class="open align-center flex-flow flex-dir-col p-1 setup-step">
+
+            <button class="align-center setup-accordion flex-flow gap-sm w-100">
+
+                <!-- Dash Circle --> 
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 32 32" fill="none">
+                  <circle cx="16" cy="16" r="12" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="4 6" />
+                </svg>
+            
+
+              <!-- Step Title --> 
+              <h2 class="fw-bold text-14">Customize your online store</h2>
+            </button>
+
+            <div class="flex-flow space-btw w-100">
+              <div class="flex-flow flex-dir-col step-note-btn setup-step-msg-btn w-100">
+                <p class="fw-medium mb-1rem step-msg text-15">
+                Choose a theme and add your logo, colors, and images to reflect your brand. <a class="link" href="https://help.shopify.com/en/manual/products/add-update-products"> Learn more </a>
+                </p>
+                <button class="btn btn-black">Customize theme</button>
+              </div>
+
+              <img class="setup-step-img" alt="Illustration of a painting, a painting brush and some colors" src="./assets/customise-store.png" width="157" height="120"/>
+            </div>
+
+          </article>
+
+          <article>
+
+          </article>
+        <div>
+      </section>
 
     </main>
   </body>

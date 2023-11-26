@@ -47,6 +47,7 @@
 --clr-green: #36FBA1;
 --clr-dark-green: #209761;
 --clr-search: #B5B5B5;
+--clr-grey-150: #8A8A8A;
 
 
   /* Border Radius */ 
@@ -160,11 +161,13 @@ header {
   background: var(--clr-grey-300);
 }
 
-.setup-guide {
+.setup{
   background: var(--clr-bg-white);
   border: 1px solid var(--clr-s100);
-  border-radius: var(--bdr-lg);
 
+  & .btn {
+    width: fit-content;
+  }
 
   /* Progress Bar */
 
@@ -184,12 +187,41 @@ header {
     background: var(--clr-grey-200);
   }
 
+  & .setup-msg {
+    color: red !important; /*var(--clr-grey-150);*/
+  }
+
+  & .setup-step {
+    border-radius: var(--bdr-md);
+  }
+
+  & .setup-step.open {
+    background: var(--clr-bg-grey);
+  }
+  
+  & .setup-accordion svg {
+    padding: 0px !important;
+    width: 26px;
+  }
+
+  & .setup-step-img {
+    display: none;
+    height: 120px;
+    width: 157px;
+  }
+
+  & .setup-step-msg-btn {
+    margin-left: 2.2rem;
+  }
 }
 
 
 
 
 /* -- Components -- */ 
+.b-1 {
+  border: 1px solid red;
+}
 
   /* button */ 
 .btn {
@@ -263,11 +295,20 @@ header {
 
   }
 
-  &.btn-icon {
+  &.btn-icon,
+  &.btn-stroke-icon {
     background: transparent;
     border: none;
     padding-block: calc(var(--size-1) - .1rem);
     padding-inline: var(--size-1);
+  }
+
+  &.btn-stroke-icon {
+    stroke: var(--clr-grey-150);
+
+    & svg > * {
+      stroke: var(--clr-grey-150);
+    }
   }
 
 
@@ -327,7 +368,7 @@ header {
 
     &:focus::before {
       outline: 2px solid var(--clr-focus);
-      outline-offset: 2px;
+      outline-offset: 1.5px;
     }
 
     &:hover {
@@ -375,9 +416,20 @@ header {
       outline-offset: 1px;
     }
   }
+}
 
-  
+  /* link */ 
+.link {
+  color: var(--clr-focus);
+  font-weight: 500;
+  text-decoration: none;
 
+  &:is(
+    :hover,
+    :active,
+    :focus){
+    text-decoration: underline;
+  }
 }
 
   /* logo */
@@ -405,10 +457,6 @@ header {
 
   & div {
     align-items: flex-start;
-  }
-
-  .close-plan-notifier {
-
   }
 }
 
@@ -583,11 +631,11 @@ div:has(
 }
 
 .mt-1rem {
-  margin-bottom: var(--size-3);
+  margin-top: var(--size-3);
 }
 
 .mt-2rem {
-  margin-bottom: var(--size-5);
+  margin-top: var(--size-5);
 }
 
 .p-1 {
@@ -626,7 +674,17 @@ div:has(
 /* -- Media Query -- */ 
 @media screen and (min-width: 800px) {
 
-  /* > Components < */
+  /* >> Block << */
+  .setup {
+    border-radius: var(--bdr-lg);
+
+
+    & .setup-step-img {
+      display: block;
+    }
+  }
+
+  /* >> Components << */
   .close-plan-notifier {
     margin-top: 0px;
   }
