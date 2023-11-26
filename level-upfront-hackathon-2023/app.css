@@ -158,9 +158,18 @@ select {
 /* -- Blocks -- */
 header {
   background: var(--clr-grey-300);
-  padding: var(--size-3);
 }
 
+.setup-guide {
+  
+  & progress {
+    background: blue;
+    border: none;
+    border-radius: 1rem;
+    color: red;
+    height: .3rem;
+  }
+}
 
 
 
@@ -174,7 +183,8 @@ header {
   border-radius: var(--bdr-md);
   color: var(--clr-light);
   font-weight: 600;
-  padding: var(--size-1);
+  padding-block: calc(var(--size-1) - .1rem);
+  padding-inline: var(--size-1);
   text-decoration: none;
 
   & svg {
@@ -198,6 +208,12 @@ header {
       outline: 2px solid var(--clr-focus);
       outline-offset: 2px;
     }
+  }
+
+  &.btn-icon {
+    background: transparent;
+    border: none;
+    padding: 0px;
   }
 
 
@@ -328,7 +344,6 @@ header {
   background: var(--clr-grey-300);
   color: var(--clr-light);
   margin-inline: 1rem;
-  padding: var(--size-3);
 
   & button {
     width: fit-content;
@@ -339,10 +354,6 @@ header {
   }
 
   .close-plan-notifier {
-    background: transparent;
-    border: none;
-    padding: 0px;
-    margin-top: .4rem;
 
     &:is(
       :hover,
@@ -502,12 +513,60 @@ div:has(
   align-content: start;
 }
 
+.m-1 {
+  margin: var(--size-1);
+}
+
+.m-2 {
+  margin: var(--size-2);
+}
+
+.m-3 {
+  margin: var(--size-3);
+}
+
+.m-4 {
+  margin: var(--size-4);
+}
+
+.m-5 {
+  margin: var(--size-5);
+}
+
+
+.mb-1rem {
+  margin-bottom: var(--size-3);
+}
 .mb-2rem {
-  margin-bottom: 2rem;
+  margin-bottom: var(--size-5);
+}
+
+.mt-1rem {
+  margin-bottom: var(--size-3);
 }
 
 .mt-2rem {
-  margin-bottom: 2rem;
+  margin-bottom: var(--size-5);
+}
+
+.p-1 {
+  padding: var(--size-1);
+}
+
+.p-2 {
+  padding: var(--size-2);
+}
+
+.p-3 {
+  padding: var(--size-3);
+}
+
+.p-4 {
+  padding: var(--size-4);
+}
+
+.p-5 {
+  padding: var(--size-5);
 }
 
 .space-btw {
@@ -527,6 +586,10 @@ div:has(
 @media screen and (min-width: 800px) {
 
   /* > Components < */
+  .close-plan-notifier {
+    margin-top: 0px;
+  }
+
   .logo {
     width: 102px;
   }
@@ -535,13 +598,10 @@ div:has(
     border-radius: var(--bdr-md);
 
 
-  & div {
-    align-items: center;
-  }
-    
-    .close-plan-notifier {
-      margin-top: 0px;
+    & div {
+      align-items: center;
     }
+    
   }
 
   .notification {

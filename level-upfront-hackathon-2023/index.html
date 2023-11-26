@@ -24,7 +24,7 @@
 
   </head>
   <body class="text-13">
-    <header class="align-center flex-flow gap-sm mb-2rem space-btw text-14"> 
+    <header class="align-center flex-flow gap-sm mb-2rem p-3 space-btw text-14"> 
 
       <!-- Shopify Logo -->
       <a href="http://shopify.com">
@@ -69,7 +69,7 @@
 
     <main class="grid-flex ">
       <!-- Plan Notifier -->
-      <section class="auto-width flex-flow gap-md plan-notifier space-btw"> 
+      <section class="auto-width flex-flow gap-md mb-1rem p-3 plan-notifier space-btw"> 
         <div class="flex-dir-col-to-row flex-flow gap-md space-btw w-100"> 
           <p>
             Extend your trial for $1/month for 3 months on select plans.
@@ -78,21 +78,40 @@
           <button class="btn btn-white">Select a plan</button>
         </div>
         <div class="flex-flow">
-          <button class="close-plan-notifier"> 
+          <button class="btn btn-icon close-plan-notifier"> 
             <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M14.4697 15.0303C14.7626 15.3232 15.2374 15.3232 15.5303 15.0303C15.8232 14.7374 15.8232 14.2626 15.5303 13.9697L11.5607 10L15.5303 6.03033C15.8232 5.73744 15.8232 5.26256 15.5303 4.96967C15.2374 4.67678 14.7626 4.67678 14.4697 4.96967L10.5 8.93934L6.53033 4.96967C6.23744 4.67678 5.76256 4.67678 5.46967 4.96967C5.17678 5.26256 5.17678 5.73744 5.46967 6.03033L9.43934 10L5.46967 13.9697C5.17678 14.2626 5.17678 14.7374 5.46967 15.0303C5.76256 15.3232 6.23744 15.3232 6.53033 15.0303L10.5 11.0607L14.4697 15.0303Z" fill="current"/>
-</svg>
-
+            </svg>
           </button>
         </div>
       </section> 
 
-      <section class="setup-guide mt-1rem">
-        <h1> Setup Guide </h1> 
-        <p> Use this personalized guide to get your store up and running. </p>
+      <section class="auto-width flex-flow gap-md mb-1rem p-3 setup-guide space-btw">
+        <div class="flex-flow flex-dir-col gap-md flex">
+          
+          <div class="flex-flow gap-md space-btw">
+            <div class="flex-flow gap-sm flex-dir-col">
+              <h1 class="text-14 fw-bold"> Setup Guide </h1> 
+              <p> Use this personalized guide to get your store up and running.</p>
+            </div>
+            <div class="flex-flow">
+              <button class="btn btn-icon chevron">
+                x
+              </button> 
+            </div>
+          </div>
 
-        <div class="progress">
+          <div class="progress text-12">
+            <div class="align-center flex-flow gap-sm">
+              <p><span class="progress-step">1</span> / 5 completed</p>
+              <progress class="progress-bar" min="0" max="100" value="25"> 25%
+              </progress>
+            </div>
+          </div>
 
+          <div>
+
+          </div>
         </div>
 
       </section>
