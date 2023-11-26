@@ -161,14 +161,27 @@ header {
 }
 
 .setup-guide {
-  
-  & progress {
-    background: blue;
-    border: none;
+  background: var(--clr-bg-white);
+
+
+  /* Progress Bar */
+
+  & progress[value] { 
     border-radius: 1rem;
-    color: red;
     height: .3rem;
+    width: 5rem;
   }
+  
+  & progress[value]::-webkit-progress-bar {
+    background: var(--clr-light);
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+
+  & progress[value]::-webkit-progress-value {
+    background: var(--clr-grey-200);
+  }
+
 }
 
 
