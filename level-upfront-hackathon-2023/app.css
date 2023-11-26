@@ -187,26 +187,33 @@ header {
     background: var(--clr-grey-200);
   }
 
-  & .setup-msg {
-    color: red !important; /*var(--clr-grey-150);*/
-  }
-
   & .setup-step {
     border-radius: var(--bdr-md);
   }
 
-  & .setup-step.open {
-    background: var(--clr-bg-grey);
-  }
-  
-  & .setup-accordion svg {
-    padding: 0px !important;
-    width: 26px;
+  & .setup-step-content {
+    position: relative;
   }
 
+  & .setup-step-msg {
+    color: var(--clr-mid);
+    max-width: 480px;
+  }
+
+  & .setup-step.open {
+    background: var(--clr-bg-grey);
+
+    & .setup-step-msg {
+      font-weight: 500;
+    }
+  }
+  
   & .setup-step-img {
+    bottom: 0px;
     display: none;
     height: 120px;
+    right: 0px;
+    position: absolute;
     width: 157px;
   }
 
@@ -222,6 +229,19 @@ header {
 .b-1 {
   border: 1px solid red;
 }
+
+/* Accordion */
+  .accordion {
+    border: 1px solid red;
+    color: var(--clr-dark);
+    padding: 0px;
+
+    & svg {
+    border: 1px solid red;
+      color: var(--clr-grey-150);
+      width: 26px;
+    }
+  }
 
   /* button */ 
 .btn {
