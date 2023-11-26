@@ -52,7 +52,7 @@
   /* Border Radius */ 
 --bdr-sm: .25rem;
 --bdr-md: .5rem;
---bdr-lg: .8rem; 
+--bdr-lg: 1rem; 
 
 
   /* Sizes */ 
@@ -162,6 +162,8 @@ header {
 
 .setup-guide {
   background: var(--clr-bg-white);
+  border: 1px solid var(--clr-s100);
+  border-radius: var(--bdr-lg);
 
 
   /* Progress Bar */
@@ -208,11 +210,19 @@ header {
     color: var(--clr-dark);
     background: transparent;
 
-    &:hover {
+
+    & svg {
+      fill: var(--clr-dark);
+      background: transparent;
+    }
+
+    &:hover,
+    &:hover svg {
       background: var(--clr-hover);
     }
 
-    &:active {
+    &:active,
+    &:active svg {
       background: var(--clr-pressed);
     }
 
@@ -221,12 +231,43 @@ header {
       outline: 2px solid var(--clr-focus);
       outline-offset: 2px;
     }
+
+    &:focus svg path {
+      fill: var(--clr-dark);
+    }
+  }
+
+  &.btn-neutral-dark {
+    color: var(--clr-light);
+    background: transparent;
+
+    & svg path {
+      fill: var(--clr-light);
+      background: transparent;
+    }
+
+    &:hover,
+    &:hover svg {
+      background: var(--clr-grey-100);
+    }
+
+    &:active,
+    &:active svg {
+      background: var(--clr-grey-50);
+    }
+
+    &:focus {
+      outline: 2px solid var(--clr-focus);
+      outline-offset: 2px;
+    }
+
   }
 
   &.btn-icon {
     background: transparent;
     border: none;
-    padding: 0px;
+    padding-block: calc(var(--size-1) - .1rem);
+    padding-inline: var(--size-1);
   }
 
 
@@ -368,19 +409,6 @@ header {
 
   .close-plan-notifier {
 
-    &:is(
-      :hover,
-      :active,
-      :focus) svg path{
-      fill: red;
-    }
-    
-    & svg {
-
-      & path {
-        fill: white;
-      }
-    }
   }
 }
 
