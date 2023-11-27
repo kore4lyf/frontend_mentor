@@ -8,6 +8,12 @@ const toggleStoreMenu = (forceHide = false) => {
   if(forceHide) { 
     storeBtn.classList.remove('active')
     storeMenu.classList.add('fade-off')
+
+    // hide
+    setTimeout(
+      () => storeMenu.style.display = 'none',
+      300
+    )
   }
   else {
     storeBtn.classList.toggle('active')
@@ -44,6 +50,12 @@ const toggleAlerts = (forceHide = false) => {
   if(forceHide) { 
     notification.classList.remove('active')
     alerts.classList.add('fade-off')
+
+    // hide
+    setTimeout(
+      () => alerts.style.display = 'none',
+      300
+    )
   }
   else {
     notification.classList.toggle('active')
