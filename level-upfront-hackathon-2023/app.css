@@ -215,17 +215,17 @@ header {
   }
   
   & .setup-step-img {
-    bottom: 0px;
+    bottom: 15px;
     display: none;
     height: 120px;
-    right: 0px;
+    right: 10px;
     position: absolute;
     width: 157px;
   }
 
   & .setup-step-msg-btn {
     margin-left: 2.6rem;
-    margin-bottom: .2rem;
+    margin-bottom: .5rem;
     width: fit-content;
   }
 }
