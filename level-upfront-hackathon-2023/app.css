@@ -648,7 +648,11 @@ div:has(
   }
 
   & .store-item {
-    padding-block: 0px;
+    padding-block: .2rem;
+
+    & svg {
+      width: 20px;
+    }
   }
 
   & .btn {
@@ -668,7 +672,7 @@ div:has(
     background: var(--clr-bg-grey);
     border-radius: var(--bdr-md);
     padding-inline: .25rem;
-    padding-block: .2rem;
+    padding-block: 0rem;
     margin-bottom: 0px;
   }
 }

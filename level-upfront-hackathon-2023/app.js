@@ -1,4 +1,39 @@
 
+// Store Menu 
+const toggleStoreMenu = (forceHide = false) => {
+  const storeBtn = getElement('.store-btn')
+  const storeMenu = getElement('.store-menu')
+  const isStoreMenuDisplayed = storeMenu.style.display
+
+  if(forceHide) { 
+    storeBtn.classList.remove('active')
+    storeMenu.classList.add('fade-off')
+  }
+  else {
+    storeBtn.classList.toggle('active')
+    storeMenu.classList.toggle('fade-off')
+    
+    if(isStoreMenuDisplayed === 'none' 
+      || isStoreMenuDisplayed === '') {
+      // display
+      setTimeout(
+        () => storeMenu.style.display = 'block',
+        300
+      )
+    }
+    else {
+      // hide
+      setTimeout(
+        () => storeMenu.style.display = 'none',
+        300
+      )
+    }
+  }
+
+}
+
+
+
 
 // Notification / Alerts 
 const toggleAlerts = (forceHide = false) => {
@@ -6,15 +41,11 @@ const toggleAlerts = (forceHide = false) => {
   const notification = getElement('.notification')
   const isAlertsDisplayed = alerts.style.display 
 
-  console.log('forcehide: ' + forceHide.toString())
   if(forceHide) { 
-  console.log('Yep')
-    notification.classList.toggle('active')
-    alerts.classList.toggle('fade-off')
+    notification.classList.remove('active')
+    alerts.classList.add('fade-off')
   }
   else {
-  console.log('Nop')
-
     notification.classList.toggle('active')
     alerts.classList.toggle('fade-off')
     
