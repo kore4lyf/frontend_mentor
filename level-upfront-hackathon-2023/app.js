@@ -19,7 +19,7 @@ const toggleStoreMenu = (forceHide = false) => {
     state = { ...state, 
       timeoutId: setTimeout(
       () => {
-      storeMenu.style.display = 'block'
+      storeMenu.style.display = 'flex'
       state = { ...state, isStoreMenuDisplayed: true}
       },
       300)

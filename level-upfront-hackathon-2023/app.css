@@ -624,7 +624,14 @@ div:has(
   text-transform: uppercase;
 }
 
+
+/* Increase specificity for .store-menu on display property*/
+body main .store-menu {
+  display: none;
+} 
+
 .store-menu {
+  display: none;
   right: 1rem;
   width: 82%;
 
