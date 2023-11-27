@@ -172,7 +172,7 @@ header {
 .setup{
   background: var(--clr-bg-white);
   border: 1px solid var(--clr-s100);
-  height: 130px;
+  height: 136px;
   overflow: hidden;
   transition: height ease-out .5s;
 
@@ -254,22 +254,24 @@ header {
 
 /* alwrts */
 .alerts {
-  background: white;
-  border: 1px solid var(--clr-s100);
-  border-radius: var(--bdr-lg);
   display: none;
-  position: absolute;
   width: 95%;
-  top: 15px;
-  transition: opacity ease-out .3s;
-  z-index: 10;
 
   & .alerts-note {
     background: var(--clr-bg-grey);
   }
 }
 
+.overlay-box {
+  background: white;
+  border: 1px solid var(--clr-s100);
+  border-radius: var(--bdr-lg);
+  position: absolute;
+  top: 15px;
+  transition: opacity ease-out .3s;
+  z-index: 10;
 
+}
 
 /* Accordion */
   .accordion {
@@ -767,7 +769,17 @@ div:has(
     }
   }
 
+
+
+
+
   /* >> Components << */
+
+  .alerts {
+    width: 380px;
+    right: 1rem;
+  }
+
   .logo {
     width: 102px;
   }

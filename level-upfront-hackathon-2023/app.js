@@ -1,9 +1,9 @@
 
 
 // Notification / Alerts 
-const toggleAlerts = (e, forceHide = false) => {
+const toggleAlerts = (forceHide = false) => {
   const alerts = getElement('.alerts')
-  const notification = e.target
+  const notification = getElement('.notification')
   const isAlertsDisplayed = alerts.style.display 
 
   console.log('forcehide: ' + forceHide.toString())
