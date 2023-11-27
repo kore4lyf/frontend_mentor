@@ -165,6 +165,16 @@ header {
   background: var(--clr-bg-white);
   border: 1px solid var(--clr-s100);
 
+  & {
+    height: 130px;
+    overflow: hidden;
+    transition: height ease-out .5s;
+  }
+
+  &.open {
+    height: 100%;
+  }
+
   & .btn {
     width: fit-content;
   }

@@ -1,14 +1,22 @@
 
-let x = 2
 
-if(true) {
-  let x = 3
+
+// Setup Guide 
+const toggleSetupSteps = () => {
+  const setupSteps = getElement('.setup')
+  const chevronUp = getElement('.chevron-up')
+  const chevronDown = getElement('.chevron-down')
+
+  setupSteps.classList.toggle('open')
+  chevronUp.classList.toggle('hide')
+  chevronDown.classList.toggle('hide')
 }
 
+
 // Accordion 
-const toggleAccordion = (e) => {
-  const openedAccordion = getElement('.setup-step.open');
-  const selectedAccordion = e.target.closest('.setup-step');
+const toggleAccordion = e => {
+  const openedAccordion = getElement('.setup-step.open')
+  const selectedAccordion = e.target.closest('.setup-step')
 
 
   if (selectedAccordion.classList.contains("open")) {
@@ -19,9 +27,14 @@ const toggleAccordion = (e) => {
   // Close opened accordion
   if (openedAccordion) openedAccordion.classList.remove('open')
 
-  // Open new selected accordion
+  // Open selected accordion
   selectedAccordion.classList.add('open')
 }
+
+
+
+
+
 
 // Helpers
 var getElement = (selector) => document.querySelector(selector)
