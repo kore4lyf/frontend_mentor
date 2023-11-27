@@ -189,30 +189,28 @@ header {
 
   & .setup-step {
     border-radius: var(--bdr-md);
-    transition: background ease-out .3s;
+    position: relative;
   }
 
   & .setup-step-content {
-    max-height: 0;
-    overflow: hidden;
-    position: relative;
-    transition: max-height ease-out .3s
+    display:none;
   }
 
   & .setup-step-msg {
     color: var(--clr-mid);
+    font-weight: 500;
     max-width: 480px;
   }
 
   & .setup-step.open {
     background: var(--clr-bg-grey);
 
-    & .setup-step-msg {
-      font-weight: 500;
+    & .accordion {
+      background: var(--clr-bg-grey);
     }
 
     & .setup-step-content {
-      max-height: 100%;
+      display: block;
     }
   }
   
@@ -226,11 +224,11 @@ header {
   }
 
   & .setup-step-msg-btn {
-    margin-left: 2.1rem;
+    margin-left: 2.6rem;
     margin-bottom: .2rem;
+    width: fit-content;
   }
 }
-
 
 
 
@@ -243,8 +241,9 @@ header {
   .accordion {
     background: transparent;
     border: none;
+    border-radius: var(--bdr-md);
     color: var(--clr-dark);
-    padding: 0px;
+    padding: .5rem;
 
     & svg {
       color: var(--clr-grey-150);
@@ -399,12 +398,13 @@ header {
     border: 2px solid var(--clr-s200);
     border-bottom: none;
     box-shadow: 0px 2px black;
+    isolation: isolate;
     position: relative;
+    z-index: 2;
 
     &:active {
       border-color: transparent;
       box-shadow: 0px 0px black;
-      outline: none;
     }
     
     &:active::after{
@@ -426,7 +426,7 @@ header {
       border-radius: inherit;
       inset: 0;
       padding: inherit;
-      margin-inline: -2px;
+      margin-inline: -1.5px;
       position: absolute;
       transform: scaleY(1.12);
     }
@@ -436,11 +436,13 @@ header {
       content: "";
       border-radius: inherit;
       inset: 0;
+      isolation: isolate;
       padding: inherit;
       margin-inline: -4px;
+      mix-blend-mode:color;
       position: absolute;
       transform: scaleY(1.21);
-      z-index: -2;
+      z-index: -1;
     }
   }
 
