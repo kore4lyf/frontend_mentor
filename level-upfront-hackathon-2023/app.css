@@ -612,16 +612,66 @@ div:has(
     text-transform: capitalize;
   }
 
-  & .store-init-name {
-    background: var(--clr-green);
-    border-radius: calc(var(--bdr-md) * .8);
-    color: var(--clr-dark-green); 
-    display: block;
-    padding: var(--size-1);
-    text-transform: uppercase;
-  }
 }
 
+
+.store-init-name {
+  background: var(--clr-green);
+  border-radius: calc(var(--bdr-md) * .8);
+  color: var(--clr-dark-green); 
+  display: block;
+  padding: var(--size-1);
+  text-transform: uppercase;
+}
+
+.store-menu {
+  right: 1rem;
+  width: 82%;
+
+  & ul {
+    list-style-type: none;
+    padding-left: 0px;
+  }
+
+  & .store-details{
+    padding-top: .5rem;
+    padding-left: .8rem;
+  }
+
+  & > div {
+    margin: .35rem;
+  }
+
+  & .list-item,
+  & .store-item {
+    padding: .35rem;
+  }
+
+  & .store-item {
+    padding-block: 0px;
+  }
+
+  & .btn {
+    font-weight: 400;
+    width: 100%;
+  }
+
+  & hr {
+    border-top: 1px solid var(--clr-s50);
+  }
+
+  & .store-mail {
+    color: var(--clr-mid);
+  }
+
+  & .store-stamp {
+    background: var(--clr-bg-grey);
+    border-radius: var(--bdr-md);
+    padding-inline: .25rem;
+    padding-block: .2rem;
+    margin-bottom: 0px;
+  }
+}
 
 
 
@@ -775,13 +825,13 @@ div:has(
 
   /* >> Components << */
 
-  .alerts {
-    width: 380px;
-    right: 1rem;
-  }
-
   .logo {
     width: 102px;
+  }
+
+  .overlay-box {
+    width: 380px;
+    right: 1rem;
   }
 
   .plan-notifier {
