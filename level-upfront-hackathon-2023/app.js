@@ -1,6 +1,18 @@
 
 
 
+// Plan Notifier 
+const closePlanNotifier = () => {
+  const planNotifier =  getElement('.plan-notifier')
+    
+  planNotifier.classList.add('fade-off')
+  setTimeout(
+    () => planNotifier.style.display = "none",
+    300
+  )
+}
+
+
 // Setup Guide 
 const toggleSetupSteps = () => {
   const setupSteps = getElement('.setup')

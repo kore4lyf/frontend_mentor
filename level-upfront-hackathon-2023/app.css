@@ -620,6 +620,12 @@ div:has(
   width: 100%;
 }
 
+.fade-off {
+  opacity: 0;
+  transition: 
+  opacity ease-out .3s;
+}
+
 .flex-dir-row,
 .flex-dir-row-to-col{
   flex-direction: row;
@@ -740,10 +746,6 @@ div:has(
   }
 
   /* >> Components << */
-  .close-plan-notifier {
-    margin-top: 0px;
-  }
-
   .logo {
     width: 102px;
   }
@@ -751,11 +753,9 @@ div:has(
   .plan-notifier {
     border-radius: var(--bdr-md);
 
-
     & div {
       align-items: center;
     }
-    
   }
 
   .notification {
