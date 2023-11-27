@@ -1,41 +1,56 @@
+let state = {
+  isAlertsDisplayed : false,
+  isStoreMenuDisplayed : false,
+  timeoutId : null
+}
+
+
 
 // Store Menu 
 const toggleStoreMenu = (forceHide = false) => {
   const storeBtn = getElement('.store-btn')
   const storeMenu = getElement('.store-menu')
-  const isStoreMenuDisplayed = storeMenu.style.display
 
-  if(forceHide) { 
-    storeBtn.classList.remove('active')
-    storeMenu.classList.add('fade-off')
-
-    // hide
-    setTimeout(
-      () => storeMenu.style.display = 'none',
-      300
-    )
+  // Prevent button from malfunctioning when double clicked
+  clearTimeout(state.timeoutId)
+  
+  if(!state.isStoreMenuDisplayed) {
+    // display
+    state = { ...state, 
+      timeoutId: setTimeout(
+      () => {
+      storeMenu.style.display = 'block'
+      state = { ...state, isStoreMenuDisplayed: true}
+      },
+      300)
+    }
+      
   }
   else {
-    storeBtn.classList.toggle('active')
-    storeMenu.classList.toggle('fade-off')
-    
-    if(isStoreMenuDisplayed === 'none' 
-      || isStoreMenuDisplayed === '') {
-      // display
-      setTimeout(
-        () => storeMenu.style.display = 'block',
-        300
-      )
+    // hide
+    state = { ...state, 
+      timeoutId: setTimeout(
+      () => {
+      storeMenu.style.display = 'none'
+      state = { ...state, isStoreMenuDisplayed: false}
+      },
+      300)
     }
-    else {
-      // hide
-      setTimeout(
-        () => storeMenu.style.display = 'none',
-        300
-      )
-    }
+
   }
 
+  // Toggle elements state
+  storeBtn.classList.toggle('active')
+  storeMenu.classList.toggle('fade-off')
+
+
+    console.log(state.isStoreMenuDisplayed)
+  //Close active alerts 
+  if(state.isAlertsDisplayed) {
+    closeAlerts()
+    state = { ...state, isAlertsDisplayed: false}
+  }
+  
 }
 
 
@@ -45,45 +60,73 @@ const toggleStoreMenu = (forceHide = false) => {
 const toggleAlerts = (forceHide = false) => {
   const alerts = getElement('.alerts')
   const notification = getElement('.notification')
-  const isAlertsDisplayed = alerts.style.display 
 
-  if(forceHide) { 
-    notification.classList.remove('active')
-    alerts.classList.add('fade-off')
 
-    // hide
-    setTimeout(
-      () => alerts.style.display = 'none',
-      300
-    )
+  // Prevent button from malfunctioning when double clicked
+  clearTimeout(state.timeoutId)
+
+  
+  if(!state.isAlertsDisplayed) {
+    // display
+    state = { ...state, 
+      timeoutId: setTimeout(
+      () => {
+      alerts.style.display = 'block'
+      state = { ...state, isAlertsDisplayed: true}
+      },
+      300)
+    }
+      
   }
   else {
-    notification.classList.toggle('active')
-    alerts.classList.toggle('fade-off')
-    
-    if(isAlertsDisplayed === 'none' 
-      || isAlertsDisplayed === '') {
-      // display
-      setTimeout(
-        () => alerts.style.display = 'block',
-        300
-      )
+    // hide
+    state = { ...state, 
+      timeoutId: setTimeout(
+      () => {
+      alerts.style.display = 'none'
+      state = { ...state, isAlertsDisplayed: false}
+      },
+      300)
     }
-    else {
-      // hide
-      setTimeout(
-        () => alerts.style.display = 'none',
-        300
-      )
-    }
+
   }
+
+
+  // Toggle elements state
+  notification.classList.toggle('active')
+  alerts.classList.toggle('fade-off')
+  
+  //Close active store menu 
+  if(state.isStoreMenuDisplayed) {
+    console.log('alertsClick')
+    closeStoreMenu()
+    state = { ...state, isStoreMenuDisplayed: false}
+  }
+
 }
 
 
-const hideAlerts = () => {
+const closeAlerts = () => {
   const alerts = getElement('.alerts')
+  const notification = getElement('.notification')
+
+  notification.classList.remove('active')
+  alerts.classList.add('fade-off')
+  alerts.style.display = 'none'
+
+  
 }
 
+
+
+const closeStoreMenu = () => {
+  const storeBtn = getElement('.store-btn')
+  const storeMenu = getElement('.store-menu')
+
+  storeBtn.classList.remove('active')
+  storeMenu.classList.add('fade-off')
+  storeMenu.style.display = 'none'
+}
 
 
 // Plan Notifier 
