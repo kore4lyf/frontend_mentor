@@ -164,12 +164,9 @@ header {
 .setup{
   background: var(--clr-bg-white);
   border: 1px solid var(--clr-s100);
-
-  & {
-    height: 130px;
-    overflow: hidden;
-    transition: height ease-out .5s;
-  }
+  height: 130px;
+  overflow: hidden;
+  transition: height ease-out .5s;
 
   &.open {
     height: 100%;
@@ -734,6 +731,7 @@ div:has(
   /* >> Block << */
   .setup {
     border-radius: var(--bdr-lg);
+    height: 110px;
 
 
     & .setup-step-img {
