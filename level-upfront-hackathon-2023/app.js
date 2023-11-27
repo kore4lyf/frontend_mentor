@@ -15,6 +15,21 @@ const toggleStoreMenu = (forceHide = false) => {
   clearTimeout(state.timeoutId)
   
   if(!state.isStoreMenuDisplayed) {
+    let menuItems = getChildren(storeMenu)('[role="menuitem"]')
+    storeMenu.ariaExpanded = "true";
+
+    // focus on first menu item
+    menuItems.item(0).focus();
+
+    storeMenu.addEventListener('keyup', (e) => handleMenuEscapeKeypress(e, closeStoreMenu));
+
+    menuItems.forEach(
+      (menuItem, menuItemIndex) =>  {
+      menuItem.addEventListener('keyup', (e) => {
+        handleMenuItemArrowKeyPress(e, menuItemIndex);
+      })
+    })
+
     // display
     state = { ...state, 
       timeoutId: setTimeout(
@@ -27,6 +42,9 @@ const toggleStoreMenu = (forceHide = false) => {
       
   }
   else {
+    storeMenu.ariaExpanded = "false";
+    storeBtn.focus();
+
     // hide
     state = { ...state, 
       timeoutId: setTimeout(
@@ -36,7 +54,6 @@ const toggleStoreMenu = (forceHide = false) => {
       },
       300)
     }
-
   }
 
   // Toggle elements state
@@ -44,7 +61,8 @@ const toggleStoreMenu = (forceHide = false) => {
   storeMenu.classList.toggle('fade-off')
 
 
-    console.log(state.isStoreMenuDisplayed)
+
+
   //Close active alerts 
   if(state.isAlertsDisplayed) {
     closeAlerts()
@@ -67,6 +85,22 @@ const toggleAlerts = (forceHide = false) => {
 
   
   if(!state.isAlertsDisplayed) {
+    let menuItems = getChildren(alerts)('[role="menuitem"]')
+    alerts.ariaExpanded = 'true';
+
+    // focus on first menu item
+    menuItems.item(0).focus();
+
+    alerts.addEventListener('keyup', (e) => handleMenuEscapeKeypress(e, closeAlerts));
+
+    menuItems.forEach(
+      (menuItem, menuItemIndex) =>  {
+      menuItem.addEventListener('keyup', (e) => {
+        handleMenuItemArrowKeyPress(e, menuItemIndex);
+      })
+    })
+
+
     // display
     state = { ...state, 
       timeoutId: setTimeout(
@@ -79,6 +113,9 @@ const toggleAlerts = (forceHide = false) => {
       
   }
   else {
+    alerts.ariaExpanded = 'false';
+    notification.focus();
+
     // hide
     state = { ...state, 
       timeoutId: setTimeout(
@@ -98,7 +135,6 @@ const toggleAlerts = (forceHide = false) => {
   
   //Close active store menu 
   if(state.isStoreMenuDisplayed) {
-    console.log('alertsClick')
     closeStoreMenu()
     state = { ...state, isStoreMenuDisplayed: false}
   }
@@ -113,8 +149,10 @@ const closeAlerts = () => {
   notification.classList.remove('active')
   alerts.classList.add('fade-off')
   alerts.style.display = 'none'
-
   
+  alerts.ariaExpanded = 'false';
+  notfication.focus();
+
 }
 
 
@@ -126,6 +164,9 @@ const closeStoreMenu = () => {
   storeBtn.classList.remove('active')
   storeMenu.classList.add('fade-off')
   storeMenu.style.display = 'none'
+
+  storeMenu.ariaExpanded = "false";
+  storeBtn.focus();
 }
 
 
@@ -186,4 +227,47 @@ const toggleAccordion = e => {
 // Helpers
 var getElement = (selector) => document.querySelector(selector)
 
+var getChild = (outterElement) => 
+  (seletor) => outterElement.querySelector(selector)
+
+var getChildren = (outterElement) => 
+  (selector) => outterElement.querySelectorAll(selector)
+
+var handleMenuEscapeKeypress = (e, fn) => {
+  if (e.key === "Escape") {
+    fn()
+  }
+}
+
+var handleMenuItemArrowKeyPress = (e, menuItemIndex) => {
+  const isLastMenuItem = menuItemIndex === allMenuItems.length - 1
+  const isFirstMenuItem = menuItemIndex === 0
+
+  const nextMenuItem = allMenuItems.item(
+    menuItemIndex + 1
+  )
+  const previousMenuItem = allMenuItems.item(
+    menuItemIndex - 1
+  )
+
+  if ( e.key === "ArrowRight" 
+      || e.key === "ArrowDown") {
+    if (isLastMenuItem) {
+      allMenuItems.item(0).focus();
+      return
+    }
+
+    nextMenuItem.focus();
+  }
+
+  if (e.key === "ArrowUp" 
+      || e.key === "ArrowLeft") {
+    if (isFirstMenuItem) {
+      allMenuItems.item(allMenuItems.length - 1).focus()
+      return
+    }
+
+    previousMenuItem.focus()
+  }
+}
 
