@@ -257,9 +257,11 @@ header {
   background: white;
   border: 1px solid var(--clr-s100);
   border-radius: var(--bdr-lg);
+  display: none;
   position: absolute;
   width: 95%;
   top: 15px;
+  transition: opacity ease-out .3s;
   z-index: 10;
 
   & .alerts-note {
@@ -634,8 +636,7 @@ div:has(
 
 .fade-off {
   opacity: 0;
-  transition: 
-  opacity ease-out .3s;
+  transition: opacity ease-out .3s;
 }
 
 .flex-dir-row,
