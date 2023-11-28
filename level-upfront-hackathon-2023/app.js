@@ -18,17 +18,26 @@ const check = (e) => {
   const dashCircle = getChild(stepChecker)('#dash-circle'); 
   const spinner = getChild(stepChecker)('#spinner'); 
   const checkMark = getChild(stepChecker)('#check-mark'); 
+
+
+  const activeVoice = getElement('.setup-step-status')
+  const stepName = getChild(stepChecker.parentElement)('.accordion').textContent
   
+
   dashCircle.classList.add(hide)
   spinner.classList.remove(hide)
   
   setTimeout(
     () => {
+      activeVoice.ariaLabel = 'Loading..., please wait.'
       spinner.classList.add(hide)
       checkMark.classList.remove(hide)
     }, 
-    1000
+    500
   )
+
+  activeVoice.ariaLabel = `Successfully marked ${stepName} as complete`
+  stepChecker.ariaLabel = `Mark ${stepName} as not complete`
 }
 
 const uncheck = (e) => {
@@ -38,21 +47,31 @@ const uncheck = (e) => {
   const spinner = getChild(stepChecker)('#spinner'); 
   const checkMark = getChild(stepChecker)('#check-mark'); 
   
+
+  const activeVoice = getElement('.setup-step-status')
+  const stepName = getChild(stepChecker.parentElement)('.accordion').textContent
+  
+
   checkMark.classList.add(hide)
   spinner.classList.remove(hide)
   
   setTimeout(
     () => {
+      activeVoice.ariaLabel = 'Loading..., please wait.'
       spinner.classList.add(hide)
       dashCircle.classList.remove(hide)
     }, 
-    1000
+    500
   )
+
+  activeVoice.ariaLabel = `Successfully marked ${stepName} as not complete`
+  stepChecker.ariaLabel = `Mark ${stepName} as complete`
 }
 
 const handleStepCheck = (e) =>  {
   const stepChecker = e.currentTarget
   const isChecked = stepChecker.classList.contains('checked')
+
 
   if(isChecked) {
     uncheck(e)
@@ -62,6 +81,8 @@ const handleStepCheck = (e) =>  {
     check(e)
     stepChecker.classList.add('checked')
   }
+
+  console.log(stepChecker.ariaLabel)
 }
 
 
