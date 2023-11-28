@@ -95,6 +95,7 @@ const toggleAlerts = (forceHide = false) => {
     let menuItems = getChildren(alerts)('[role="menuitem"]')
     alerts.ariaExpanded = 'true'
 
+    getElement('.store-item').focus()
     alerts.addEventListener('keyup', (e) => handleMenuEscapeKeypress(e, closeAlerts))
 
     if(menuItems.item(0)) {
@@ -164,8 +165,6 @@ const closeAlerts = (isEscKeyPress = false) => {
 
   if (isEscKeyPress) 
     notification.focus()
-  
-
 }
 
 

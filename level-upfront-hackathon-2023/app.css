@@ -784,6 +784,11 @@ body main .store-menu {
   margin-top: var(--size-5);
 }
 
+.list-none {
+  list-style: none;
+  padding-left: 0px;
+}
+
 .p-1 {
   padding: var(--size-1);
 }
