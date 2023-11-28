@@ -11,23 +11,26 @@ const toggleStoreMenu = (forceHide = false) => {
   const storeBtn = getElement('.store-btn')
   const storeMenu = getElement('.store-menu')
 
+    console.log(state.timeoutId)
   // Prevent button from malfunctioning when double clicked
+    console.log(
   clearTimeout(state.timeoutId)
+  )
   
   if(!state.isStoreMenuDisplayed) {
     let menuItems = getChildren(storeMenu)('[role="menuitem"]')
-    storeMenu.ariaExpanded = "true";
+    storeMenu.ariaExpanded = "true"
 
     // focus on first menu item
-    menuItems.item(0).focus();
+    menuItems.item(0).focus()
 
-    storeMenu.addEventListener('keyup', (e) => handleMenuEscapeKeypress(e, closeStoreMenu));
+    storeMenu.addEventListener('keyup', (e) => handleMenuEscapeKeypress(e, closeStoreMenu))
     
 
     menuItems.forEach(
       (menuItem, menuItemIndex) =>  {
       menuItem.addEventListener('keyup', (e) => {
-        handleMenuItemArrowKeyPress(e, menuItemIndex);
+        handleMenuItemArrowKeyPress(e, menuItemIndex)
       })
     })
 
@@ -43,8 +46,8 @@ const toggleStoreMenu = (forceHide = false) => {
       
   }
   else {
-    storeMenu.ariaExpanded = "false";
-    storeBtn.focus();
+    storeMenu.ariaExpanded = "false"
+    storeBtn.focus()
 
     // hide
     state = { ...state, 
@@ -87,17 +90,18 @@ const toggleAlerts = (forceHide = false) => {
   
   if(!state.isAlertsDisplayed) {
     let menuItems = getChildren(alerts)('[role="menuitem"]')
-    alerts.ariaExpanded = 'true';
+    alerts.ariaExpanded = 'true'
 
     // focus on first menu item
-    menuItems.item(0).focus();
+    if(menuItems.item(0))
+      menuItems.item(0).focus()
 
-    alerts.addEventListener('keyup', (e) => handleMenuEscapeKeypress(e, closeAlerts));
+    alerts.addEventListener('keyup', (e) => handleMenuEscapeKeypress(e, closeAlerts))
 
     menuItems.forEach(
       (menuItem, menuItemIndex) =>  {
       menuItem.addEventListener('keyup', (e) => {
-        handleMenuItemArrowKeyPress(e, menuItemIndex);
+        handleMenuItemArrowKeyPress(e, menuItemIndex)
       })
     })
 
@@ -114,7 +118,7 @@ const toggleAlerts = (forceHide = false) => {
       
   }
   else {
-    alerts.ariaExpanded = 'false';
+    alerts.ariaExpanded = 'false'
 
     // hide
     state = { ...state, 
@@ -150,16 +154,17 @@ const closeAlerts = (isEscKeyPress = false) => {
   alerts.classList.add('fade-off')
   alerts.style.display = 'none'
   
-  alerts.ariaExpanded = 'false';
-  if (esc) {
-    notification.focus();
-  }
+  alerts.ariaExpanded = 'false'
+
+  if (isEscKeyPress) 
+    notification.focus()
+  
 
 }
 
 
 
-const closeStoreMenu = () => {
+const closeStoreMenu = (isEscKeyPress = false) => {
   const storeBtn = getElement('.store-btn')
   const storeMenu = getElement('.store-menu')
 
@@ -167,8 +172,10 @@ const closeStoreMenu = () => {
   storeMenu.classList.add('fade-off')
   storeMenu.style.display = 'none'
 
-  storeMenu.ariaExpanded = "false";
-  storeBtn.focus();
+  storeMenu.ariaExpanded = "false"
+  
+  if (isEscKeyPress)
+    storeBtn.focus()
 }
 
 
@@ -255,11 +262,11 @@ var handleMenuItemArrowKeyPress = (e, menuItemIndex) => {
   if ( e.key === "ArrowRight" 
       || e.key === "ArrowDown") {
     if (isLastMenuItem) {
-      allMenuItems.item(0).focus();
+      allMenuItems.item(0).focus()
       return
     }
 
-    nextMenuItem.focus();
+    nextMenuItem.focus()
   }
 
   if (e.key === "ArrowUp" 
