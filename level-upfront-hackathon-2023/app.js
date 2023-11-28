@@ -12,9 +12,10 @@ const evaluateProgress = () => {
   const activeVoice = getElement('.setup-step-status')
   const completedSteps = state.completedSteps
   const totalSteps = state.totalSteps
-  const score = (completedSteps / totalSteps) * 100
+  let score = (completedSteps / totalSteps) * 100
+  score = Math.floor(score)
 
-  progress.value = `${Math.floor(score)}` 
+  progress.value = `${score}` 
   progress.textContent = `${score}%`
 
   activeVoice.ariaLabel = `You have completed ${score}% of the Setup Guide`
@@ -298,11 +299,23 @@ const closePlanNotifier = () => {
 
 // Setup Guide 
 const toggleSetupSteps = () => {
-  const setupSteps = getElement('.setup')
+  const setup = getElement('.setup')
   const chevronUp = getElement('.chevron-up')
   const chevronDown = getElement('.chevron-down')
 
-  setupSteps.classList.toggle('open')
+  const setupGuideCtrl = getElement('.setup-guide-ctrl')
+  const isOpened = setupGuideCtrl.ariaExpanded === 'true' 
+
+  if(isOpened) {
+    setupGuideCtrl.ariaExpanded = 'false'
+    setup.ariaHidden = 'true'
+  }
+  else {
+    setupGuideCtrl.ariaExpanded = 'true'
+    setup.ariaHidden = 'false'
+  }
+
+  setup.classList.toggle('open')
   chevronUp.classList.toggle('hide')
   chevronDown.classList.toggle('hide')
 }
@@ -313,6 +326,7 @@ const toggleSetupSteps = () => {
 
 // Accordion 
 const toggleAccordion = e => {
+  const accordionBtn = e.currentTarget
   const openedAccordion = getElement('.setup-step.open')
   const selectedAccordion = e.target.closest('.setup-step')
   let selectedAccordionContent = getChild(selectedAccordion)('.setup-step-content')
@@ -330,13 +344,16 @@ const toggleAccordion = e => {
       },
       300)
     }
-
+    
+    accordionBtn.ariaExpanded = 'false'
+    selectedAccordionContent.ariaHidden = 'true'
     return selectedAccordion.classList.remove('open')
   }
 
   // Close opened accordion
   if (openedAccordion){ 
     let openedAccordionContent = getChild(openedAccordion)('.setup-step-content')
+    let openedAccordionBtn = getChild(openedAccordion)('.accordion')
     state = { ...state, 
       timeoutId: setTimeout(
       () => {
@@ -345,11 +362,15 @@ const toggleAccordion = e => {
       300)
     }
     openedAccordion.classList.remove('open')
+    openedAccordionBtn.ariaExpanded = 'false'
+    openedAccordionContent.ariaHidden = 'true'
   }
 
   // Open selected accordion
   selectedAccordion.classList.add('open')
   selectedAccordionContent.style.display = 'flex'
+  accordionBtn.ariaExpanded = 'true'
+  selectedAccordionContent.ariaHidden = 'false'
 }
 
 
