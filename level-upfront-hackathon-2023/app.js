@@ -4,11 +4,6 @@ let state = {
   timeoutId : null
 }
 
-document.addEventListener('DOMContentLoaded',() => {
-  // open first accordion
-   const firstAccordion = document.querySelectorAll('.accordion')
-  firstAccordion[0].click()
-})
 
 
 
@@ -312,3 +307,9 @@ var handleMenuItemArrowKeyPress = (e, menuItemIndex) => {
 
 
 
+document.addEventListener('DOMContentLoaded',() => {
+  // first accordion
+   const firstAccordion = getElement('.accordion')
+  firstAccordion[0].click()
+  firstAccordion[0].click()
+})
