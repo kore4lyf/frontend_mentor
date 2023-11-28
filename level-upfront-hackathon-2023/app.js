@@ -4,6 +4,13 @@ let state = {
   timeoutId : null
 }
 
+document.addEventListener('DOMContentLoaded',() => {
+  // open first accordion
+   const firstAccordion = document.querySelectorAll('.accordion')
+  firstAccordion[0].click()
+})
+
+
 
 
 // Store Menu 
@@ -229,7 +236,7 @@ const toggleAccordion = e => {
       300)
     }
 
-    return e.target.closest('.setup-step.open').classList.toggle('open')
+    return selectedAccordion.classList.remove('open')
   }
 
   // Close opened accordion
