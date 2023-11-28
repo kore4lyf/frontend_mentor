@@ -645,24 +645,27 @@ body main .store-menu {
   right: 1rem;
   width: 82%;
 
-  & ul {
-    list-style-type: none;
-    padding-left: 0px;
-  }
-
   & .store-details{
     padding-top: .5rem;
     padding-left: .8rem;
   }
 
-  & > div {
-    margin: .35rem;
+  & ul{
   }
 
-  & .list-item,
-  & .store-item {
+  & li {
+    margin-inline: .35rem;
     padding: .35rem;
+
+    &:first-child {
+      margin-top: .35rem;
+    }
+
+    &:last-child {
+      margin-bottom: .35rem;
+    }
   }
+
 
   & .store-item {
     padding-block: .2rem;
@@ -672,13 +675,14 @@ body main .store-menu {
     }
   }
 
-  & .btn {
+  & a {
     font-weight: 400;
     width: 100%;
   }
 
   & hr {
     border-top: 1px solid var(--clr-s50);
+    margin-block: .25rem;
   }
 
   & .store-mail {
