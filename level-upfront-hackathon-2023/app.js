@@ -1,23 +1,34 @@
 let state = {
   isAlertsDisplayed : false,
   isStoreMenuDisplayed : false,
-  timeoutId : null
+  timeoutId : null,
+  completedSteps: 0,
+  totalSteps: 5
+}
+
+
+const evaluateProgress = () => {
+  const progress = getElement('progress')
+  const activeVoice = getElement('.setup-step-status')
+  const completedSteps = state.completedSteps
+  const totalSteps = state.totalSteps
+  const score = (completedSteps / totalSteps) * 100
+
+  progress.value = `${Math.floor(score)}` 
+  progress.textContent = `${score}%`
+
+  activeVoice.ariaLabel = `You have completed ${score}% of the Setup Guide`
 }
 
 
 // Step-checker 
 
-// const stepChecker = getElement('#step-checker');
-// const dashCircle = getElement('#dash-circle'); 
-// const spinner = getElement('#spinner'); 
-// const checkMark = getElement('#check-mark'); 
-
 const check = (e) => {
   const hide = 'hide'
   const stepChecker = e.currentTarget
-  const dashCircle = getChild(stepChecker)('#dash-circle'); 
-  const spinner = getChild(stepChecker)('#spinner'); 
-  const checkMark = getChild(stepChecker)('#check-mark'); 
+  const dashCircle = getChild(stepChecker)('.dash-circle'); 
+  const spinner = getChild(stepChecker)('.spinner'); 
+  const checkMark = getChild(stepChecker)('.check-mark'); 
 
 
   const activeVoice = getElement('.setup-step-status')
@@ -43,9 +54,9 @@ const check = (e) => {
 const uncheck = (e) => {
   const hide = 'hide'
   const stepChecker = e.currentTarget
-  const dashCircle = getChild(stepChecker)('#dash-circle'); 
-  const spinner = getChild(stepChecker)('#spinner'); 
-  const checkMark = getChild(stepChecker)('#check-mark'); 
+  const dashCircle = getChild(stepChecker)('.dash-circle'); 
+  const spinner = getChild(stepChecker)('.spinner'); 
+  const checkMark = getChild(stepChecker)('.check-mark'); 
   
 
   const activeVoice = getElement('.setup-step-status')
@@ -76,13 +87,21 @@ const handleStepCheck = (e) =>  {
   if(isChecked) {
     uncheck(e)
     stepChecker.classList.remove('checked')
+
+    state = { ...state, 
+      completedSteps: state.completedSteps - 1 }
+
   }
   else {
     check(e)
     stepChecker.classList.add('checked')
+
+    state = { ...state, 
+      completedSteps: state.completedSteps + 1 }
+
   }
 
-  console.log(stepChecker.ariaLabel)
+  evaluateProgress()
 }
 
 

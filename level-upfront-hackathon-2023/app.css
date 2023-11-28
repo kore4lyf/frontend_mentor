@@ -202,6 +202,7 @@ header {
 
   & progress[value]::-webkit-progress-value {
     background: var(--clr-grey-200);
+    transition: all ease .3s;
   }
 
   & .setup-step {
