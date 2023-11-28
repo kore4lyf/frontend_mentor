@@ -5,6 +5,66 @@ let state = {
 }
 
 
+// Step-checker 
+
+// const stepChecker = getElement('#step-checker');
+// const dashCircle = getElement('#dash-circle'); 
+// const spinner = getElement('#spinner'); 
+// const checkMark = getElement('#check-mark'); 
+
+const check = (e) => {
+  const hide = 'hide'
+  const stepChecker = e.currentTarget
+  const dashCircle = getChild(stepChecker)('#dash-circle'); 
+  const spinner = getChild(stepChecker)('#spinner'); 
+  const checkMark = getChild(stepChecker)('#check-mark'); 
+  
+  dashCircle.classList.add(hide)
+  spinner.classList.remove(hide)
+  
+  setTimeout(
+    () => {
+      spinner.classList.add(hide)
+      checkMark.classList.remove(hide)
+    }, 
+    1000
+  )
+}
+
+const uncheck = (e) => {
+  const hide = 'hide'
+  const stepChecker = e.currentTarget
+  const dashCircle = getChild(stepChecker)('#dash-circle'); 
+  const spinner = getChild(stepChecker)('#spinner'); 
+  const checkMark = getChild(stepChecker)('#check-mark'); 
+  
+  checkMark.classList.add(hide)
+  spinner.classList.remove(hide)
+  
+  setTimeout(
+    () => {
+      spinner.classList.add(hide)
+      dashCircle.classList.remove(hide)
+    }, 
+    1000
+  )
+}
+
+const handleStepCheck = (e) =>  {
+  const stepChecker = e.currentTarget
+  const isChecked = stepChecker.classList.contains('checked')
+
+  if(isChecked) {
+    uncheck(e)
+    stepChecker.classList.remove('checked')
+  }
+  else {
+    check(e)
+    stepChecker.classList.add('checked')
+  }
+}
+
+
 
 
 
@@ -306,10 +366,10 @@ var handleMenuItemArrowKeyPress = (e, menuItemIndex) => {
 
 
 
-
+// Execute immediately after DOM is load
 document.addEventListener('DOMContentLoaded',() => {
   // first accordion
    const firstAccordion = getElement('.accordion')
-  firstAccordion[0].click()
-  firstAccordion[0].click()
+  firstAccordion.click()
+  firstAccordion.click()
 })

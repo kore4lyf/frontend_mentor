@@ -8,7 +8,8 @@
  * 4. Blocks 
  * 5. Components 
  * 6. Utilities 
- * 7. Media Query
+ * 7. Keyframes
+ * 8. Media Query
  *
  */
 
@@ -300,20 +301,35 @@ header {
 .step-checker-accordion {
   padding: .5rem;
 
-  & svg {
-    border: 
-    color: var(--clr-grey-150);
-    width: 26px;
-  }
-
   & button {
     background: transparent;
     border: none;
     border-radius: var(--bdr-md);
     color: var(--clr-dark);
 
+    & svg {
+      width: 26px;
+      transition: all ease  .1s;
+
+      &.dash-circle {    
+      }
+
+      &.spinner {
+        padding: 2px;
+        animation: spin linear 1s infinite;
+      }
+
+      &.check-mark {
+        animation: zoom-in-spin linear .3s;
+      }
+    }
+
     &:hover {
       background: var(--clr-hover);
+
+      &.dash-circle  circle {
+        stroke-dasharray: 0 0;
+      }
     }
 
     &:active {
@@ -325,11 +341,18 @@ header {
       color: var(--clr-dark);
       outline: 2px solid var(--clr-focus);
       outline-offset: 2px;
+
+      &.dash-circle circle {
+        stroke-dasharray: 0 0;
+      }
     }
   }
 
   & .step-checker {
     padding: 0px;
+    position: relative;
+
+
   }
 }
 
@@ -847,6 +870,36 @@ body main .store-menu {
 .w-100 {
   width: 100%;
 }
+
+
+
+
+
+/* keyframes */
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+@keyframes zoom-in-spin {
+  from {
+    transform: scale(0) rotate(300deg);
+    opacity: 0;
+  }
+  
+  to {
+    transform: scale(1) rotate(360deg);
+    opacity: 1;
+  }
+}
+
 
 
 
