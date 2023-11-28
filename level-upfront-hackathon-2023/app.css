@@ -205,10 +205,22 @@ header {
   & .setup-step {
     border-radius: var(--bdr-md);
     position: relative;
-  }
+    max-height: 38px;
+    overflow: hidden;
+    transition: max-height ease-out .3s;
 
-  & .setup-step-content {
-    display:none;
+    &.open {
+      background: var(--clr-bg-grey);
+      max-height: 100%;
+
+      & .setup-step-img {
+        opacity: 1; 
+      }
+
+      & .accordion {
+        background: var(--clr-bg-grey);
+      }
+    }
   }
 
   & .setup-step-msg {
@@ -216,26 +228,16 @@ header {
     font-weight: 500;
     max-width: 480px;
   }
-
-  & .setup-step.open {
-    background: var(--clr-bg-grey);
-
-    & .accordion {
-      background: var(--clr-bg-grey);
-    }
-
-    & .setup-step-content {
-      display: block;
-    }
-  }
   
   & .setup-step-img {
     bottom: 15px;
     display: none;
     height: 120px;
+    opacity: 0;
     right: 10px;
     position: absolute;
     width: 157px;
+    transition: opacity ease-out .3s;
   }
 
   & .setup-step-msg-btn {
