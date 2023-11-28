@@ -16,23 +16,26 @@ const toggleStoreMenu = (forceHide = false) => {
     console.log(
   clearTimeout(state.timeoutId)
   )
+    console.log(state.timeoutId)
   
   if(!state.isStoreMenuDisplayed) {
     let menuItems = getChildren(storeMenu)('[role="menuitem"]')
     storeMenu.ariaExpanded = "true"
 
-    // focus on first menu item
-    menuItems.item(0).focus()
-
     storeMenu.addEventListener('keyup', (e) => handleMenuEscapeKeypress(e, closeStoreMenu))
     
+    
+    if (menuItems.item(0)) {
+      // focus on first menu item
+      menuItems.item(0).focus()
 
-    menuItems.forEach(
-      (menuItem, menuItemIndex) =>  {
-      menuItem.addEventListener('keyup', (e) => {
-        handleMenuItemArrowKeyPress(e, menuItemIndex)
+      menuItems.forEach(
+        (menuItem, menuItemIndex) =>  {
+        menuItem.addEventListener('keyup', (e) => {
+          handleMenuItemArrowKeyPress(e, menuItemIndex)
+        })
       })
-    })
+    }
 
     // display
     state = { ...state, 
@@ -44,10 +47,12 @@ const toggleStoreMenu = (forceHide = false) => {
       300)
     }
       
+    // Toggle elements state
+    storeBtn.classList.add('active')
+    storeMenu.classList.remove('fade-off')
   }
   else {
     storeMenu.ariaExpanded = "false"
-    storeBtn.focus()
 
     // hide
     state = { ...state, 
@@ -58,12 +63,10 @@ const toggleStoreMenu = (forceHide = false) => {
       },
       300)
     }
+    // Toggle elements state
+    storeBtn.classList.remove('active')
+    storeMenu.classList.add('fade-off')
   }
-
-  // Toggle elements state
-  storeBtn.classList.toggle('active')
-  storeMenu.classList.toggle('fade-off')
-
 
 
 
@@ -92,18 +95,19 @@ const toggleAlerts = (forceHide = false) => {
     let menuItems = getChildren(alerts)('[role="menuitem"]')
     alerts.ariaExpanded = 'true'
 
-    // focus on first menu item
-    if(menuItems.item(0))
-      menuItems.item(0).focus()
-
     alerts.addEventListener('keyup', (e) => handleMenuEscapeKeypress(e, closeAlerts))
 
-    menuItems.forEach(
-      (menuItem, menuItemIndex) =>  {
-      menuItem.addEventListener('keyup', (e) => {
-        handleMenuItemArrowKeyPress(e, menuItemIndex)
+    if(menuItems.item(0)) {
+      // focus on first menu item
+      menuItems.item(0).focus()
+
+      menuItems.forEach(
+        (menuItem, menuItemIndex) =>  {
+        menuItem.addEventListener('keyup', (e) => {
+          handleMenuItemArrowKeyPress(e, menuItemIndex)
+        })
       })
-    })
+    }
 
 
     // display
@@ -116,6 +120,9 @@ const toggleAlerts = (forceHide = false) => {
       300)
     }
       
+    notification.classList.add('active')
+    alerts.classList.remove('fade-off')
+
   }
   else {
     alerts.ariaExpanded = 'false'
@@ -130,13 +137,12 @@ const toggleAlerts = (forceHide = false) => {
       300)
     }
 
+    notification.classList.remove('active')
+    alerts.classList.add('fade-off')
+
   }
 
 
-  // Toggle elements state
-  notification.classList.toggle('active')
-  alerts.classList.toggle('fade-off')
-  
   //Close active store menu 
   if(state.isStoreMenuDisplayed) {
     closeStoreMenu()
