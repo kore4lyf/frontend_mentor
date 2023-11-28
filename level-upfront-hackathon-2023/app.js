@@ -22,6 +22,7 @@ const toggleStoreMenu = (forceHide = false) => {
     menuItems.item(0).focus();
 
     storeMenu.addEventListener('keyup', (e) => handleMenuEscapeKeypress(e, closeStoreMenu));
+    
 
     menuItems.forEach(
       (menuItem, menuItemIndex) =>  {
@@ -114,7 +115,6 @@ const toggleAlerts = (forceHide = false) => {
   }
   else {
     alerts.ariaExpanded = 'false';
-    notification.focus();
 
     // hide
     state = { ...state, 
@@ -142,7 +142,7 @@ const toggleAlerts = (forceHide = false) => {
 }
 
 
-const closeAlerts = () => {
+const closeAlerts = (isEscKeyPress = false) => {
   const alerts = getElement('.alerts')
   const notification = getElement('.notification')
 
@@ -151,7 +151,9 @@ const closeAlerts = () => {
   alerts.style.display = 'none'
   
   alerts.ariaExpanded = 'false';
-  notfication.focus();
+  if (esc) {
+    notification.focus();
+  }
 
 }
 
@@ -235,7 +237,7 @@ var getChildren = (outterElement) =>
 
 var handleMenuEscapeKeypress = (e, fn) => {
   if (e.key === "Escape") {
-    fn()
+    fn(true)
   }
 }
 
@@ -270,4 +272,7 @@ var handleMenuItemArrowKeyPress = (e, menuItemIndex) => {
     previousMenuItem.focus()
   }
 }
+
+
+
 

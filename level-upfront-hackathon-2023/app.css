@@ -272,20 +272,22 @@ header {
   z-index: 10;
 
 }
+ 
 
-/* Accordion */
-  .accordion {
+.step-checker-accordion {
+  padding: .5rem;
+
+  & svg {
+    border: 
+    color: var(--clr-grey-150);
+    width: 26px;
+  }
+
+  & button {
     background: transparent;
     border: none;
     border-radius: var(--bdr-md);
     color: var(--clr-dark);
-    padding: .5rem;
-
-    & svg {
-      color: var(--clr-grey-150);
-      width: 26px;
-    }
-
 
     &:hover {
       background: var(--clr-hover);
@@ -302,6 +304,12 @@ header {
       outline-offset: 2px;
     }
   }
+
+  & .step-checker {
+    padding: 0px;
+  }
+}
+
 
   /* button */ 
 .btn {
