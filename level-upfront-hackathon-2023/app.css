@@ -180,8 +180,9 @@ header {
     height: 100%;
   }
 
-  & .btn {
+  &  .btn {
     width: fit-content;
+
   }
 
   /* Progress Bar */
@@ -209,10 +210,18 @@ header {
     overflow: hidden;
     transition: max-height ease-out .3s;
 
+    & .setup-step-content {
+      display: none;
+    }
+
     &.open {
+      display: flex;
       background: var(--clr-bg-grey);
       max-height: 100%;
 
+    & .setup-step-content {
+      display: flex;
+    }
       & .setup-step-img {
         opacity: 1; 
       }
@@ -221,6 +230,7 @@ header {
         background: var(--clr-bg-grey);
       }
     }
+
   }
 
   & .setup-step-msg {
@@ -230,7 +240,9 @@ header {
   }
   
   & .setup-step-img {
+    background: black;
     bottom: 15px;
+    box-shadow: inset 0px -15px 5px red;
     display: none;
     height: 120px;
     opacity: 0;
@@ -648,9 +660,6 @@ body main .store-menu {
   & .store-details{
     padding-top: .5rem;
     padding-left: .8rem;
-  }
-
-  & ul{
   }
 
   & li {

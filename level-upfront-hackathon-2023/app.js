@@ -11,12 +11,8 @@ const toggleStoreMenu = (forceHide = false) => {
   const storeBtn = getElement('.store-btn')
   const storeMenu = getElement('.store-menu')
 
-    console.log(state.timeoutId)
   // Prevent button from malfunctioning when double clicked
-    console.log(
   clearTimeout(state.timeoutId)
-  )
-    console.log(state.timeoutId)
   
   if(!state.isStoreMenuDisplayed) {
     let menuItems = getChildren(storeMenu)('[role="menuitem"]')
@@ -67,7 +63,6 @@ const toggleStoreMenu = (forceHide = false) => {
     storeBtn.classList.remove('active')
     storeMenu.classList.add('fade-off')
   }
-
 
 
   //Close active alerts 
@@ -218,19 +213,41 @@ const toggleSetupSteps = () => {
 const toggleAccordion = e => {
   const openedAccordion = getElement('.setup-step.open')
   const selectedAccordion = e.target.closest('.setup-step')
+  let selectedAccordionContent = getChild(selectedAccordion)('.setup-step-content')
 
+  // Prevent button from malfunctioning when double clicked
+  clearTimeout(state.timeoutId)
 
   // Toggle selected accordion
-  if (selectedAccordion.classList.contains('open'))
+  if (selectedAccordion.classList.contains('open')){
+
+    state = { ...state, 
+      timeoutId: setTimeout(
+      () => {
+      selectedAccordionContent.style.display = 'none'
+      },
+      300)
+    }
+
     return e.target.closest('.setup-step.open').classList.toggle('open')
-  
+  }
 
   // Close opened accordion
-  if (openedAccordion) 
+  if (openedAccordion){ 
+    let openedAccordionContent = getChild(openedAccordion)('.setup-step-content')
+    state = { ...state, 
+      timeoutId: setTimeout(
+      () => {
+      openedAccordionContent.style.display = 'none'
+      },
+      300)
+    }
     openedAccordion.classList.remove('open')
+  }
 
   // Open selected accordion
   selectedAccordion.classList.add('open')
+  selectedAccordionContent.style.display = 'flex'
 }
 
 
@@ -242,7 +259,7 @@ const toggleAccordion = e => {
 var getElement = (selector) => document.querySelector(selector)
 
 var getChild = (outterElement) => 
-  (seletor) => outterElement.querySelector(selector)
+  (selector) => outterElement.querySelector(selector)
 
 var getChildren = (outterElement) => 
   (selector) => outterElement.querySelectorAll(selector)
