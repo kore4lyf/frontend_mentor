@@ -362,7 +362,7 @@ const toggleAccordion = e => {
       300)
     }
     openedAccordion.classList.remove('open')
-    openedAccordionBtn.ariaExpanded = 'false'
+    openedaccordionBtn.ariaExpanded = 'false'
     openedAccordionContent.ariaHidden = 'true'
   }
 
