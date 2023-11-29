@@ -353,7 +353,6 @@ const toggleAccordion = e => {
   // Close opened accordion
   if (openedAccordion){ 
     let openedAccordionContent = getChild(openedAccordion)('.setup-step-content')
-    let openedAccordionBtn = getChild(openedAccordion)('.accordion')
     state = { ...state, 
       timeoutId: setTimeout(
       () => {
@@ -362,7 +361,7 @@ const toggleAccordion = e => {
       300)
     }
     openedAccordion.classList.remove('open')
-    openedaccordionBtn.ariaExpanded = 'false'
+    accordionBtn.ariaExpanded = 'false'
     openedAccordionContent.ariaHidden = 'true'
   }
 
