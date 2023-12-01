@@ -23,10 +23,10 @@
     <header class="align-center flex-flow gap-sm p-3 space-btw text-14"> 
 
       <!-- Shopify Logo -->
-      <a href="http://shopify.com">
+      <a href="http://shopify.com" aria-label="Shopify hompage">
         <picture>
           <source srcset="./assets/shopify-icon-desktop.svg" media="(min-width: 800px)">
-          <img class="logo" src="./assets/shopify-icon.svg" alt="Shopify logo"/>
+          <img class="logo" src="./assets/shopify-icon.svg" alt="Shopify Logo"/>
         </picture>
       </a>
 
@@ -257,7 +257,7 @@
           <!-- Progress -->
           <div class="progress text-12">
             <div class="align-center flex-flow gap-sm">
-              <p><span class="progress-count">0</span> / 5 completed</p>
+              <p><span><span class="progress-count">0</span> <span arial-label="of">/</span> 5</span> completed</p>
               <progress class="progress-bar" min="0" max="100" value="0"> 0% </progress>
             </div>
           </div>
@@ -273,7 +273,7 @@
             <!-- Step Checker --> 
             <button 
               class="step-checker align-center flex-flow" 
-              arial-label = "Mark customize your online store as complete"
+              aria-label = "Mark customize your online store as complete"
               onclick="handleStepCheck(event)" >
 
               <!-- Dash Circle -->
@@ -343,8 +343,8 @@
 
             <!-- Step Checker --> 
             <button 
+              aria-label = "Mark add your first product as complete"
               class="step-checker align-center flex-flow" 
-              arial-label = "Mark customize your online store as complete"
               onclick="handleStepCheck(event)" >
 
               <!-- Dash Circle -->
@@ -419,8 +419,8 @@
 
             <!-- Step Checker --> 
             <button 
+              aria-label = "Mark add a custom domain as complete"
               class="step-checker align-center flex-flow" 
-              arial-label = "Mark customize your online store as complete"
               onclick="handleStepCheck(event)" >
 
               <!-- Dash Circle -->
@@ -492,8 +492,8 @@
 
             <!-- Step Checker --> 
             <button 
+              aria-label = "Mark name your store as complete"
               class="step-checker align-center flex-flow" 
-              arial-label = "Mark customize your online store as complete"
               onclick="handleStepCheck(event)" >
 
               <!-- Dash Circle -->
@@ -566,8 +566,8 @@
 
             <!-- Step Checker --> 
             <button 
+              aria-label = "Mark set up a payment provider as complete"
               class="step-checker align-center flex-flow" 
-              arial-label = "Mark customize your online store as complete"
               onclick="handleStepCheck(event)" >
 
               <!-- Dash Circle -->
@@ -605,7 +605,7 @@
                 role="button" 
                 aria-expanded="false"
                 class="accordion fw-bold text-14" onclick="toggleAccordion(event)">
-                Set up a payment provider</h2>
+                Set up a payment provider
               </button>
             </div>
 

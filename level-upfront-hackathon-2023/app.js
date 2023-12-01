@@ -42,14 +42,13 @@ const check = (e) => {
   
   setTimeout(
     () => {
-      activeVoice.ariaLabel = 'Loading..., please wait.'
       spinner.classList.add(hide)
       checkMark.classList.remove(hide)
     }, 
     500
   )
 
-  activeVoice.ariaLabel = `Successfully marked ${stepName} as complete`
+  activeVoice.ariaLabel = `You have successfully marked ${stepName} as complete`
   stepChecker.ariaLabel = `Mark ${stepName} as not complete`
 }
 
@@ -70,7 +69,6 @@ const uncheck = (e) => {
   
   setTimeout(
     () => {
-      activeVoice.ariaLabel = 'Loading..., please wait.'
       spinner.classList.add(hide)
       dashCircle.classList.remove(hide)
     }, 

@@ -753,6 +753,10 @@ body main .store-menu {
   width: 100%;
 }
 
+.char-space-1 {
+  letter-spacing: var(--size-5);
+}
+
 .fade-off {
   opacity: 0;
   transition: opacity ease-out .3s;
