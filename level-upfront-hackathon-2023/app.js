@@ -9,28 +9,29 @@ let state = {
 
 const evaluateProgress = () => {
   const progress = getElement('progress')
+  const progressCount = getElement('.progress-count')
   const activeVoice = getElement('.setup-step-status')
   const completedSteps = state.completedSteps
   const totalSteps = state.totalSteps
+
   let score = (completedSteps / totalSteps) * 100
   score = Math.floor(score)
 
   progress.value = `${score}` 
   progress.textContent = `${score}%`
+  progressCount.textContent = state.completedSteps
 
   activeVoice.ariaLabel = `You have completed ${score}% of the Setup Guide`
 }
 
 
 // Step-checker 
-
 const check = (e) => {
   const hide = 'hide'
   const stepChecker = e.currentTarget
   const dashCircle = getChild(stepChecker)('.dash-circle'); 
   const spinner = getChild(stepChecker)('.spinner'); 
   const checkMark = getChild(stepChecker)('.check-mark'); 
-
 
   const activeVoice = getElement('.setup-step-status')
   const stepName = getChild(stepChecker.parentElement)('.accordion').textContent
