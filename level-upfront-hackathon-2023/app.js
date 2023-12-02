@@ -6,11 +6,19 @@ let state = {
   totalSteps: 5
 }
 
+const screenReaderSay = (text) => {
+  const activeVoice = getElement('.setup-step-status')
+  setTimeout(
+    () => activeVoice.ariaLabel = text,
+    0
+  ) 
+}
+
+const queueCall = (fn) => setTimeout(() => fn(), 0);
 
 const evaluateProgress = () => {
   const progress = getElement('progress')
   const progressCount = getElement('.progress-count')
-  const activeVoice = getElement('.setup-step-status')
   const completedSteps = state.completedSteps
   const totalSteps = state.totalSteps
 
@@ -21,7 +29,7 @@ const evaluateProgress = () => {
   progress.textContent = `${score}%`
   progressCount.textContent = state.completedSteps
 
-  activeVoice.ariaLabel = `You have completed ${score}% of the Setup Guide`
+  //screenReaderSay(`You have completed ${completedSteps} of ${totalSteps} setup guides.`)
 }
 
 
@@ -33,7 +41,6 @@ const check = (e) => {
   const spinner = getChild(stepChecker)('.spinner'); 
   const checkMark = getChild(stepChecker)('.check-mark'); 
 
-  const activeVoice = getElement('.setup-step-status')
   const stepName = getChild(stepChecker.parentElement)('.accordion').textContent
   
 
@@ -44,12 +51,13 @@ const check = (e) => {
     () => {
       spinner.classList.add(hide)
       checkMark.classList.remove(hide)
+      screenReaderSay(`Successfully marked ${stepName} as complete`)
     }, 
     500
   )
-
-  activeVoice.ariaLabel = `You have successfully marked ${stepName} as complete`
-  stepChecker.ariaLabel = `Mark ${stepName} as not complete`
+  stepChecker.addEventListener('focusOut',
+    () => stepChecker.ariaLabel = `Mark ${stepName} as not complete`
+  )
 }
 
 const uncheck = (e) => {
@@ -60,7 +68,6 @@ const uncheck = (e) => {
   const checkMark = getChild(stepChecker)('.check-mark'); 
   
 
-  const activeVoice = getElement('.setup-step-status')
   const stepName = getChild(stepChecker.parentElement)('.accordion').textContent
   
 
@@ -71,11 +78,11 @@ const uncheck = (e) => {
     () => {
       spinner.classList.add(hide)
       dashCircle.classList.remove(hide)
+      screenReaderSay(`Successfully marked ${stepName} as not complete`)
     }, 
     500
   )
 
-  activeVoice.ariaLabel = `Successfully marked ${stepName} as not complete`
   stepChecker.ariaLabel = `Mark ${stepName} as complete`
 }
 
@@ -83,6 +90,7 @@ const handleStepCheck = (e) =>  {
   const stepChecker = e.currentTarget
   const isChecked = stepChecker.classList.contains('checked')
 
+  screenReaderSay('Loading, please wait')
 
   if(isChecked) {
     uncheck(e)
@@ -101,7 +109,8 @@ const handleStepCheck = (e) =>  {
 
   }
 
-  evaluateProgress()
+  // Reflect Number of Completed setup guide steps
+  queueCall(evaluateProgress)
 }
 
 
@@ -287,9 +296,13 @@ const closePlanNotifier = () => {
 
   planNotifier.classList.add('fade-off')
   setTimeout(
-    () => planNotifier.style.display = 'none',
+    () => {
+      planNotifier.style.display = 'none'
+      screenReaderSay(`Select a plan notification closed.`)
+    },
     300
   )
+
 }
 
 
@@ -308,10 +321,12 @@ const toggleSetupSteps = () => {
   if(isOpened) {
     setupGuideCtrl.ariaExpanded = 'false'
     setup.ariaHidden = 'true'
+    screenReaderSay('Setup Guide collapsed')
   }
   else {
     setupGuideCtrl.ariaExpanded = 'true'
     setup.ariaHidden = 'false'
+    screenReaderSay('')
   }
 
   setup.classList.toggle('open')

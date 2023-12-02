@@ -767,6 +767,10 @@ body main .store-menu {
   flex-direction: row;
 }
 
+.flex-dir-row-rev {
+  flex-direction: row-reverse;
+}
+
 .flex-dir-col,
 .flex-dir-col-to-row{
   flex-direction: column;
@@ -866,6 +870,27 @@ body main .store-menu {
 
 .pt-2rem {
   padding-top: var(--size-5);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+
+  &:focus {
+    position: relative;
+    width: auto;
+    height: auto;
+    clip: initial;
+    margin: inherit;
+    padding: inherit;
+    border: initial;
+  }
 }
 
 .space-btw {
