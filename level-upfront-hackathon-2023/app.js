@@ -14,7 +14,10 @@ const screenReaderSay = (text) => {
   ) 
 }
 
-const queueCall = (fn) => setTimeout(() => fn(), 0);
+const queueCall = (fn, seconds = 0) => setTimeout(() => {
+    fn()
+  }
+  , seconds * 1000)
 
 const evaluateProgress = () => {
   const progress = getElement('progress')
@@ -29,7 +32,6 @@ const evaluateProgress = () => {
   progress.textContent = `${score}%`
   progressCount.textContent = state.completedSteps
 
-  //screenReaderSay(`You have completed ${completedSteps} of ${totalSteps} setup guides.`)
 }
 
 
@@ -42,7 +44,6 @@ const check = (e) => {
   const checkMark = getChild(stepChecker)('.check-mark'); 
 
   const stepName = getChild(stepChecker.parentElement)('.accordion').textContent
-  
 
   dashCircle.classList.add(hide)
   spinner.classList.remove(hide)
@@ -51,12 +52,15 @@ const check = (e) => {
     () => {
       spinner.classList.add(hide)
       checkMark.classList.remove(hide)
-      screenReaderSay(`Successfully marked ${stepName} as complete`)
     }, 
     500
   )
-  stepChecker.addEventListener('focusOut',
-    () => stepChecker.ariaLabel = `Mark ${stepName} as not complete`
+
+  screenReaderSay(`Successfully marked ${stepName} as complete`)
+  
+  queueCall( 
+    () => stepChecker.ariaLabel = `Mark ${stepName} as not complete`, 
+    1
   )
 }
 
@@ -70,27 +74,29 @@ const uncheck = (e) => {
 
   const stepName = getChild(stepChecker.parentElement)('.accordion').textContent
   
-
   checkMark.classList.add(hide)
   spinner.classList.remove(hide)
-  
+
   setTimeout(
     () => {
       spinner.classList.add(hide)
       dashCircle.classList.remove(hide)
-      screenReaderSay(`Successfully marked ${stepName} as not complete`)
     }, 
     500
   )
 
-  stepChecker.ariaLabel = `Mark ${stepName} as complete`
+  screenReaderSay(`Successfully marked ${stepName} as not complete`)
+
+  queueCall( 
+    () => stepChecker.ariaLabel = `Mark ${stepName} as complete`, 
+    1
+  )
 }
 
 const handleStepCheck = (e) =>  {
   const stepChecker = e.currentTarget
   const isChecked = stepChecker.classList.contains('checked')
 
-  screenReaderSay('Loading, please wait')
 
   if(isChecked) {
     uncheck(e)
@@ -125,7 +131,7 @@ const toggleStoreMenu = (forceHide = false) => {
   // Prevent button from malfunctioning when double clicked
   clearTimeout(state.timeoutId)
   
-  if(!state.isStoreMenuDisplayed) {
+  if(state.isStoreMenuDisplayed) {
     let menuItems = getChildren(storeMenu)('[role="menuitem"]')
     storeMenu.ariaExpanded = "true"
 
@@ -134,7 +140,8 @@ const toggleStoreMenu = (forceHide = false) => {
     
     if (menuItems.item(0)) {
       // focus on first menu item
-      menuItems.item(0).focus()
+
+      queueCall(menuItems.item(0).focus, 0.3)
 
       menuItems.forEach(
         (menuItem, menuItemIndex) =>  {
@@ -312,6 +319,7 @@ const closePlanNotifier = () => {
 // Setup Guide 
 const toggleSetupSteps = () => {
   const setup = getElement('.setup')
+  const setupSteps = getElement('.setup-steps')
   const chevronUp = getElement('.chevron-up')
   const chevronDown = getElement('.chevron-down')
 
@@ -321,17 +329,25 @@ const toggleSetupSteps = () => {
   if(isOpened) {
     setupGuideCtrl.ariaExpanded = 'false'
     setup.ariaHidden = 'true'
-    screenReaderSay('Setup Guide collapsed')
+    screenReaderSay('Setup guide collapsed')
+
+    setTimeout( 
+      () => setupSteps.style.display = 'none', 
+      300
+    )
   }
   else {
     setupGuideCtrl.ariaExpanded = 'true'
     setup.ariaHidden = 'false'
-    screenReaderSay('')
+    setupSteps.style.display = 'flex', 
+    screenReaderSay('Setup guide collapsed')
   }
 
   setup.classList.toggle('open')
   chevronUp.classList.toggle('hide')
   chevronDown.classList.toggle('hide')
+  
+  
 }
 
 
@@ -354,14 +370,15 @@ const toggleAccordion = e => {
     state = { ...state, 
       timeoutId: setTimeout(
       () => {
-      selectedAccordionContent.style.display = 'none'
+        selectedAccordionContent.style.display = 'none'
       },
       300)
     }
     
     accordionBtn.ariaExpanded = 'false'
     selectedAccordionContent.ariaHidden = 'true'
-    return selectedAccordion.classList.remove('open')
+    selectedAccordion.classList.remove('open')
+    return 
   }
 
   // Close opened accordion
@@ -370,7 +387,7 @@ const toggleAccordion = e => {
     state = { ...state, 
       timeoutId: setTimeout(
       () => {
-      openedAccordionContent.style.display = 'none'
+        openedAccordionContent.style.display = 'none'
       },
       300)
     }
@@ -442,8 +459,6 @@ var handleMenuItemArrowKeyPress = (e, menuItemIndex) => {
 
 // Execute immediately after DOM is load
 document.addEventListener('DOMContentLoaded',() => {
-  // first accordion
-   const firstAccordion = getElement('.accordion')
-  firstAccordion.click()
-  firstAccordion.click()
+  // first accordion 
+  
 })

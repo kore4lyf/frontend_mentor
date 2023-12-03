@@ -38,7 +38,10 @@
         </svg>
         
         <!-- Search Box -->
-        <input class="search-box" type="text" placeholder="Search"/>
+        <div>
+          <label for="search-box" class="sr-only"> Search </label>
+          <input class="search-box" type="text" placeholder="Search"/>
+        </div>
       </div>
 
       <!-- Navigation --> 
@@ -194,10 +197,13 @@
 
       <!-- Plan Notifier -->
       <section class="auto-width flex-flow gap-md mb-1rem p-3 plan-notifier space-btw"> 
-        <div class="flex-dir-col-to-row flex-flow gap-md space-btw w-100"> 
-          <p>
-            Extend your trial for $1/month for 3 months on select plans.
-          </p>
+        <div class="flex-dir-col-to-row flex-flow gap-md space-btw w-100">
+          <div>
+            <div class="sr-only"> Select a plan notification </div> 
+            <p>
+              Extend your trial for $1/month for 3 months on select plans.
+            </p>
+          </div>
 
           <button class="btn btn-white" onclick="window.location.assign('https://shopify.com/pricing')">Select a plan</button>
         </div>
@@ -215,7 +221,6 @@
 
 
       <span class="setup-step-status" aria-live="polite"> </>
-
 
 
       <section
@@ -311,15 +316,15 @@
                 </svg>
             </button>
             
-              <button 
-                role="button" 
+              <button
+                role="button"
                 aria-expanded="true"
-                class="accordion fw-bold text-14" onclick="toggleAccordion(event)"> Customize your online store 
+                class="accordion fw-bold text-14" onclick="toggleAccordion(event)"> Customize your online store
               </button>
             </div>
 
-            <div 
-              role="region" 
+            <div
+              role="region"
               aria-hidden="false"
               class="flex-flow m-1 setup-step-content w-100">
               <div class="flex-flow flex-dir-col step-note-btn setup-step-msg-btn w-100">
@@ -492,7 +497,7 @@
               </div>
 
               <div class="setup-step-img"> 
-                <img alt="Illustration of a web browser, with a www text and symbol" src="./assets/website.png" width="157" height="120"/>
+                <img alt="Illustration of a web browser, with a (w.w.w) world wide web text and symbol" src="./assets/website.png" width="157" height="120"/>
               </div>
             </div>
 
@@ -652,7 +657,7 @@
               </div>
 
               <div class="setup-step-img"> 
-                <img alt="Illustration of a website a visa logo" src="./assets/payment.png" width="157" height="120"/>
+                <img alt="Illustration of a website, with a visa logo" src="./assets/payment.png" width="157" height="120"/>
               </div>
             </div>
 
