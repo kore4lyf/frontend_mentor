@@ -333,7 +333,7 @@ const toggleSetupSteps = () => {
 
     setTimeout( 
       () => setupSteps.style.display = 'none', 
-      300
+      500
     )
   }
   else {
@@ -366,18 +366,18 @@ const toggleAccordion = e => {
 
   // Toggle selected accordion
   if (selectedAccordion.classList.contains('open')){
+    accordionBtn.ariaExpanded = 'false'
+    selectedAccordionContent.ariaHidden = 'true'
+    selectedAccordion.classList.remove('open')
 
     state = { ...state, 
       timeoutId: setTimeout(
       () => {
-        selectedAccordionContent.style.display = 'none'
+        //selectedAccordionContent.style.display = 'none'
       },
       300)
     }
-    
-    accordionBtn.ariaExpanded = 'false'
-    selectedAccordionContent.ariaHidden = 'true'
-    selectedAccordion.classList.remove('open')
+
     return 
   }
 
